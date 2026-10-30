@@ -1,0 +1,7 @@
+{
+ "session": "mso-slice2-20261029-180611",
+ "note": "4-run job; runs 1-3 (flat, tree, repeat) recovered from the streamed log; run 4 (study) lost when a server start swept every mso-* session (fixed: the sweep now stops only attributable sessions); study rerun alone in mso-slice2-20261029-182352",
+ "balance_before": 192.56,
+ "balance_after": 191.36,
+ "cu_measured": 1.2
+}

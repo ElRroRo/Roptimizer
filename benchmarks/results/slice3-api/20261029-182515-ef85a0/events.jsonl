@@ -1,0 +1,11 @@
+{"type": "queued", "t": 1793287515.6529965, "machine": "laptop", "position": 1}
+{"type": "started", "t": 1793287515.6537426, "machine": "laptop"}
+{"type": "start", "t": 1793287517.118, "machine": "laptop", "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU", "seed": 20261029}
+{"type": "stage", "t": 1793287517.118, "stage": "inputs"}
+{"type": "stage", "t": 1793287518.165, "stage": "bank", "paths": 1000000}
+{"type": "bank", "t": 1793287522.801, "done": 500000, "total": 1000000, "s": 4.5}
+{"type": "bank", "t": 1793287523.687, "done": 1000000, "total": 1000000, "s": 5.4}
+{"type": "stage", "t": 1793287523.982, "stage": "search"}
+{"type": "search_start", "t": 1793287523.982, "search": "Portfolio", "children": ["NVDA", "MNTS", "META", "JPM", "GOOGL", "FERG", "BTC=F", "ADBE", "NRIM", "SPGI", "DBMF", "CTA", "WTMF", "TLT", "IBHK", "SPY"]}
+{"type": "generation", "t": 1793287528.438, "search": "Portfolio", "gen": 1, "incumbent": -0.10473737925218574, "scored": 2, "s": 2.96, "replaced": 378, "stop": false}
+{"type": "end", "t": 1793287528.9616342, "ended": "2026-10-29T18:25:28", "wall_s": 13.3, "exit": -15, "status": "cancelled", "error": "cancelled"}

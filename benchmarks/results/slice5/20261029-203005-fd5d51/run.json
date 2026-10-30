@@ -1,0 +1,19 @@
+{
+ "id": "20261029-203005-fd5d51",
+ "portfolio_id": "9ab550081382",
+ "portfolio_name": "Reference tree (portfolio_data.csv inputs)",
+ "portfolio_version": 2,
+ "machine": "laptop",
+ "status": "done",
+ "queued": "2026-10-29T20:30:05",
+ "settings": {},
+ "started": "2026-10-29T20:30:05",
+ "pid": 73568,
+ "ended": "2026-10-29T20:31:37",
+ "wall_s": 92.1,
+ "exit": 0,
+ "objective": -0.10343124612160759,
+ "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+ "colab": null,
+ "searches": 8
+}

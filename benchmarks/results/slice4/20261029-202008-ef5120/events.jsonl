@@ -1,0 +1,78 @@
+{"type": "queued", "t": 1793294408.5927396, "machine": "laptop", "position": 1, "seq": 0}
+{"type": "started", "t": 1793294408.5932958, "machine": "laptop", "seq": 1}
+{"type": "start", "t": 1793294410.226, "machine": "laptop", "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU", "seed": 20261029, "seq": 2}
+{"type": "stage", "t": 1793294410.226, "stage": "inputs", "seq": 3}
+{"type": "stage", "t": 1793294411.365, "stage": "bank", "paths": 2000000, "seq": 4}
+{"type": "bank", "t": 1793294415.946, "done": 500000, "total": 2000000, "s": 4.6, "seq": 5}
+{"type": "bank", "t": 1793294416.863, "done": 1000000, "total": 2000000, "s": 5.5, "seq": 6}
+{"type": "bank", "t": 1793294418.049, "done": 1500000, "total": 2000000, "s": 6.7, "seq": 7}
+{"type": "bank", "t": 1793294419.239, "done": 2000000, "total": 2000000, "s": 7.9, "seq": 8}
+{"type": "stage", "t": 1793294419.534, "stage": "search", "seq": 9}
+{"type": "search_start", "t": 1793294419.534, "search": "Portfolio / Equities / Technology", "children": ["NVDA", "META", "GOOGL", "ADBE"], "seq": 10}
+{"type": "generation", "t": 1793294421.796, "search": "Portfolio / Equities / Technology", "gen": 1, "incumbent": -0.05663397229879302, "scored": 2, "s": 1.49, "replaced": 82, "stop": false, "seq": 11}
+{"type": "generation", "t": 1793294423.283, "search": "Portfolio / Equities / Technology", "gen": 2, "incumbent": -0.056789904439976294, "scored": 2, "s": 1.49, "replaced": 64, "stop": false, "seq": 12}
+{"type": "generation", "t": 1793294424.769, "search": "Portfolio / Equities / Technology", "gen": 3, "incumbent": -0.05676732886304492, "scored": 3, "s": 1.49, "replaced": 77, "stop": false, "seq": 13}
+{"type": "generation", "t": 1793294426.257, "search": "Portfolio / Equities / Technology", "gen": 4, "incumbent": -0.05675872106842972, "scored": 4, "s": 1.49, "replaced": 60, "stop": false, "seq": 14}
+{"type": "generation", "t": 1793294427.745, "search": "Portfolio / Equities / Technology", "gen": 5, "incumbent": -0.056778772152537675, "scored": 2, "s": 1.49, "replaced": 47, "stop": false, "seq": 15}
+{"type": "generation", "t": 1793294429.233, "search": "Portfolio / Equities / Technology", "gen": 6, "incumbent": -0.05678095140363074, "scored": 3, "s": 1.49, "replaced": 78, "stop": true, "seq": 16}
+{"type": "search_done", "t": 1793294429.233, "search": "Portfolio / Equities / Technology", "generations": 6, "stopped": "window", "incumbent": -0.05678095140363074, "seq": 17}
+{"type": "search_start", "t": 1793294429.234, "search": "Portfolio / Equities / Financials", "children": ["JPM", "NRIM", "SPGI"], "seq": 18}
+{"type": "generation", "t": 1793294430.937, "search": "Portfolio / Equities / Financials", "gen": 1, "incumbent": -0.05284986552740269, "scored": 2, "s": 1.13, "replaced": 49, "stop": false, "seq": 19}
+{"type": "generation", "t": 1793294432.063, "search": "Portfolio / Equities / Financials", "gen": 2, "incumbent": -0.052875296577606055, "scored": 3, "s": 1.13, "replaced": 38, "stop": false, "seq": 20}
+{"type": "generation", "t": 1793294433.188, "search": "Portfolio / Equities / Financials", "gen": 3, "incumbent": -0.05284329010088514, "scored": 4, "s": 1.13, "replaced": 57, "stop": false, "seq": 21}
+{"type": "generation", "t": 1793294434.314, "search": "Portfolio / Equities / Financials", "gen": 4, "incumbent": -0.05283334252397316, "scored": 5, "s": 1.13, "replaced": 53, "stop": false, "seq": 22}
+{"type": "generation", "t": 1793294435.439, "search": "Portfolio / Equities / Financials", "gen": 5, "incumbent": -0.05284259306911836, "scored": 2, "s": 1.13, "replaced": 43, "stop": false, "seq": 23}
+{"type": "generation", "t": 1793294436.566, "search": "Portfolio / Equities / Financials", "gen": 6, "incumbent": -0.05287032241805818, "scored": 2, "s": 1.13, "replaced": 51, "stop": true, "seq": 24}
+{"type": "search_done", "t": 1793294436.566, "search": "Portfolio / Equities / Financials", "generations": 6, "stopped": "window", "incumbent": -0.05287032241805818, "seq": 25}
+{"type": "search_start", "t": 1793294436.566, "search": "Portfolio / Equities / Other equities", "children": ["FERG", "MNTS"], "seq": 26}
+{"type": "generation", "t": 1793294437.725, "search": "Portfolio / Equities / Other equities", "gen": 1, "incumbent": -0.04685738006878333, "scored": 2, "s": 0.76, "replaced": 40, "stop": false, "seq": 27}
+{"type": "generation", "t": 1793294438.487, "search": "Portfolio / Equities / Other equities", "gen": 2, "incumbent": -0.046830138790341556, "scored": 3, "s": 0.76, "replaced": 27, "stop": false, "seq": 28}
+{"type": "generation", "t": 1793294439.25, "search": "Portfolio / Equities / Other equities", "gen": 3, "incumbent": -0.046833782574945214, "scored": 4, "s": 0.76, "replaced": 33, "stop": false, "seq": 29}
+{"type": "generation", "t": 1793294440.012, "search": "Portfolio / Equities / Other equities", "gen": 4, "incumbent": -0.04686966665165093, "scored": 2, "s": 0.76, "replaced": 24, "stop": false, "seq": 30}
+{"type": "generation", "t": 1793294440.775, "search": "Portfolio / Equities / Other equities", "gen": 5, "incumbent": -0.04688305771893247, "scored": 3, "s": 0.76, "replaced": 28, "stop": false, "seq": 31}
+{"type": "generation", "t": 1793294441.536, "search": "Portfolio / Equities / Other equities", "gen": 6, "incumbent": -0.04690803057784056, "scored": 2, "s": 0.76, "replaced": 24, "stop": true, "seq": 32}
+{"type": "search_done", "t": 1793294441.536, "search": "Portfolio / Equities / Other equities", "generations": 6, "stopped": "window", "incumbent": -0.04690803057784056, "seq": 33}
+{"type": "search_start", "t": 1793294441.536, "search": "Portfolio / Equities", "children": ["Technology", "Financials", "Other equities"], "seq": 34}
+{"type": "generation", "t": 1793294443.24, "search": "Portfolio / Equities", "gen": 1, "incumbent": -0.06871096622778247, "scored": 2, "s": 1.13, "replaced": 66, "stop": false, "seq": 35}
+{"type": "generation", "t": 1793294444.366, "search": "Portfolio / Equities", "gen": 2, "incumbent": -0.0687458454425589, "scored": 2, "s": 1.13, "replaced": 55, "stop": false, "seq": 36}
+{"type": "generation", "t": 1793294445.493, "search": "Portfolio / Equities", "gen": 3, "incumbent": -0.06883436457792602, "scored": 2, "s": 1.13, "replaced": 41, "stop": false, "seq": 37}
+{"type": "generation", "t": 1793294446.621, "search": "Portfolio / Equities", "gen": 4, "incumbent": -0.0688290326597491, "scored": 3, "s": 1.13, "replaced": 58, "stop": false, "seq": 38}
+{"type": "generation", "t": 1793294447.747, "search": "Portfolio / Equities", "gen": 5, "incumbent": -0.06882158624299103, "scored": 4, "s": 1.13, "replaced": 48, "stop": false, "seq": 39}
+{"type": "generation", "t": 1793294448.873, "search": "Portfolio / Equities", "gen": 6, "incumbent": -0.06879586835588501, "scored": 5, "s": 1.13, "replaced": 33, "stop": true, "seq": 40}
+{"type": "search_done", "t": 1793294448.873, "search": "Portfolio / Equities", "generations": 6, "stopped": "window", "incumbent": -0.06879586835588501, "seq": 41}
+{"type": "search_start", "t": 1793294448.873, "search": "Portfolio / Alternatives / Managed futures", "children": ["DBMF", "CTA", "WTMF"], "seq": 42}
+{"type": "generation", "t": 1793294450.578, "search": "Portfolio / Alternatives / Managed futures", "gen": 1, "incumbent": -0.05369234639355812, "scored": 2, "s": 1.13, "replaced": 68, "stop": false, "seq": 43}
+{"type": "generation", "t": 1793294451.703, "search": "Portfolio / Alternatives / Managed futures", "gen": 2, "incumbent": -0.053707275176712796, "scored": 2, "s": 1.13, "replaced": 50, "stop": false, "seq": 44}
+{"type": "generation", "t": 1793294452.829, "search": "Portfolio / Alternatives / Managed futures", "gen": 3, "incumbent": -0.05371078099181137, "scored": 3, "s": 1.13, "replaced": 35, "stop": false, "seq": 45}
+{"type": "generation", "t": 1793294453.955, "search": "Portfolio / Alternatives / Managed futures", "gen": 4, "incumbent": -0.05371710142545763, "scored": 2, "s": 1.13, "replaced": 37, "stop": false, "seq": 46}
+{"type": "generation", "t": 1793294455.081, "search": "Portfolio / Alternatives / Managed futures", "gen": 5, "incumbent": -0.05369874761431017, "scored": 5, "s": 1.13, "replaced": 34, "stop": false, "seq": 47}
+{"type": "generation", "t": 1793294456.207, "search": "Portfolio / Alternatives / Managed futures", "gen": 6, "incumbent": -0.05369542755924581, "scored": 6, "s": 1.13, "replaced": 48, "stop": true, "seq": 48}
+{"type": "search_done", "t": 1793294456.207, "search": "Portfolio / Alternatives / Managed futures", "generations": 6, "stopped": "window", "incumbent": -0.05369542755924581, "seq": 49}
+{"type": "search_start", "t": 1793294456.208, "search": "Portfolio / Alternatives", "children": ["Crypto", "Managed futures"], "seq": 50}
+{"type": "generation", "t": 1793294457.367, "search": "Portfolio / Alternatives", "gen": 1, "incumbent": -0.14497353493044762, "scored": 2, "s": 0.76, "replaced": 28, "stop": false, "seq": 51}
+{"type": "generation", "t": 1793294458.13, "search": "Portfolio / Alternatives", "gen": 2, "incumbent": -0.14498406654769486, "scored": 2, "s": 0.76, "replaced": 15, "stop": false, "seq": 52}
+{"type": "generation", "t": 1793294458.893, "search": "Portfolio / Alternatives", "gen": 3, "incumbent": -0.1449276918797263, "scored": 3, "s": 0.76, "replaced": 10, "stop": false, "seq": 53}
+{"type": "generation", "t": 1793294459.656, "search": "Portfolio / Alternatives", "gen": 4, "incumbent": -0.14492891732248386, "scored": 4, "s": 0.76, "replaced": 20, "stop": false, "seq": 54}
+{"type": "generation", "t": 1793294460.419, "search": "Portfolio / Alternatives", "gen": 5, "incumbent": -0.14504035672410956, "scored": 2, "s": 0.76, "replaced": 22, "stop": false, "seq": 55}
+{"type": "generation", "t": 1793294461.182, "search": "Portfolio / Alternatives", "gen": 6, "incumbent": -0.14503924555550185, "scored": 2, "s": 0.76, "replaced": 32, "stop": true, "seq": 56}
+{"type": "search_done", "t": 1793294461.182, "search": "Portfolio / Alternatives", "generations": 6, "stopped": "window", "incumbent": -0.14503924555550185, "seq": 57}
+{"type": "search_start", "t": 1793294461.182, "search": "Portfolio / Rates & index", "children": ["TLT", "IBHK", "SPY"], "seq": 58}
+{"type": "generation", "t": 1793294462.888, "search": "Portfolio / Rates & index", "gen": 1, "incumbent": -0.0774392625042172, "scored": 2, "s": 1.13, "replaced": 86, "stop": false, "seq": 59}
+{"type": "generation", "t": 1793294464.015, "search": "Portfolio / Rates & index", "gen": 2, "incumbent": -0.08179545838514535, "scored": 2, "s": 1.13, "replaced": 69, "stop": false, "seq": 60}
+{"type": "generation", "t": 1793294465.141, "search": "Portfolio / Rates & index", "gen": 3, "incumbent": -0.08180065911173989, "scored": 2, "s": 1.13, "replaced": 55, "stop": false, "seq": 61}
+{"type": "generation", "t": 1793294466.268, "search": "Portfolio / Rates & index", "gen": 4, "incumbent": -0.08187892139232024, "scored": 2, "s": 1.13, "replaced": 39, "stop": false, "seq": 62}
+{"type": "generation", "t": 1793294467.394, "search": "Portfolio / Rates & index", "gen": 5, "incumbent": -0.081947748729254, "scored": 2, "s": 1.13, "replaced": 30, "stop": false, "seq": 63}
+{"type": "generation", "t": 1793294468.523, "search": "Portfolio / Rates & index", "gen": 6, "incumbent": -0.08189773377289888, "scored": 3, "s": 1.13, "replaced": 12, "stop": false, "seq": 64}
+{"type": "generation", "t": 1793294469.65, "search": "Portfolio / Rates & index", "gen": 7, "incumbent": -0.08189154484874499, "scored": 4, "s": 1.13, "replaced": 3, "stop": true, "seq": 65}
+{"type": "search_done", "t": 1793294469.65, "search": "Portfolio / Rates & index", "generations": 7, "stopped": "window", "incumbent": -0.08189154484874499, "seq": 66}
+{"type": "search_start", "t": 1793294469.65, "search": "Portfolio", "children": ["Equities", "Alternatives", "Rates & index"], "seq": 67}
+{"type": "generation", "t": 1793294471.358, "search": "Portfolio", "gen": 1, "incumbent": -0.08458686314537872, "scored": 2, "s": 1.13, "replaced": 58, "stop": false, "seq": 68}
+{"type": "generation", "t": 1793294472.486, "search": "Portfolio", "gen": 2, "incumbent": -0.08460460563774168, "scored": 3, "s": 1.13, "replaced": 32, "stop": false, "seq": 69}
+{"type": "generation", "t": 1793294473.614, "search": "Portfolio", "gen": 3, "incumbent": -0.0846472877196963, "scored": 2, "s": 1.13, "replaced": 35, "stop": false, "seq": 70}
+{"type": "generation", "t": 1793294474.741, "search": "Portfolio", "gen": 4, "incumbent": -0.0846477347457997, "scored": 2, "s": 1.13, "replaced": 25, "stop": false, "seq": 71}
+{"type": "generation", "t": 1793294475.869, "search": "Portfolio", "gen": 5, "incumbent": -0.08464718810678745, "scored": 3, "s": 1.13, "replaced": 29, "stop": false, "seq": 72}
+{"type": "generation", "t": 1793294476.996, "search": "Portfolio", "gen": 6, "incumbent": -0.08466280757638497, "scored": 2, "s": 1.13, "replaced": 32, "stop": true, "seq": 73}
+{"type": "search_done", "t": 1793294476.996, "search": "Portfolio", "generations": 6, "stopped": "window", "incumbent": -0.08466280757638497, "seq": 74}
+{"type": "stage", "t": 1793294476.996, "stage": "metrics", "seq": 75}
+{"type": "done", "t": 1793294477.316, "out": "<repo>/library/runs/20261029-202008-ef5120/results.json", "wall_s": 67.2, "objective": -0.08466280757638497, "seq": 76}
+{"type": "end", "t": 1793294477.879599, "ended": "2026-10-29T20:21:17", "wall_s": 69.3, "exit": 0, "status": "done", "objective": -0.08466280757638497, "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU", "colab": null, "searches": 8, "seq": 77}

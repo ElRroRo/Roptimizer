@@ -1,0 +1,143 @@
+
+Market data: day cache 2026-10-29 (37 series already cached)
+
+Loading portfolio data...
+Idiosyncratic-jump whitelist (systematic-only assets): ['DBMF', 'CTA', 'WTMF', 'TLT', 'IBHK', 'SPY']
+Fetching historical returns and VIX data...
+
+   [ret_df] Requested period='5y', interval='1wk', mode='max_info'.
+   Per-ticker history coverage:
+     NVDA     obs=  260  2021-11-01 -> 2026-10-19
+     MNTS     obs=  260  2021-11-01 -> 2026-10-19
+     META     obs=  260  2021-11-01 -> 2026-10-19
+     JPM      obs=  260  2021-11-01 -> 2026-10-19
+     GOOGL    obs=  260  2021-11-01 -> 2026-10-19
+     FERG     obs=  260  2021-11-01 -> 2026-10-19
+     BTC=F    obs=  260  2021-11-01 -> 2026-10-19
+     ADBE     obs=  260  2021-11-01 -> 2026-10-19
+     NRIM     obs=  260  2021-11-01 -> 2026-10-19
+     SPGI     obs=  260  2021-11-01 -> 2026-10-19
+     DBMF     obs=  260  2021-11-01 -> 2026-10-19
+     CTA      obs=  241  2022-03-14 -> 2026-10-19
+     WTMF     obs=  260  2021-11-01 -> 2026-10-19
+     TLT      obs=  260  2021-11-01 -> 2026-10-19
+     IBHK     obs=  126  2024-05-27 -> 2026-10-19
+     SPY      obs=  260  2021-11-01 -> 2026-10-19
+Return panel shape (rows x assets): (260, 16)
+
+Fitting GARCH-X and forecasting DCC matrices...
+
+   [GARCH] Volatility model per asset (leverage gate, p < 0.05):
+     NVDA     CONST gamma=+0.137 LR p=0.216  (GARCH fit had no shock response (alpha+gamma/2=1.2e-05): constant variance)
+     MNTS     GJR   gamma=+0.128 LR p=0.021  (asymmetry significant)
+     META     GJR   gamma=+0.053 LR p=0.001  (asymmetry significant)
+     JPM      GJR   gamma=+0.196 LR p=0.002  (asymmetry significant)
+     GOOGL    GJR   gamma=+0.286 LR p=0.030  (asymmetry significant)
+     FERG     CONST gamma=+0.013 LR p=1.000  (GARCH fit had no shock response (alpha+gamma/2=1.9e-10): constant variance)
+     BTC=F    GJR   gamma=+0.019 LR p=0.025  (asymmetry significant)
+     ADBE     GARCH gamma=-0.321 LR p=0.119  (asymmetry not significant)
+     NRIM     CONST gamma=-0.000 LR p=1.000  (GARCH fit had no shock response (alpha+gamma/2=4.7e-18): constant variance)
+     SPGI     GJR   gamma=+0.048 LR p=0.027  (asymmetry significant)
+     DBMF     GARCH gamma=+0.305 LR p=0.163  (asymmetry not significant)
+     CTA      GARCH gamma=-0.226 LR p=0.114  (asymmetry not significant)
+     WTMF     GARCH gamma=+0.010 LR p=0.654  (asymmetry not significant)
+     TLT      GARCH gamma=+0.031 LR p=0.070  (asymmetry not significant)
+     IBHK     GJR   gamma=+0.224 LR p=0.029  (asymmetry significant)
+     SPY      GJR   gamma=+0.201 LR p=0.000  (asymmetry significant)
+   [forecast_dcc] alpha=0.0092 beta=0.9407 (persistence 0.9499, 126 joint weeks)
+   [Heston][POOLED] constant variance, kappa and xi pooled: NVDA, FERG, NRIM
+
+   [Heston] Per-asset CIR variance calibration (weekly units):
+     NVDA     v0=0.00427 theta=0.00427 kappa=0.149 xi=0.0188 rho=+0.00  Feller:ok  [pooled from 13 identified assets (constant variance)]
+     MNTS     v0=0.03176 theta=0.03991 kappa=0.064 xi=0.0362 rho=-0.19  Feller:ok
+     META     v0=0.00351 theta=0.00337 kappa=0.031 xi=0.0054 rho=-0.66  Feller:ok
+     JPM      v0=0.00096 theta=0.00120 kappa=0.178 xi=0.0100 rho=-0.74  Feller:ok
+     GOOGL    v0=0.00289 theta=0.00199 kappa=1.066 xi=0.0131 rho=-0.73  Feller:ok
+     FERG     v0=0.00168 theta=0.00168 kappa=0.149 xi=0.0118 rho=+0.00  Feller:ok  [pooled from 13 identified assets (constant variance)]
+     BTC=F    v0=0.00417 theta=0.00451 kappa=0.014 xi=0.0025 rho=-0.63  Feller:ok
+     ADBE     v0=0.00400 theta=0.00319 kappa=0.956 xi=0.0311 rho=+0.00  Feller:ok
+     NRIM     v0=0.00235 theta=0.00235 kappa=0.149 xi=0.0139 rho=+0.00  Feller:ok  [pooled from 13 identified assets (constant variance)]
+     SPGI     v0=0.00157 theta=0.00138 kappa=0.043 xi=0.0036 rho=-0.64  Feller:ok
+     DBMF     v0=0.00018 theta=0.00024 kappa=0.500 xi=0.0067 rho=+0.00  Feller:ok
+     CTA      v0=0.00054 theta=0.00056 kappa=0.296 xi=0.0091 rho=+0.00  Feller:ok
+     WTMF     v0=0.00010 theta=0.00010 kappa=0.019 xi=0.0002 rho=+0.00  Feller:ok
+     TLT      v0=0.00027 theta=0.00039 kappa=0.026 xi=0.0015 rho=+0.00  Feller:ok
+     IBHK     v0=0.00006 theta=0.00004 kappa=0.285 xi=0.0019 rho=-0.73  Feller:ok
+     SPY      v0=0.00035 theta=0.00051 kappa=0.149 xi=0.0069 rho=-0.67  Feller:ok
+
+   [VIX-theta] Per-asset VIX elasticity gamma (variance ~ VIX^gamma):
+     NVDA     gamma=0.000
+     MNTS     gamma=0.000
+     META     gamma=0.814
+     JPM      gamma=0.995
+     GOOGL    gamma=0.182
+     FERG     gamma=0.000
+     BTC=F    gamma=0.383
+     ADBE     gamma=0.140
+     NRIM     gamma=0.000
+     SPGI     gamma=0.543
+     DBMF     gamma=0.306
+     CTA      gamma=0.000
+     WTMF     gamma=0.491
+     TLT      gamma=0.229
+     IBHK     gamma=0.627
+     SPY      gamma=1.123
+VIX-theta tilt active: VIX_now=16.76 vs median=17.31 (ratio=0.968)
+
+Downloading initial prices...
+Initial Prices: {'NVDA': '213.81', 'MNTS': '2.14', 'META': '623.87', 'JPM': '345.20', 'GOOGL': '285.68', 'FERG': '233.50', 'BTC=F': '80550.00', 'ADBE': '246.81', 'NRIM': '24.32', 'SPGI': '456.46', 'DBMF': '32.72', 'CTA': '29.76', 'WTMF': '39.74', 'TLT': '81.36', 'IBHK': '24.72', 'SPY': '769.58'}
+
+Applying Black-Litterman views...
+  ticker  equilibrium      view  view sd  posterior
+  NVDA         +13.9%    +35.0%    41.0%     +15.4%
+  MNTS         +13.7%   +400.0%    94.0%     +23.6%
+  META          +9.7%    +37.0%    51.0%     +10.8%
+  JPM           +8.6%         -        -      +9.2%
+  GOOGL         +9.8%   +138.0%    40.0%     +11.0%
+  FERG          +9.2%         -        -      +9.8%
+  BTC=F        +38.0%         -        -     +38.7%
+  ADBE         +11.0%    +16.0%    44.3%     +12.1%
+  NRIM         +11.0%    +22.0%    40.0%     +11.6%
+  SPGI         +10.0%    +25.0%    31.0%     +10.7%
+  DBMF          +7.0%         -        -      +7.0%
+  CTA           +8.0%         -        -      +7.7%
+  WTMF          +6.0%         -        -      +6.2%
+  TLT           +5.0%    +10.7%    11.9%      +5.1%
+  IBHK          +7.0%         -        -      +7.2%
+  SPY           +8.6%     +9.1%    19.3%      +9.3%
+Sanitized Weekly Drift range: [0.0010, 0.0063]
+
+Jump database version 2026-10-29 (0 days old)
+Per-asset jump betas and variance co-jumps (S&P surprise days, daily):
+  ticker   normal   crash  (days) source    rally  (days) source   co-jump source 
+  NVDA       1.64    1.72      54 direct     1.67       6 LOWESS      0.36 own    
+  MNTS       1.25    0.91      20 direct     1.17       2 LOWESS      1.59 pooled 
+  META       1.27    1.34      37 direct     1.20       4 LOWESS      0.28 own    
+  JPM        1.30    1.17      80 direct     1.01      23 direct      0.82 own    
+  GOOGL      1.02    1.10      49 direct     0.92       4 LOWESS      0.25 own    
+  FERG       0.37    0.42      43 direct     0.31       4 LOWESS      0.19 own    
+  BTC=F      0.94    0.82      25 direct     0.94       2 normal      1.59 pooled 
+  ADBE       1.30    1.22      76 direct     1.42      12 direct      0.23 own    
+  NRIM       0.44    0.50      67 direct     0.37       8 LOWESS      0.53 own    
+  SPGI       0.92    0.98      84 direct     0.81      26 direct      0.57 own    
+  DBMF       0.12    0.34      22 direct     0.12       2 normal      1.59 pooled 
+  CTA       -0.17    0.17      11 direct    -0.17       2 normal      1.59 pooled 
+  WTMF       0.06    0.12      42 direct     0.06       4 normal      0.07 own    
+  TLT       -0.23   -0.28      49 direct    -0.23       4 normal      0.26 own    
+  IBHK       0.24    0.24       9 normal     0.24       1 normal      1.59 pooled 
+  SPY        1.00    1.01      65 direct     1.00       6 normal      3.67 own    
+S&P weekly volatility over the horizon: 1.50% -> 1.87%
+Risk-free rate (^TNX): 4.991%
+[mso] A100 job mso-20261029-185302-756c26: payload 161 KiB; balance 190.40 CU (plain A100 bills 5.3 CU/h)
+
+[colab] A new version of Colab CLI is available: 0.7.5 (current: 0.7.4)
+[colab] Run 'colab update' to update.
+[colab] To silence this check, set "enable_update_check": false in ~/.config/colab-cli/settings.json
+
+[colab] Creating session 'mso-20261029-185302-756c26'...
+[colab] Session READY (mso-20261029-185302-756c26). Executing /tmp/mso-20261029-185302-756c26-157e_ra4/job.py...
+[job] started on the VM at 2026-10-29 15:53:52
+[job] GPU: NVIDIA A100-SXM4-40GB, 40960 MiB
+[job] pip install arch: 2.1 s, exit 0
+[job] run 1/1: run --snapshot inputs.json --tree portfolio.json --machine local --profile a100 --out result.json --seed 20261029 --validation 0.1 --rescore-reps 5
+[mso] local run on NVIDIA A100-SXM4-40GB, seed 20261029

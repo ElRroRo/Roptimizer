@@ -1,0 +1,29 @@
+{
+ "id": "20261029-214241-503679",
+ "portfolio_id": "e9fdb039c9d3",
+ "portfolio_name": "Test: 25 US assets, 4 levels",
+ "portfolio_version": 1,
+ "machine": "a100",
+ "status": "done",
+ "queued": "2026-10-29T21:42:41",
+ "settings": {},
+ "started": "2026-10-29T21:42:41",
+ "pid": 83100,
+ "ended": "2026-10-29T21:45:40",
+ "wall_s": 179.3,
+ "exit": 0,
+ "objective": -0.0492408492476071,
+ "gpu": "NVIDIA A100-SXM4-40GB",
+ "colab": {
+  "session": "mso-20261029-214241-503679",
+  "exit": 0,
+  "wall_s": 173.6,
+  "balance_before": 190.26,
+  "balance_after": 190.03,
+  "cu_measured": 0.23,
+  "cu_note": null,
+  "cu_at_rate": 0.26
+ },
+ "searches": 14,
+ "sessions_stopped_after": []
+}

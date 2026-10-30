@@ -1,0 +1,29 @@
+{
+ "id": "20261029-202414-4acd69",
+ "portfolio_id": "05e04365dd32",
+ "portfolio_name": "Built by hand (slice 4 test)",
+ "portfolio_version": 2,
+ "machine": "a100",
+ "status": "done",
+ "queued": "2026-10-29T20:24:14",
+ "settings": {},
+ "started": "2026-10-29T20:24:14",
+ "pid": 71890,
+ "ended": "2026-10-29T20:25:47",
+ "wall_s": 92.7,
+ "exit": 0,
+ "objective": 0.05825772905389434,
+ "gpu": "NVIDIA A100-SXM4-40GB",
+ "colab": {
+  "session": "mso-20261029-202414-4acd69",
+  "exit": 0,
+  "wall_s": 45.7,
+  "balance_before": 190.4,
+  "balance_after": 190.4,
+  "cu_measured": null,
+  "cu_note": "Colab had not updated the balance yet; see cu_at_rate",
+  "cu_at_rate": 0.07
+ },
+ "searches": 2,
+ "sessions_stopped_after": []
+}

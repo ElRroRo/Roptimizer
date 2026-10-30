@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="design-allow" content="mono: owner FUI brief, mono panel labels and tickers; micro-label: owner FUI brief, panel labels; hairline: panel frames; outlined-box: the wall of framed panels is the direction, same as the analysis room"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Run Results</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="results.css"></head>
+<body>
+<div class="top"><h1>Run results</h1>
+  <div class="tabs" role="tablist" aria-label="Views">
+    <button role="tab" type="button" data-v="progress">Progress</button><button role="tab" type="button" data-v="results">Results</button><button role="tab" type="button" data-v="builder">Builder</button><button role="tab" type="button" data-v="compare">Compare</button><button role="tab" type="button" data-v="diag">Diagnostics</button></div>
+  <span class="meta" id="meta"></span><span class="sp"></span>
+  <a class="q" href="setup.html" style="text-decoration:none">Setup</a><a class="q" id="to-builder" href="builder.html" style="text-decoration:none">Edit portfolio</a><a class="q" id="to-jump" href="jumpdb.html" style="text-decoration:none">Jump data</a><button class="q" type="button" data-x="xlsx">Excel</button><button class="q" type="button" data-x="pdf">PDF</button><button class="q" type="button" data-x="csv">Builder CSV</button></div>
+
+<div class="wall" id="v-progress" hidden>
+  <section class="panel"><div class="ph"><b>Searches</b><span>one bar per search, inside out; a tick per generation, length = time it took</span></div><div class="pb" id="p-gantt"></div></section>
+  <section class="panel"><div class="ph"><b>Run</b><span id="prog-sub"></span></div><div class="pb scroll" id="p-run"></div></section>
+</div>
+<div class="wall" id="v-results"></div>
+<div class="wall" id="v-builder" hidden>
+  <section class="panel p-orders"><div class="ph"><b>Orders</b><span>shares rounded down to two decimals, so the total never exceeds the budget</span></div><div class="pb scroll" id="p-orders"></div></section>
+  <section class="panel p-money" style="grid-template-rows: 28px auto"><div class="ph"><b>Where the money goes</b><span>dollars by subportfolio, and what is left over</span></div><div class="pb" id="p-money"></div></section>
+</div>
+<div class="wall" id="v-compare" hidden>
+  <section class="panel p-ctab"><div class="ph"><b>Change</b><span id="cmp-sub"></span></div><div class="pb scroll" id="p-ctab"></div></section>
+  <section class="panel" style="grid-template-rows: 28px auto"><div class="ph"><b>What changed</b><span>between the two runs' inputs</span></div><div class="pb" id="p-changed"></div></section>
+  <section class="panel"><div class="ph"><b>Outcome fans</b><span>both runs, 5–95th percentiles</span><span class="for" data-for></span></div><div class="pb" id="p-cfan"></div></section>
+</div>
+<div class="wall" id="v-diag" hidden>
+  <section class="panel"><div class="ph"><b>Posterior vs simulated</b><span>12-week mean per asset; the simulation should hit the posterior</span></div><div class="pb" id="p-post"></div></section>
+  <section class="panel"><div class="ph"><b>Search histories</b><span>best score by generation; stop when it gains under 0.0002 in 5</span></div><div class="pb" id="p-hist"></div></section>
+  <section class="panel"><div class="ph"><b>Crash betas</b><span>surprise-day β and how it was estimated</span></div><div class="pb scroll" id="p-betas"></div></section>
+  <section class="panel"><div class="ph"><b>Simulated vs history</b><span>12-week returns: simulation (fill) vs 5 years of history (line)</span></div><div class="pb" id="p-sim"></div></section>
+  <section class="panel"><div class="ph"><b>Volatility model</b><span>Heston per asset, long-run vol √θ·√52 and vol of vol ξ</span></div><div class="pb scroll" id="p-heston"></div></section>
+  <section class="panel"><div class="ph"><b>Jumps</b><span>systematic and idiosyncratic, from the jump calibration</span></div><div class="pb scroll" id="p-jumps"></div></section>
+</div>
+<div class="foot" id="note"></div>
+<div class="tip" id="tip"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="live.js"></script>
+<script src="common2.js"></script>
+<script src="results-live.js"></script>
+<script src="results.js"></script>
+<script src="room.js"></script>
+<script src="charts.js"></script>
+<script src="variants.js"></script>
+<script src="progress-live.js"></script>
+<script>// Jump data keeps this run and portfolio, so its back links return here
+(() => { const pid = encodeURIComponent(LIVE.portfolio.id), run = LIVE.run ? `&run=${encodeURIComponent(LIVE.run.id)}` : "";
+  document.getElementById("to-builder").href = `builder.html?p=${pid}`;
+  document.getElementById("to-jump").href = `jumpdb.html?p=${pid}${run}`; })();</script>
+</body></html>

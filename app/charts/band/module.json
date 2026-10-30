@@ -1,0 +1,7 @@
+{
+  "name": "band",
+  "title": "Sensitivity band",
+  "description": "Each part's share of its parent with the 10th-90th percentile range over K repeats of its search, posterior returns drawn from the Black-Litterman posterior (#6). Follows the selected subportfolio.",
+  "needs": ["rows[].share", "rows[].band.p10", "rows[].band.p90", "rows[].band.sd", "rows[].band.k"],
+  "follows": true
+}

@@ -1,0 +1,56 @@
+{
+ "what": "Reference answer for v5.0: the fixed v4.1 optimizer (commit d731e48) at production settings on the frozen inputs in inputs.json",
+ "inputs": "benchmarks/reference/inputs.json",
+ "engine_commit": "d731e48",
+ "snapshot": {
+  "created": "2026-10-27T17:25:46",
+  "last_return_week": "2026-10-19",
+  "assets": 16
+ },
+ "hardware": "NVIDIA A100-SXM4-40GB",
+ "settings": {
+  "paths_per_evaluation": 3000000,
+  "generations": 15,
+  "popsize": 30,
+  "seed": 20261027,
+  "evaluations": 7680
+ },
+ "weights": {
+  "NVDA": 0.037099,
+  "MNTS": 0.008144,
+  "META": 0.007376,
+  "JPM": 0.033155,
+  "GOOGL": 0.012384,
+  "FERG": 0.032283,
+  "BTC=F": 0.272432,
+  "ADBE": 0.005647,
+  "NRIM": 0.022678,
+  "SPGI": 0.047769,
+  "DBMF": 0.100046,
+  "CTA": 0.10625,
+  "WTMF": 0.082548,
+  "TLT": 0.019356,
+  "IBHK": 0.13814,
+  "SPY": 0.074693
+ },
+ "metrics_12w": {
+  "expected_return": 0.03526144009185518,
+  "volatility": 0.09602645871634438,
+  "cvar_5pct": -0.16686736615406086,
+  "cdar_5pct": -0.20791344344615936,
+  "starr": 0.14344521246102762,
+  "report_paths": 250000
+ },
+ "objective": {
+  "at_optimum_during_run": -0.08826204245446449,
+  "rescored_10M_paths": [
+   -0.08833226201175057,
+   -0.08828606332130949,
+   -0.08836675579805071
+  ],
+  "rescored_mean": -0.08832836037703691,
+  "rescored_sd": 4.0487479740498047e-05
+ },
+ "check": "posterior +0.0353 vs simulated mean +0.0352, gap -0.2 standard errors (OK)",
+ "how_to_compare": "score a v5.0 answer with bench.py's objective on inputs.json at 10M paths; the DE optimum itself is one seeded draw, not a unique point"
+}

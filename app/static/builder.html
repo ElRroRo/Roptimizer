@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="design-allow" content="mono: owner FUI brief, mono panel labels; micro-label: owner FUI brief, panel labels; hairline: panel frames; donut: d3.arc draws hit wedges and the radial level bands of the tree, never a pie of shares; outlined-box: framed panels are the direction, same as the analysis room"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Roptimizer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="builder.css">
+<style>
+/* Round 8: radial map variations. Group colours come from the shared fixed list in builder-core.js. */
+/* Round 6 map: a canvas bigger than the screen, moved in both directions, with instrument cards and a minimap. */
+#canvas { overflow: hidden; cursor: grab; }
+body.panning, body.panning * { cursor: grabbing !important; user-select: none; }
+#canvas svg rect.card { fill: color-mix(in oklab, var(--c) 9%, var(--panel-2)); stroke: var(--frame-2); stroke-width: 1; cursor: pointer; }
+#canvas svg rect.card:hover { fill: color-mix(in oklab, var(--c) 16%, var(--panel-2)); }
+#canvas svg rect.card.on { stroke: var(--att); stroke-width: 2; }
+#canvas svg rect.card.slot { fill: color-mix(in oklab, var(--c) 5%, var(--panel)); stroke: color-mix(in oklab, var(--c) 55%, var(--frame-2)); stroke-dasharray: 7 5; }
+#canvas svg rect.card.slot.on { stroke: var(--att); }
+svg text.big { font-size: 14px; }
+.mini { position: absolute; right: 10px; bottom: 10px; padding: 6px; background: color-mix(in oklab, var(--bg) 85%, transparent); border: 1px solid var(--frame-2); border-radius: 3px; cursor: pointer; }
+.mini svg { display: block; }
+.mini .vp { fill: color-mix(in oklab, var(--ink) 8%, transparent); stroke: var(--ink-2); stroke-width: 1; }
+.zoom { position: absolute; right: 12px; top: 8px; color: var(--mute); font-size: 11.5px; }
+.tip { position: fixed; pointer-events: none; background: var(--panel-2); border: 1px solid var(--frame-2); padding: 6px 9px; font-size: 12px; display: none; z-index: 60; line-height: 1.5; max-width: 320px; }
+.tip b { font-weight: 600; }/* Round 6 radial builders: every level of the tree is a ring, a subportfolio an arc on it, named along the arc.
+   Numbers live on hover and in the editor; the canvas carries structure, limits (line width) and views. */
+
+svg text.arcl { font-size: 12px; }
+svg text.arcl .lim { fill: var(--ink-2); font-weight: 400; font-size: 11px; }
+svg text.arcl.sel { fill: var(--att); }
+#canvas svg path.band { fill: color-mix(in oklab, var(--c) 30%, var(--panel)); stroke: var(--panel); stroke-width: 1.5; cursor: pointer; }
+#canvas svg path.band:hover { fill: color-mix(in oklab, var(--c) 42%, var(--panel)); }
+#canvas svg path.band.on, #canvas svg path.band.target { stroke: var(--att); stroke-width: 2.5; }
+#canvas svg path.ghit.target { stroke: color-mix(in oklab, var(--att) 35%, transparent) !important; }
+.tip { position: fixed; pointer-events: none; background: var(--panel-2); border: 1px solid var(--frame-2); padding: 6px 9px; font-size: 12px; display: none; z-index: 60; line-height: 1.5; max-width: 320px; }
+.tip b { font-weight: 600; }
+svg text.arcl { font-size: 16px; } svg text.arcl .lim { font-size: 14px; }
+.preset { color: var(--ink-2); font-size: 12px; display: inline-flex; align-items: center; gap: 6px; flex: none; }
+.preset select { font: 500 12px var(--sans); color: var(--ink); background: var(--panel-2); border: 1px solid var(--frame-2); border-radius: 3px; padding: 2px 5px; }
+</style>
+<link rel="stylesheet" href="review.css">
+<link rel="stylesheet" href="review-wall.css"></head>
+<body>
+<div class="top"><h1>Build the portfolio</h1><span class="meta" id="meta"></span><span class="state" id="state"></span><span class="sp"></span>
+  <a class="q" href="setup.html" style="text-decoration:none">Setup</a><button class="q" id="addg" type="button">Add subportfolio</button><button class="q" id="adda" type="button">Add asset</button><button class="q" id="undo" type="button" disabled>Undo</button><button id="review" type="button">Review and run</button></div>
+<div class="main">
+  <section class="panel tree"><div class="ph"><b>Tree</b><span id="tree-sub">line width = the most of the portfolio a branch can take under its limits</span><button class="act" id="foldall" type="button">Collapse all</button></div>
+    <div class="pb" id="canvas" tabindex="0" aria-label="Portfolio tree. Arrows move, Tab and Shift-Tab indent, Alt-Up and Alt-Down reorder, Delete removes"></div>
+    <div class="checks" id="checks"></div></section>
+  <section class="panel"><div class="ph"><b>Edit</b><span id="insp-sub"></span></div><div class="pb" id="insp"></div></section>
+</div>
+<div class="foot" id="note"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="live.js"></script>
+<script src="common2.js"></script>
+<div class="tip" id="tip"></div>
+<script>
+const LAYOUT = "focus";
+// ---- Round 7: the map (round 6's 8/10) in three layouts. A canvas bigger than the screen, moved in both
+// directions: drag the background to pan, wheel to zoom, minimap to jump, double-click to fit. Assets are
+// instrument cards: the price, the view's cone and the equilibrium cone. Zoomed out, cards drop their small text
+// and keep the chart (semantic zoom). LAYOUT "lr": tree left, cards in a column. "td": tree from the top, cards
+// in a row. "radial": the tree as level bands in the centre, cards on an orbit around it.
+const CARD = { w: 236, h: 136 }, VIEW = { k: 0.85, tx: 0, ty: 0, init: false }, RADIAL = ["radial", "ellipse", "focus"].includes(LAYOUT), TD = LAYOUT === "td";
+// "ellipse": the orbit stretched to the screen's shape. "focus": clicking a subportfolio swings it to the top and zooms
+// to its cards (a moment the user asked for; everything else keeps still).
+const ELLIPSE = LAYOUT === "ellipse", FOCUS = LAYOUT === "focus", FOCUS_STATE = { id: null, anim: null };
+let ROT = 0;
+const TWO_PI = 2 * Math.PI, wrap = (a) => ((a % TWO_PI) + TWO_PI) % TWO_PI, within = (a, lo, hi) => wrap(a - lo) <= hi - lo;
+const real = (n) => (n.kind === "slot" ? n.of : n);   // an empty subportfolio's placeholder stands for the subportfolio
+const short = (n) => limitLabel(n).replace(/ of [^,]+/g, "").replace(/^at most /, "≤ ").replace(/^at least /, "≥ ");
+function layout() {
+  const root = d3.hierarchy(ROOT, (n) => (n.kind === "group" && n.open ? (n.children.length ? n.children : n === ROOT ? null : [{ id: n.id + "~slot", kind: "slot", of: n }]) : null)), Hh = Math.max(1, root.height);
+  const leaves = root.leaves();
+  if (RADIAL) {   // cards evenly round an orbit big enough to keep them apart; levels as bands inside it
+    const step = TWO_PI / Math.max(1, leaves.length), R = Math.max(560, (CARD.w + (ELLIPSE ? 52 : 22)) / step);   // cards side by side at the top and bottom must not touch
+    const Rx = R, Ry = ELLIPSE ? Math.max(R * 0.68, (CARD.h + 24) / step) : R;   // the ellipse keeps cards at the sides and diagonals apart too
+    leaves.forEach((d, i) => { d.a = step * (i + 0.5) + ROT; });
+    root.eachAfter((d) => { if (d.children) { d.lo = d.children[0].lo ?? d.children[0].a; d.hi = d.children[d.children.length - 1].hi ?? d.children[d.children.length - 1].a; d.a = (d.lo + d.hi) / 2; } });
+    const rIn = Ry - CARD.h * 0.9 - 40, rad = (k) => (k === 0 ? 0 : rIn * (0.32 + (0.68 * (k - 1)) / Math.max(1, Hh - 1)));
+    root.each((d) => { if (d.children) { d.r = rad(d.depth); d.wx = d.r * Math.sin(d.a); d.wy = -d.r * Math.cos(d.a); } else { d.r = R; const cx = Rx * Math.sin(d.a), cy = -Ry * Math.cos(d.a); d.cx = cx - CARD.w / 2; d.cy = cy - CARD.h / 2; d.wx = cx; d.wy = cy; d.ax = rIn * Math.sin(d.a); d.ay = -rIn * Math.cos(d.a); } });
+    Object.assign(root, { R, Rx, Ry, rIn, step });
+  } else if (TD) {
+    d3.cluster().nodeSize([CARD.w + 26, 1]).separation((a, b) => (a.parent === b.parent ? 1 : 1.15))(root);
+    root.each((d) => { if (d.children) { d.wx = d.x; d.wy = d.depth * 150; } else { d.cx = d.x - CARD.w / 2; d.cy = Hh * 150 + 40; d.wx = d.x; d.wy = d.cy; d.ax = d.x; d.ay = d.cy; } });
+  } else {
+    d3.cluster().nodeSize([CARD.h + 22, 1]).separation((a, b) => (a.parent === b.parent ? 1 : 1.2))(root);
+    root.each((d) => { if (d.children) { d.wx = d.depth * 230; d.wy = d.x; } else { d.cx = Hh * 230 + 40; d.cy = d.x - CARD.h / 2; d.wx = d.cx; d.wy = d.x; d.ax = d.cx; d.ay = d.x; } });
+  }
+  const all = root.descendants(), xs = all.flatMap((d) => (d.children ? [d.wx - 40, d.wx + 160] : [d.cx, d.cx + CARD.w])), ys = all.flatMap((d) => (d.children ? [d.wy - 40, d.wy + 40] : [d.cy, d.cy + CARD.h]));
+  root.box = { x0: d3.min(xs) - 30, y0: d3.min(ys) - 30, x1: d3.max(xs) + 30, y1: d3.max(ys) + 30 };
+  return root;
+}
+function card(n, x, y, c, on, compact) {
+  if (n.kind === "slot") { const g = n.of, gc = colorOf(g);   // a dashed place on the orbit: drop or add assets here
+    return `<rect class="hit card slot${sel === g.id ? " on" : ""}" data-gid="${g.id}" data-label="${esc(g.name)}" x="${x}" y="${y}" width="${CARD.w}" height="${CARD.h}" rx="4" style="--c:${gc}"/>`
+      + `<text class="gl big" x="${x + CARD.w / 2}" y="${y + CARD.h / 2 - 6}" text-anchor="middle" style="fill:color-mix(in oklab, ${gc} 70%, white)">${esc(g.name)} is empty</text><text class="mu" x="${x + CARD.w / 2}" y="${y + CARD.h / 2 + 16}" text-anchor="middle" style="font-size:${compact ? 18 : 12}px">add an asset, or drag one here</text>`; }
+  let s = `<rect class="hit card${on ? " on" : ""}" data-id="${n.id}" data-label="${esc(label(n))}" x="${x}" y="${y}" width="${CARD.w}" height="${CARD.h}" rx="4" style="--c:${c}"/>`;
+  if (n.kind === "group") return s + `<text class="gl big" x="${x + 14}" y="${y + 26}">${esc(n.name)}</text><text class="mu" x="${x + 14}" y="${y + 46}">${n.children.length ? `${countAssets(n)} assets folded` : "empty"}</text>`;
+  const tc = on ? "var(--att)" : `color-mix(in oklab, ${c} 70%, white)`;
+  if (compact) return s + `<text class="tk" x="${x + 12}" y="${y + 30}" style="font-size:24px;fill:${tc}">${esc(n.t || "new")}</text><g transform="translate(${x + 8},${y + 40})">${cone(n, CARD.w - 16, CARD.h - 48, c)}</g>`;
+  const m = modelOf(n), r = retOf(n), T = target(n), E = eqBand(n), a = Math.max(0, Math.min(1, n._eff[0])), b = Math.max(0, Math.min(1, n._eff[1]));
+  s += `<text class="tk" x="${x + 12}" y="${y + 20}" style="font-size:13px;fill:${tc}">${esc(n.t || "new asset")}</text>`;
+  s += `<text class="mu" x="${x + CARD.w - 10}" y="${y + 20}" text-anchor="end">${priceOf(n) == null ? "no price" : money(priceOf(n))}${T != null ? ` → ${money(T)}` : ""}</text>`;
+  s += `<g transform="translate(${x + 8},${y + 28})">${cone(n, CARD.w - 16, 68, c)}</g>`;
+  s += `<text x="${x + 12}" y="${y + 116}" class="${m ? "" : r != null ? "bad" : ""}" style="font-size:13px;font-weight:600">${m ? `${pct(m.mean, 1, true)} <tspan class="mu" style="font-weight:400">± ${pts(m.sd)}</tspan>` : r != null ? "needs − / +" : E ? `${pct(E.m, 1, true)} <tspan class="mu" style="font-weight:400">± ${pts(E.sd)} equilibrium</tspan>` : "no view"}</text>`;
+  s += `<line x1="${x + 12}" x2="${x + CARD.w - 12}" y1="${y + 127}" y2="${y + 127}" stroke="var(--frame-2)" stroke-width="3" stroke-linecap="round"/><line x1="${x + 12 + a * (CARD.w - 24)}" x2="${x + 12 + Math.max(b, a + 0.012) * (CARD.w - 24)}" y1="${y + 127}" y2="${y + 127}" stroke="${c}" stroke-width="3" stroke-linecap="round"/>`;
+  return s;
+}
+const dim = (n) => { if (!FOCUS || !FOCUS_STATE.id) return ""; const f = find(FOCUS_STATE.id); return f && isAncestor(f, real(n)) ? "" : ' opacity="0.32"'; };
+function drawTree() {
+  const host = $("#canvas"), W = host.clientWidth, H = host.clientHeight, root = layout(), all = root.descendants(), bx = root.box, ww = bx.x1 - bx.x0, wh = bx.y1 - bx.y0;
+  if (!VIEW.init) {
+    if (RADIAL) { VIEW.k = Math.min(0.9, (H - 20) / wh, (W - 20) / ww); VIEW.tx = W / 2; VIEW.ty = H / 2; }
+    else if (TD) { VIEW.k = 0.85; VIEW.tx = W / 2 - root.wx * VIEW.k; VIEW.ty = 30 - bx.y0 * VIEW.k; }
+    else { VIEW.k = 0.85; VIEW.tx = 24 - bx.x0 * VIEW.k; VIEW.ty = H / 2 - root.wy * VIEW.k; }
+    VIEW.init = true; drawTree.lastSel = sel;
+  }
+  const lit = new Set(); { let p = sel && find(sel); while (p) { lit.add(p.id); p = parentOf(p); } }
+  const compact = VIEW.k < 0.6, lw = (n) => (1 + 7 * Math.sqrt(Math.max(0, real(n)._eff[1]))).toFixed(2), lc = (n) => (lit.has(real(n).id) ? "var(--att)" : `color-mix(in oklab, ${colorOf(real(n))} 60%, var(--panel))`);
+  let s = `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}"><g transform="translate(${VIEW.tx},${VIEW.ty}) scale(${VIEW.k})">`, defs = "";
+  if (RADIAL) {
+    const step = root.step;
+    // level bands: each subportfolio a band on its level, named along it; members connect outward
+    all.forEach((d) => { if (!d.children || d.data === ROOT) return; const n = d.data, c = colorOf(n), a0 = d.lo - step * 0.42, a1 = d.hi + step * 0.42, on = n.id === sel;
+      const arc = d3.arc().innerRadius(d.r - 13).outerRadius(d.r + 13).startAngle(a0).endAngle(a1)();
+      s += `<path class="hit ghit band${on ? " on" : ""}" data-gid="${n.id}" data-label="${esc(n.name)}" d="${arc}" style="--c:${c}"${dim(n)}/>`;
+      const L = short(n), text = n.name + (L ? "  " + L : ""), rev = wrap(d.a) > Math.PI / 2 && wrap(d.a) < 1.5 * Math.PI, rt = d.r + (rev ? 4.5 : -4.5) + 0;
+      if (d.r * (a1 - a0) > text.length * 7) { const P = (a, r) => [r * Math.sin(a), -r * Math.cos(a)], [x0, y0] = P(rev ? a1 : a0, rt), [x1, y1] = P(rev ? a0 : a1, rt);
+        defs += `<path id="t${n.id}" d="M${x0},${y0} A${rt},${rt} 0 ${a1 - a0 > Math.PI ? 1 : 0} ${rev ? 0 : 1} ${x1},${y1}"/>`;
+        s += `<text class="gl arcl${on ? " sel" : ""}"><textPath href="#t${n.id}" startOffset="50%" text-anchor="middle">${esc(n.name)}${L ? `<tspan class="lim"> ${L}</tspan>` : ""}</textPath></text>`; }
+    });
+    all.forEach((d) => { if (!d.children && d.parent) { const n = d.data, L = Math.hypot(d.wx, d.wy), ux = d.wx / L, uy = d.wy / L, t = Math.min(CARD.w / 2 / Math.max(1e-6, Math.abs(ux)), CARD.h / 2 / Math.max(1e-6, Math.abs(uy))) + 4;
+      const ox = d.wx - ux * t, oy = d.wy - uy * t, pr = d.parent, px = (pr.r + 13) * Math.sin(d.a), py = -(pr.r + 13) * Math.cos(d.a);
+      s += `<line x1="${px}" y1="${py}" x2="${ox}" y2="${oy}" stroke="${lc(n)}" stroke-width="${lw(n)}" stroke-linecap="round"${dim(n)}/>`; } });
+    all.forEach((d) => { if (d.children && d.data !== ROOT) d.children.forEach((k) => { if (!k.children) return; const n = k.data, px = (d.r + 13) * Math.sin(k.a), py = -(d.r + 13) * Math.cos(k.a), qx = (k.r - 13) * Math.sin(k.a), qy = -(k.r - 13) * Math.cos(k.a);
+      s += `<line x1="${px}" y1="${py}" x2="${qx}" y2="${qy}" stroke="${lc(n)}" stroke-width="${lw(n)}" stroke-linecap="round"/>`; }); });
+    root.children?.forEach((k) => { const n = k.data, qx = (k.r - 13) * Math.sin(k.a), qy = -(k.r - 13) * Math.cos(k.a); s += `<line x1="0" y1="0" x2="${qx}" y2="${qy}" stroke="${lc(n)}" stroke-width="${lw(n)}" stroke-linecap="round"/>`; });
+    s += `<circle class="ring" data-gid="${ROOT.id}" data-label="${esc(ROOT.name)}" cx="0" cy="0" r="11" fill="var(--panel)" stroke="${sel === ROOT.id ? "var(--att)" : "var(--ink-2)"}" stroke-width="2.5"/><text class="gl big" x="0" y="30" text-anchor="middle">${esc(ROOT.name)}</text>`;
+  } else {
+    root.links().forEach(({ source: a, target: b }) => { const n = b.data, bx2 = b.children ? b.wx : b.ax, by2 = b.children ? b.wy : b.ay;
+      if (TD) { const ym = a.wy + 75, sg = Math.sign(bx2 - a.wx), rr = Math.min(12, Math.abs(bx2 - a.wx));
+        s += `<path d="M${a.wx},${a.wy + 10} V${ym - rr} Q${a.wx},${ym} ${a.wx + sg * rr},${ym} H${bx2 - sg * rr} Q${bx2},${ym} ${bx2},${ym + rr} V${b.children ? by2 - 10 : by2}" fill="none" stroke="${lc(n)}" stroke-width="${lw(n)}" stroke-linejoin="round"/>`; }
+      else { const xm = a.wx + 120, sg = Math.sign(by2 - a.wy), rr = Math.min(12, Math.abs(by2 - a.wy));
+        s += `<path d="M${a.wx + 10},${a.wy} H${xm - rr} Q${xm},${a.wy} ${xm},${a.wy + sg * rr} V${by2 - sg * rr} Q${xm},${by2} ${xm + rr},${by2} H${b.children ? bx2 - 10 : bx2}" fill="none" stroke="${lc(n)}" stroke-width="${lw(n)}" stroke-linejoin="round"/>`; } });
+    all.forEach((d) => { if (!d.children && d.data !== ROOT) return; const n = d.data, c = colorOf(n), on = n.id === sel, L = short(n);
+      s += `<rect class="hit ghit" data-gid="${n.id}" data-label="${esc(n.name)}" x="${d.wx - 16}" y="${d.wy - 36}" width="${Math.max(120, 30 + n.name.length * 9)}" height="${L ? 64 : 52}"/>`;
+      s += `<circle class="ring" data-gid="${n.id}" data-label="${esc(n.name)}" cx="${d.wx}" cy="${d.wy}" r="${n === ROOT ? 11 : 9}" fill="var(--panel)" stroke="${on ? "var(--att)" : n === ROOT ? "var(--ink-2)" : c}" stroke-width="2.5"/>`;
+      s += `<text class="gl big" x="${d.wx + (TD ? 16 : -4)}" y="${d.wy + (TD ? 5 : -18)}" style="${on ? "fill:var(--att)" : ""}">${esc(n.name)}</text>${L ? `<text class="gs" x="${d.wx + (TD ? 16 : -4)}" y="${d.wy + (TD ? 21 : 28)}">${L}</text>` : ""}`; });
+  }
+  // the cards
+  all.forEach((d) => { if (d.children || d.data === ROOT) return; const n = d.data, src = drag?.on && drag.id === n.id ? ' opacity="0.35"' : "";
+    s += `<g${src}${dim(n)}>${card(n, d.cx, d.cy, colorOf(real(n)), n.id === sel, compact)}</g>`; });
+  if (drag?.on && drag.ins) s += `<line class="ins" x1="${drag.ins.x1}" y1="${drag.ins.y1}" x2="${drag.ins.x2}" y2="${drag.ins.y2}" stroke-width="${3 / VIEW.k}"/>`;
+  s = s.replace("<svg ", "<svg ") + `</g></svg>`;
+  if (defs) s = s.replace("><g transform", `><defs>${defs}</defs><g transform`);
+  // the minimap
+  const mk = Math.min(170 / ww, 130 / wh), mw = ww * mk, mh = wh * mk, M = (x, y) => [(x - bx.x0) * mk, (y - bx.y0) * mk];
+  let mm = `<div class="mini" style="width:${mw + 12}px;height:${mh + 12}px"><svg width="${mw}" height="${mh}" viewBox="0 0 ${mw} ${mh}">`;
+  all.forEach((d) => { if (d.children || d.data === ROOT) return; const [x, y] = M(d.cx, d.cy); mm += `<rect x="${x}" y="${y}" width="${CARD.w * mk}" height="${CARD.h * mk}" fill="${d.data.id === sel ? "var(--att)" : `color-mix(in oklab, ${colorOf(d.data)} 50%, var(--panel))`}"/>`; });
+  all.forEach((d) => { if (!d.children) return; const [x, y] = M(d.wx, d.wy); mm += `<circle cx="${x}" cy="${y}" r="1.8" fill="${colorOf(d.data)}"/>`; });
+  const [vx, vy] = M(-VIEW.tx / VIEW.k, -VIEW.ty / VIEW.k); mm += `<rect class="vp" x="${vx}" y="${vy}" width="${(W / VIEW.k) * mk}" height="${(H / VIEW.k) * mk}"/></svg></div>`;
+  host.innerHTML = s + mm + `<div class="zoom">${Math.round(VIEW.k * 100)}%${compact ? ", charts only" : ""}</div>`;
+  if (drag?.on && drag.into) host.querySelector(`[data-gid="${drag.into}"]`)?.classList.add("target");
+  drawTree.geo = { root, all: all.map((d) => ({ id: d.data.id, card: !d.children && d.data !== ROOT, x: d.wx, y: d.wy, cx: d.cx, cy: d.cy, a: d.a, r: d.r, lo: d.lo, hi: d.hi })), mk, bx };
+  if (FOCUS && !drag?.on && !FOCUS_STATE.anim) {
+    const f = sel && find(sel), cur0 = FOCUS_STATE.id && find(FOCUS_STATE.id), sig = all.filter((d) => !d.children).map((d) => d.data.id).join();
+    let want = cur0 ? cur0.id : null;
+    if (!f || f === ROOT) want = null;
+    else if (f.kind === "group") want = f.children.length ? f.id : parentOf(f) === ROOT ? f.id : parentOf(f).id;
+    else if (cur0 && !isAncestor(cur0, f)) want = parentOf(f) === ROOT ? null : parentOf(f).id;   // an asset outside the focus brings its own group
+    if (want !== FOCUS_STATE.id || (want && sig !== FOCUS_STATE.sig)) { FOCUS_STATE.id = want; FOCUS_STATE.sig = sig; focusTo(want); drawTree.lastSel = sel; return; }
+    if (FOCUS_STATE.id) drawTree.lastSel = sel;   // selecting inside the focus never moves the view
+  }
+  const cur = sel && all.find((d) => d.data.id === sel);   // keep a selection made from the keyboard on screen
+  if (cur && !drag?.on && !pan && drawTree.lastSel !== sel) { drawTree.lastSel = sel; const sx = cur.wx * VIEW.k + VIEW.tx, sy = cur.wy * VIEW.k + VIEW.ty;
+    if (sx < 20 || sx > W - 80 || sy < 30 || sy > H - 30) { VIEW.tx = W / 2 - cur.wx * VIEW.k; VIEW.ty = H / 2 - cur.wy * VIEW.k; return drawTree(); } }
+  drawTree.lastSel = sel;
+}
+function focusTo(id) {   // rotate the chosen subportfolio to the top and fit its cards; with no id, back to the whole ring
+  const host = $("#canvas"), W = host.clientWidth, H = host.clientHeight, r0 = ROT, k0 = VIEW.k, x0 = VIEW.tx, y0 = VIEW.ty;
+  let rT = 0, kT, xT, yT;
+  if (id) { const d = layout().descendants().find((q) => q.data.id === id); rT = -(wrap(d.a - r0 + Math.PI) - Math.PI); }   // its unrotated angle, brought to 12 o'clock
+  const keep = ROT; ROT = rT; const L = layout(); ROT = keep;
+  if (id) { const d = L.descendants().find((q) => q.data.id === id), cards = d.leaves(), xs = cards.flatMap((c) => [c.cx, c.cx + CARD.w]).concat([0]), ys = cards.flatMap((c) => [c.cy, c.cy + CARD.h]).concat([d.wy]);
+    const bx0 = d3.min(xs) - 30, bx1 = d3.max(xs) + 30, by0 = d3.min(ys) - 40, by1 = d3.max(ys) + 30; const Wf = W - 196;   // fit beside the minimap, never under it
+    kT = Math.max(0.3, Math.min(1.05, Wf / (bx1 - bx0), H / (by1 - by0)));
+    xT = Wf / 2 - ((bx0 + bx1) / 2) * kT; yT = H / 2 - ((by0 + by1) / 2) * kT; }
+  else { const b = L.box; kT = Math.max(0.25, Math.min(0.9, (W - 20) / (b.x1 - b.x0), (H - 20) / (b.y1 - b.y0))); xT = W / 2; yT = H / 2; }
+  const dr = -(wrap(r0 - rT + Math.PI) - Math.PI), t0 = performance.now(), T = 520, ease = (t) => (t < 0.5 ? 2 * t * t : 1 - (-2 * t + 2) ** 2 / 2);
+  cancelAnimationFrame(FOCUS_STATE.anim);
+  const tick = (now) => { const t = Math.min(1, (now - t0) / T), e = ease(t); ROT = r0 + dr * e; VIEW.k = k0 + (kT - k0) * e; VIEW.tx = x0 + (xT - x0) * e; VIEW.ty = y0 + (yT - y0) * e;
+    FOCUS_STATE.anim = t < 1 ? requestAnimationFrame(tick) : null; drawTree(); };
+  FOCUS_STATE.anim = requestAnimationFrame(tick);
+}
+function dropAt(px, py, n) {
+  const wx = (px - VIEW.tx) / VIEW.k, wy = (py - VIEW.ty) / VIEW.k, { all, root } = drawTree.geo, ok = (into) => into && into.kind === "group" && into !== n && !isAncestor(n, into);
+  let g;
+  if (RADIAL) { const rad = Math.hypot(wx, wy); let a = Math.atan2(wx, -wy); if (a < 0) a += 2 * Math.PI; const st = root.step * 0.45;
+    g = all.find((q) => !q.card && (q.r === 0 ? rad < 20 : Math.abs(rad - q.r) < 16 && within(a, q.lo - st, q.hi + st))); }
+  else g = all.find((q) => !q.card && (Math.hypot(q.x - wx, q.y - wy) < 22 || (wx > q.x - 16 && wx < q.x + 130 && wy > q.y - 36 && wy < q.y + 26)));
+  if (g) { const into = find(g.id); return ok(into) ? { into: g.id, to: { into, at: null } } : null; }
+  const c = all.find((q) => q.card && wx > q.cx - 12 && wx < q.cx + CARD.w + 12 && wy > q.cy - 12 && wy < q.cy + CARD.h + 12); if (!c) return null;
+  if (c.id.endsWith("~slot")) { const g = find(c.id.slice(0, -5)); return ok(g) ? { into: g.id, to: { into: g, at: null } } : null; }
+  const cn = find(c.id), into = parentOf(cn); if (!into || cn === n || isAncestor(n, into)) return null;
+  let after, ins;
+  if (RADIAL) { const a = Math.atan2(wx, -wy); after = Math.sin(a - c.a) > 0; const e = c.a + (after ? 1 : -1) * root.step / 2, f0 = 0.78, f1 = 1.12;
+    ins = { x1: root.Rx * f0 * Math.sin(e), y1: -root.Ry * f0 * Math.cos(e), x2: root.Rx * f1 * Math.sin(e), y2: -root.Ry * f1 * Math.cos(e) }; }
+  else if (TD) { after = wx > c.cx + CARD.w / 2; const xe = after ? c.cx + CARD.w + 13 : c.cx - 13; ins = { x1: xe, y1: c.cy, x2: xe, y2: c.cy + CARD.h }; }
+  else { after = wy > c.cy + CARD.h / 2; const ye = after ? c.cy + CARD.h + 11 : c.cy - 11; ins = { x1: c.cx, y1: ye, x2: c.cx + CARD.w, y2: ye }; }
+  return { into: into.id, to: { into, at: into.children.indexOf(cn) + (after ? 1 : 0) }, ins };
+}
+// panning, zooming, the minimap
+let pan = null;
+const canvasEl = document.getElementById("canvas");
+canvasEl.addEventListener("pointerdown", (e) => {
+  if (e.button !== 0) return; const mini = e.target.closest(".mini");
+  if (mini) { const r = mini.querySelector("svg").getBoundingClientRect(), { mk, bx } = drawTree.geo, W = canvasEl.clientWidth, H = canvasEl.clientHeight;
+    const wx = (e.clientX - r.left) / mk + bx.x0, wy = (e.clientY - r.top) / mk + bx.y0; VIEW.tx = W / 2 - wx * VIEW.k; VIEW.ty = H / 2 - wy * VIEW.k; drawTree(); return; }
+  if (e.target.closest("[data-id], [data-gid]")) return;
+  pan = { x: e.clientX, y: e.clientY, tx: VIEW.tx, ty: VIEW.ty }; document.body.classList.add("panning"); e.preventDefault();
+});
+document.addEventListener("pointermove", (e) => { if (!pan) return; VIEW.tx = pan.tx + e.clientX - pan.x; VIEW.ty = pan.ty + e.clientY - pan.y; drawTree(); });
+document.addEventListener("pointerup", () => { if (!pan) return; pan = null; document.body.classList.remove("panning"); dragged = true; setTimeout(() => (dragged = false), 0); });
+canvasEl.addEventListener("wheel", (e) => { e.preventDefault(); const r = canvasEl.getBoundingClientRect(), px = e.clientX - r.left, py = e.clientY - r.top;
+  const k = Math.max(0.25, Math.min(1.8, VIEW.k * Math.exp(-e.deltaY * 0.0015))); VIEW.tx = px - ((px - VIEW.tx) / VIEW.k) * k; VIEW.ty = py - ((py - VIEW.ty) / VIEW.k) * k; VIEW.k = k; drawTree(); }, { passive: false });
+canvasEl.addEventListener("dblclick", (e) => { if (e.target.closest("[data-id], [data-gid], .mini")) return;   // fit the whole tree
+  if (FOCUS) { sel = ROOT.id; render(true); return; }
+  const { bx } = drawTree.geo, W = canvasEl.clientWidth, H = canvasEl.clientHeight; VIEW.k = Math.max(0.25, Math.min((W - 30) / (bx.x1 - bx.x0), (H - 30) / (bx.y1 - bx.y0)));
+  VIEW.tx = W / 2 - ((bx.x0 + bx.x1) / 2) * VIEW.k; VIEW.ty = H / 2 - ((bx.y0 + bx.y1) / 2) * VIEW.k; drawTree(); });
+document.getElementById("tree-sub").textContent = "drag the background to move, wheel to zoom (zoomed out = charts only), minimap to jump; double-click to fit";
+</script>
+<script src="builder-extra.js"></script>
+<script src="builder-core.js"></script>
+<script src="library.js"></script>
+<script src="review-core.js"></script>
+<script src="review-wall.js"></script>
+</body></html>

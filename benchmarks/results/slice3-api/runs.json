@@ -1,0 +1,148 @@
+{
+ "20261029-182422-a0b5c2": {
+  "id": "20261029-182422-a0b5c2",
+  "machine": "laptop",
+  "status": "done",
+  "error": null,
+  "queued": "2026-10-29T18:24:22",
+  "started": "2026-10-29T18:24:22",
+  "ended": "2026-10-29T18:24:40",
+  "wall_s": 18.1,
+  "objective": -0.13527583057916964,
+  "searches": 1,
+  "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "colab": null,
+  "sessions_stopped_after": null,
+  "settings": {
+   "bank": 400000,
+   "draw": 200000,
+   "set": [
+    "maxgen=8"
+   ]
+  }
+ },
+ "20261029-182515-ef85a0": {
+  "id": "20261029-182515-ef85a0",
+  "machine": "laptop",
+  "status": "cancelled",
+  "error": "cancelled",
+  "queued": "2026-10-29T18:25:15",
+  "started": "2026-10-29T18:25:15",
+  "ended": "2026-10-29T18:25:28",
+  "wall_s": 13.3,
+  "objective": null,
+  "searches": null,
+  "gpu": null,
+  "colab": null,
+  "sessions_stopped_after": null,
+  "settings": {
+   "bank": 1000000,
+   "draw": 500000,
+   "set": [
+    "tol=-1",
+    "maxgen=80"
+   ]
+  }
+ },
+ "20261029-182532-a000cf": {
+  "id": "20261029-182532-a000cf",
+  "machine": "laptop",
+  "status": "interrupted",
+  "error": "the server stopped while this run was running",
+  "queued": "2026-10-29T18:25:32",
+  "started": "2026-10-29T18:25:32",
+  "ended": "2026-10-29T18:28:00",
+  "wall_s": null,
+  "objective": null,
+  "searches": null,
+  "gpu": null,
+  "colab": null,
+  "sessions_stopped_after": null,
+  "settings": {
+   "bank": 1000000,
+   "draw": 500000,
+   "set": [
+    "tol=-1",
+    "maxgen=80"
+   ]
+  }
+ },
+ "20261029-184942-4d422a": {
+  "id": "20261029-184942-4d422a",
+  "machine": "a100",
+  "status": "done",
+  "error": null,
+  "queued": "2026-10-29T18:49:42",
+  "started": "2026-10-29T18:49:42",
+  "ended": "2026-10-29T18:52:48",
+  "wall_s": 186.0,
+  "objective": -0.13727086760486648,
+  "searches": 1,
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "colab": {
+   "session": "mso-20261029-184942-4d422a",
+   "exit": 0,
+   "wall_s": 180.9,
+   "balance_before": 190.4,
+   "balance_after": 190.4,
+   "cu_measured": 0.0,
+   "cu_at_rate": 0.27
+  },
+  "sessions_stopped_after": [],
+  "settings": {}
+ },
+ "20261029-185302-756c26": {
+  "id": "20261029-185302-756c26",
+  "machine": "a100",
+  "status": "cancelled",
+  "error": "cancelled",
+  "queued": "2026-10-29T18:53:02",
+  "started": "2026-10-29T18:53:02",
+  "ended": "2026-10-29T18:54:03",
+  "wall_s": 61.4,
+  "objective": null,
+  "searches": null,
+  "gpu": null,
+  "colab": null,
+  "sessions_stopped_after": [],
+  "settings": {}
+ },
+ "20261029-185425-c30d2b": {
+  "id": "20261029-185425-c30d2b",
+  "machine": "a100",
+  "status": "interrupted",
+  "error": "the server stopped while this run was running",
+  "queued": "2026-10-29T18:54:25",
+  "started": "2026-10-29T18:54:25",
+  "ended": "2026-10-29T18:55:11",
+  "wall_s": null,
+  "objective": null,
+  "searches": null,
+  "gpu": null,
+  "colab": null,
+  "sessions_stopped_after": null,
+  "settings": {}
+ },
+ "20261029-185638-43547e": {
+  "id": "20261029-185638-43547e",
+  "machine": "laptop",
+  "status": "done",
+  "error": null,
+  "queued": "2026-10-29T18:56:38",
+  "started": "2026-10-29T18:56:38",
+  "ended": "2026-10-29T18:57:09",
+  "wall_s": 31.0,
+  "objective": -0.13640902423011692,
+  "searches": 1,
+  "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "colab": null,
+  "sessions_stopped_after": null,
+  "settings": {
+   "bank": 600000,
+   "draw": 300000,
+   "set": [
+    "maxgen=12"
+   ]
+  }
+ }
+}

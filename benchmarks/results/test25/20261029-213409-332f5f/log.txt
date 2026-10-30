@@ -1,0 +1,241 @@
+
+Market data: day cache 2026-10-29 (44 series already cached)
+
+Loading portfolio data...
+Idiosyncratic-jump whitelist (systematic-only assets): ['TLT', 'IEF', 'GLD', 'DBMF']
+Fetching historical returns and VIX data...
+
+   [ret_df] Requested period='5y', interval='1wk', mode='max_info'.
+   Per-ticker history coverage:
+     TLT      obs=  260  2021-11-01 -> 2026-10-19
+     IEF      obs=  260  2021-11-01 -> 2026-10-19
+     GLD      obs=  260  2021-11-01 -> 2026-10-19
+     VNQ      obs=  260  2021-11-01 -> 2026-10-19
+     DBMF     obs=  260  2021-11-01 -> 2026-10-19
+     IBIT     obs=  145  2024-01-15 -> 2026-10-19
+     AAPL     obs=  260  2021-11-01 -> 2026-10-19
+     MSFT     obs=  260  2021-11-01 -> 2026-10-19
+     GOOGL    obs=  260  2021-11-01 -> 2026-10-19
+     META     obs=  260  2021-11-01 -> 2026-10-19
+     AMZN     obs=  260  2021-11-01 -> 2026-10-19
+     NVDA     obs=  260  2021-11-01 -> 2026-10-19
+     AVGO     obs=  260  2021-11-01 -> 2026-10-19
+     JPM      obs=  260  2021-11-01 -> 2026-10-19
+     GS       obs=  260  2021-11-01 -> 2026-10-19
+     V        obs=  260  2021-11-01 -> 2026-10-19
+     XOM      obs=  260  2021-11-01 -> 2026-10-19
+     CAT      obs=  260  2021-11-01 -> 2026-10-19
+     GE       obs=  260  2021-11-01 -> 2026-10-19
+     LLY      obs=  260  2021-11-01 -> 2026-10-19
+     UNH      obs=  260  2021-11-01 -> 2026-10-19
+     JNJ      obs=  260  2021-11-01 -> 2026-10-19
+     COST     obs=  260  2021-11-01 -> 2026-10-19
+     KO       obs=  260  2021-11-01 -> 2026-10-19
+     HD       obs=  260  2021-11-01 -> 2026-10-19
+Return panel shape (rows x assets): (260, 25)
+
+Fitting GARCH-X and forecasting DCC matrices...
+
+   [GARCH] Volatility model per asset (leverage gate, p < 0.05):
+     TLT      GARCH gamma=+0.031 LR p=0.070  (asymmetry not significant)
+     IEF      GARCH gamma=+0.010 LR p=0.615  (asymmetry not significant)
+     GLD      GJR   gamma=-0.025 LR p=0.045  (asymmetry significant)
+     VNQ      GJR   gamma=+0.165 LR p=0.006  (asymmetry significant)
+     DBMF     GARCH gamma=+0.305 LR p=0.163  (asymmetry not significant)
+     IBIT     CONST gamma=-0.000 LR p=0.998  (GARCH fit had no shock response (alpha+gamma/2=6.9e-15): constant variance)
+     AAPL     GJR   gamma=+0.140 LR p=0.038  (asymmetry significant)
+     MSFT     GJR   gamma=+0.174 LR p=0.000  (asymmetry significant)
+     GOOGL    GJR   gamma=+0.286 LR p=0.030  (asymmetry significant)
+     META     GJR   gamma=+0.053 LR p=0.000  (asymmetry significant)
+     AMZN     GJR   gamma=+0.141 LR p=0.001  (asymmetry significant)
+     NVDA     CONST gamma=+0.137 LR p=0.212  (GARCH fit had no shock response (alpha+gamma/2=0.0e+00): constant variance)
+     AVGO     GARCH gamma=+0.197 LR p=0.073  (asymmetry not significant)
+     JPM      GJR   gamma=+0.196 LR p=0.002  (asymmetry significant)
+     GS       GJR   gamma=+0.090 LR p=0.033  (asymmetry significant)
+     V        GARCH gamma=+0.100 LR p=0.070  (asymmetry not significant)
+     XOM      GARCH gamma=+0.010 LR p=1.000  (asymmetry not significant)
+     CAT      GARCH gamma=+0.048 LR p=0.298  (asymmetry not significant)
+     GE       GJR   gamma=+0.075 LR p=0.023  (asymmetry significant)
+     LLY      GJR   gamma=+0.080 LR p=0.006  (asymmetry significant)
+     UNH      GARCH gamma=-0.084 LR p=0.555  (asymmetry not significant)
+     JNJ      GARCH gamma=+0.117 LR p=0.463  (asymmetry not significant)
+     COST     GARCH gamma=+0.268 LR p=0.071  (asymmetry not significant)
+     KO       GARCH gamma=+0.062 LR p=0.382  (asymmetry not significant)
+     HD       GARCH gamma=+0.023 LR p=0.091  (asymmetry not significant)
+   [forecast_dcc] short histories (IBIT 145 weeks, under 80% of the longest 260): correlation dynamics fitted on the other 24 assets; IBIT keeps long-run pairwise correlations.
+   [forecast_dcc] alpha=0.0053 beta=0.7799 (persistence 0.7852, 260 joint weeks)
+   [Heston][POOLED] constant variance, kappa and xi pooled: IBIT, NVDA
+
+   [Heston] Per-asset CIR variance calibration (weekly units):
+     TLT      v0=0.00027 theta=0.00039 kappa=0.026 xi=0.0015 rho=+0.00  Feller:ok
+     IEF      v0=0.00006 theta=0.00010 kappa=0.024 xi=0.0007 rho=+0.00  Feller:ok
+     GLD      v0=0.00083 theta=0.00213 kappa=0.001 xi=0.0007 rho=+0.70  Feller:ok
+     VNQ      v0=0.00043 theta=0.00065 kappa=0.094 xi=0.0048 rho=-0.72  Feller:ok
+     DBMF     v0=0.00018 theta=0.00024 kappa=0.500 xi=0.0067 rho=+0.00  Feller:ok
+     IBIT     v0=0.00385 theta=0.00385 kappa=0.063 xi=0.0078 rho=+0.00  Feller:ok  [pooled from 23 identified assets (constant variance)]
+     AAPL     v0=0.00100 theta=0.00145 kappa=0.139 xi=0.0076 rho=-0.72  Feller:ok
+     MSFT     v0=0.00102 theta=0.00138 kappa=0.051 xi=0.0059 rho=-0.69  Feller:ok
+     GOOGL    v0=0.00289 theta=0.00199 kappa=1.066 xi=0.0131 rho=-0.73  Feller:ok
+     META     v0=0.00351 theta=0.00337 kappa=0.031 xi=0.0054 rho=-0.66  Feller:ok
+     AMZN     v0=0.00176 theta=0.00223 kappa=0.076 xi=0.0092 rho=-0.70  Feller:ok
+     NVDA     v0=0.00427 theta=0.00427 kappa=0.063 xi=0.0082 rho=+0.00  Feller:ok  [pooled from 23 identified assets (constant variance)]
+     AVGO     v0=0.00312 theta=0.00372 kappa=0.833 xi=0.0238 rho=+0.00  Feller:ok
+     JPM      v0=0.00096 theta=0.00120 kappa=0.178 xi=0.0100 rho=-0.74  Feller:ok
+     GS       v0=0.00162 theta=0.00154 kappa=0.137 xi=0.0050 rho=-0.71  Feller:ok
+     V        v0=0.00084 theta=0.00082 kappa=0.025 xi=0.0023 rho=+0.00  Feller:ok
+     XOM      v0=0.00144 theta=0.00139 kappa=0.014 xi=0.0007 rho=+0.00  Feller:ok
+     CAT      v0=0.00204 theta=0.00194 kappa=0.063 xi=0.0011 rho=+0.00  Feller:ok
+     GE       v0=0.00261 theta=0.00200 kappa=0.076 xi=0.0058 rho=-0.68  Feller:ok
+     LLY      v0=0.00176 theta=0.00216 kappa=0.060 xi=0.0053 rho=-0.69  Feller:ok
+     UNH      v0=0.00210 theta=0.00254 kappa=0.352 xi=0.0367 rho=+0.00  Feller:ok
+     JNJ      v0=0.00074 theta=0.00067 kappa=0.013 xi=0.0004 rho=+0.00  Feller:ok
+     COST     v0=0.00078 theta=0.00108 kappa=0.176 xi=0.0127 rho=+0.00  Feller:ok
+     KO       v0=0.00062 theta=0.00052 kappa=0.038 xi=0.0013 rho=+0.00  Feller:ok
+     HD       v0=0.00122 theta=0.00115 kappa=0.018 xi=0.0005 rho=+0.00  Feller:ok
+
+   [VIX-theta] Per-asset VIX elasticity gamma (variance ~ VIX^gamma):
+     TLT      gamma=0.229
+     IEF      gamma=0.257
+     GLD      gamma=0.000
+     VNQ      gamma=0.580
+     DBMF     gamma=0.306
+     IBIT     gamma=0.000
+     AAPL     gamma=0.586
+     MSFT     gamma=1.204
+     GOOGL    gamma=0.182
+     META     gamma=0.813
+     AMZN     gamma=1.084
+     NVDA     gamma=0.000
+     AVGO     gamma=0.021
+     JPM      gamma=0.995
+     GS       gamma=0.465
+     V        gamma=1.038
+     XOM      gamma=0.269
+     CAT      gamma=0.101
+     GE       gamma=0.811
+     LLY      gamma=0.176
+     UNH      gamma=0.079
+     JNJ      gamma=0.000
+     COST     gamma=0.940
+     KO       gamma=0.443
+     HD       gamma=0.343
+VIX-theta tilt active: VIX_now=16.32 vs median=17.31 (ratio=0.943)
+
+Downloading initial prices...
+Initial Prices: {'TLT': '81.29', 'IEF': '91.17', 'GLD': '368.49', 'VNQ': '93.42', 'DBMF': '32.69', 'IBIT': '45.75', 'AAPL': '349.95', 'MSFT': '527.94', 'GOOGL': '283.42', 'META': '629.56', 'AMZN': '244.13', 'NVDA': '213.54', 'AVGO': '343.75', 'JPM': '343.77', 'GS': '924.79', 'V': '410.38', 'XOM': '182.43', 'CAT': '647.36', 'GE': '311.67', 'LLY': '1367.11', 'UNH': '405.17', 'JNJ': '274.40', 'COST': '993.10', 'KO': '92.60', 'HD': '326.12'}
+
+Applying Black-Litterman views...
+  ticker  equilibrium      view  view sd  posterior
+  TLT           +4.5%     +9.4%     7.6%      +4.7%   (most likely +7.0% -> model uses +9.4%)
+  IEF           +4.0%         -        -      +4.1%
+  GLD           +5.0%     +9.0%     8.0%      +5.5%
+  VNQ           +7.0%         -        -      +7.6%
+  DBMF          +6.0%         -        -      +6.0%
+  IBIT         +15.0%    +51.0%    50.5%     +16.1%   (most likely +35.0% -> model uses +51.0%)
+  AAPL          +8.5%    +10.0%    12.0%      +9.3%
+  MSFT          +9.0%    +14.0%    10.0%     +10.2%
+  GOOGL         +9.2%         -        -     +10.4%
+  META          +9.5%    +18.0%    15.0%     +11.4%
+  AMZN          +9.5%    +20.8%    15.1%     +11.2%   (most likely +16.0% -> model uses +20.8%)
+  NVDA         +11.0%    +33.0%    25.2%     +13.6%   (most likely +25.0% -> model uses +33.0%)
+  AVGO         +10.5%    +20.0%    18.0%     +12.9%
+  JPM           +8.5%    +11.0%     8.0%      +9.2%
+  GS            +9.0%     +9.0%    12.0%     +10.0%
+  V             +8.0%         -        -      +8.6%
+  XOM           +7.5%     +0.8%     8.1%      +7.0%   (most likely +4.0% -> model uses +0.8%)
+  CAT           +8.5%    +19.9%    10.8%      +9.7%   (most likely +16.3% -> model uses +19.9%)
+  GE            +8.8%         -        -     +10.1%
+  LLY           +8.0%    +14.0%    20.3%      +8.4%   (most likely +22.0% -> model uses +14.0%)
+  UNH           +7.5%    +12.0%    20.0%      +7.8%
+  JNJ           +6.0%         -        -      +6.0%
+  COST          +7.0%     +8.0%     6.0%      +7.6%
+  KO            +5.5%         -        -      +5.6%
+  HD            +7.5%         -        -      +8.4%
+Sanitized Weekly Drift range: [0.0008, 0.0029]
+
+Jump database version 2026-10-29 (0 days old)
+Per-asset jump betas and variance co-jumps (S&P surprise days, daily):
+  ticker   normal   crash  (days) source    rally  (days) source   co-jump source 
+  TLT       -0.23   -0.28      49 direct    -0.23       4 normal      0.26 own    
+  IEF       -0.11   -0.14      49 direct    -0.11       4 normal      0.25 own    
+  GLD        0.07   -0.00      49 direct     0.07       4 normal      0.22 own    
+  VNQ        1.13    0.80      49 direct     1.13       4 normal      1.74 own    
+  DBMF       0.12    0.34      22 direct     0.12       2 normal      1.59 pooled 
+  IBIT       1.34    1.34       9 normal     1.34       1 normal      1.59 pooled 
+  AAPL       1.21    1.19      80 direct     1.01      22 direct      0.47 own    
+  MSFT       1.17    1.16      77 direct     1.21      12 direct      0.27 own    
+  GOOGL      1.02    1.10      49 direct     0.92       4 LOWESS      0.25 own    
+  META       1.27    1.34      37 direct     1.20       4 LOWESS      0.28 own    
+  AMZN       1.33    1.39      59 direct     1.28       6 LOWESS      0.22 own    
+  NVDA       1.64    1.72      54 direct     1.67       6 LOWESS      0.36 own    
+  AVGO       1.39    1.48      43 direct     1.36       4 LOWESS      0.43 own    
+  JPM        1.30    1.17      80 direct     1.01      23 direct      0.82 own    
+  GS         1.34    1.34      54 direct     1.30       6 LOWESS      1.14 own    
+  V          0.97    0.95      46 direct     0.86       4 LOWESS      0.47 own    
+  XOM        0.84    0.90      90 direct     0.65      29 direct      0.97 own    
+  CAT        1.05    1.08      90 direct     1.12      29 direct      0.27 own    
+  GE         1.16    1.09      90 direct     1.25      29 direct      0.69 own    
+  LLY        0.81    0.74      84 direct     0.81      26 direct      0.70 own    
+  UNH        0.81    0.81      78 direct     0.45      16 direct      0.57 own    
+  JNJ        0.72    0.74      90 direct     0.90      29 direct      0.53 own    
+  COST       0.84    0.78      76 direct     0.75      12 direct      0.23 own    
+  KO         0.75    0.73      90 direct     0.85      29 direct      1.00 own    
+  HD         1.07    0.97      79 direct     1.25      21 direct      0.71 own    
+S&P weekly volatility over the horizon: 1.50% -> 1.87%
+Risk-free rate (^TNX): 4.999%
+[mso] A100 job mso-20261029-213409-332f5f: payload 241 KiB; balance 190.26 CU (plain A100 bills 5.3 CU/h)
+
+[colab] A new version of Colab CLI is available: 0.7.5 (current: 0.7.4)
+[colab] Run 'colab update' to update.
+[colab] To silence this check, set "enable_update_check": false in ~/.config/colab-cli/settings.json
+
+[colab] Creating session 'mso-20261029-213409-332f5f'...
+[colab] Session READY (mso-20261029-213409-332f5f). Executing /tmp/mso-20261029-213409-332f5f-1jxrn11t/job.py...
+[job] started on the VM at 2026-10-29 18:35:43
+[job] GPU: NVIDIA A100-SXM4-40GB, 40960 MiB
+[job] pip install arch: 2.3 s, exit 0
+[job] run 1/1: run --snapshot inputs.json --tree portfolio.json --machine local --profile a100 --out result.json --seed 20261029 --validation 0.1 --rescore-reps 5
+[mso] local run on NVIDIA A100-SXM4-40GB, seed 20261029
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/content/mso-job/mso/__main__.py", line 3, in <module>
+    main()
+    ~~~~^^
+  File "/content/mso-job/mso/cli.py", line 337, in main
+    {"run": run, "jumpdb": jumpdb_cmd, "data": data_cmd, "betas": betas_cmd}[a.cmd](a)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/content/mso-job/mso/cli.py", line 148, in run
+    G = bank.build(inputs, paths, min(chunk, paths), a.seed,
+                   progress=lambda d, n, s: events.emit("bank", done=d, total=n, s=round(s, 1)))
+  File "/content/mso-job/mso/bank.py", line 54, in build
+    cum = sim.monte_carlo_simulation(sk["initial_prices"], sk["forecasted_matrices"], m, sk["drift"], w,
+                                     sk["jump_config"], return_paths=True, return_cum=True, **rest)
+  File "/content/mso-job/mso/sim.py", line 190, in monte_carlo_simulation
+    return _simulate_heston_bates(
+        xp, initial_prices, forecasted_matrices, num_simulations, drift, weights, jump_config,
+        heston_config, hawkes_config, cojump_config, corr_matrices, tickers, scheme, dt,
+        idio_jump_exclude, vix_theta, return_paths, return_cum, jump_betas, market_vol, cojump_mults)
+  File "/content/mso-job/mso/sim.py", line 589, in _simulate_heston_bates
+    var_cojump = -xp.log(xp.clip(_xp_rand(xp, (N, M)), 1e-12, 1.0)) * mult * v_pos
+                                 ~~~~~~~~^^^^^^^^^^^^
+  File "/content/mso-job/mso/sim.py", line 23, in _xp_rand
+    return xp.random.random(size=shape).astype(xp.float32)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "cupy/_core/core.pyx", line 764, in cupy._core.core._ndarray_base.astype
+  File "cupy/_core/core.pyx", line 792, in cupy._core.core._ndarray_base.astype
+  File "cupy/_core/core.pyx", line 751, in cupy._core.core._ndarray_base._astype
+  File "cupy/_core/core.pyx", line 175, in cupy._core.core.ndarray.__new__
+  File "cupy/_core/core.pyx", line 279, in cupy._core.core._ndarray_base._init
+  File "cupy/cuda/memory.pyx", line 877, in cupy.cuda.memory.alloc
+  File "cupy/cuda/memory.pyx", line 1622, in cupy.cuda.memory.MemoryPool.malloc
+  File "cupy/cuda/memory.pyx", line 1643, in cupy.cuda.memory.MemoryPool.malloc
+  File "cupy/cuda/memory.pyx", line 1290, in cupy.cuda.memory.SingleDeviceMemoryPool.malloc
+  File "cupy/cuda/memory.pyx", line 1311, in cupy.cuda.memory.SingleDeviceMemoryPool._malloc
+  File "cupy/cuda/memory.pyx", line 1566, in cupy.cuda.memory.SingleDeviceMemoryPool._try_malloc
+  File "cupy/cuda/memory.pyx", line 1569, in cupy.cuda.memory.SingleDeviceMemoryPool._try_malloc
+cupy.cuda.memory.OutOfMemoryError: Out of memory allocating 400,000,000 bytes (allocated so far: 41,664,014,848 bytes).
+[job] finished, 19.7 s on the VM, exit 1
+[colab] Stopping session 'mso-20261029-213409-332f5f'...
+[colab] Session terminated.
+the A100 job ended without a result (exit 1): see <repo>/library/runs/20261029-213409-332f5f/results.colab.log

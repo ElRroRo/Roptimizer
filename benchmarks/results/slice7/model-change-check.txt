@@ -1,0 +1,16 @@
+weights (BTC=F / equities / managed futures + bonds):
+  today's production weights: 16.3% / 19.3% / 64.5%
+  v4.1 reference answer (BTC=F 27%): 27.2% / 28.1% / 44.6%
+  prototype tree run, 2026-10-29 (#12): 13.4% / 61.6% / 25.0%
+A. today's model and inputs (per-asset jump betas, co-jumps, refits)
+   today's production weights             vol  5.58%  CVaR  -7.94%  CDaR  -9.93%
+   v4.1 reference answer (BTC=F 27%)      vol  8.77%  CVaR -12.90%  CDaR -15.69%
+   prototype tree run, 2026-10-29 (#12)   vol 10.86%  CVaR -17.02%  CDaR -19.91%
+B. today's inputs, old jump treatment (loading 1, pooled co-jump)
+   today's production weights             vol  6.63%  CVaR -12.43%  CDaR -16.02%
+   v4.1 reference answer (BTC=F 27%)      vol  9.71%  CVaR -16.80%  CDaR -20.87%
+   prototype tree run, 2026-10-29 (#12)   vol 12.06%  CVaR -21.65%  CDaR -26.06%
+C. the frozen v4.1 reference inputs (2026-10-27 data, old fits and jumps)
+   today's production weights             vol  6.67%  CVaR -12.54%  CDaR -16.15%
+   v4.1 reference answer (BTC=F 27%)      vol  9.65%  CVaR -16.73%  CDaR -20.80%
+   prototype tree run, 2026-10-29 (#12)   vol 10.92%  CVaR -20.14%  CDaR -24.45%

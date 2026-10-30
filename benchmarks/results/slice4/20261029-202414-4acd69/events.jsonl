@@ -1,0 +1,36 @@
+{"type": "queued", "t": 1793294654.7114177, "machine": "a100", "position": 1, "seq": 0}
+{"type": "started", "t": 1793294654.7119443, "machine": "a100", "seq": 1}
+{"type": "stage", "t": 1793294655.034, "stage": "inputs", "seq": 2}
+{"type": "stage", "t": 1793294656.431, "stage": "packed", "session": "mso-20261029-202414-4acd69", "payload_kib": 106, "seq": 3}
+{"type": "colab", "t": 1793294658.225, "balance_before": 190.4, "rate": 5.3, "seq": 4}
+{"type": "start", "t": 1793294672.777, "machine": "local", "gpu": "NVIDIA A100-SXM4-40GB", "seed": 20261029, "seq": 5}
+{"type": "stage", "t": 1793294672.777, "stage": "inputs", "seq": 6}
+{"type": "stage", "t": 1793294673.039, "stage": "bank", "paths": 30000000, "seq": 7}
+{"type": "bank", "t": 1793294684.234, "done": 4000000, "total": 30000000, "s": 11.2, "seq": 8}
+{"type": "bank", "t": 1793294684.423, "done": 8000000, "total": 30000000, "s": 11.4, "seq": 9}
+{"type": "bank", "t": 1793294684.714, "done": 12000000, "total": 30000000, "s": 11.6, "seq": 10}
+{"type": "bank", "t": 1793294685.008, "done": 16000000, "total": 30000000, "s": 11.9, "seq": 11}
+{"type": "bank", "t": 1793294685.29, "done": 20000000, "total": 30000000, "s": 12.2, "seq": 12}
+{"type": "bank", "t": 1793294685.586, "done": 24000000, "total": 30000000, "s": 12.5, "seq": 13}
+{"type": "bank", "t": 1793294685.873, "done": 28000000, "total": 30000000, "s": 12.8, "seq": 14}
+{"type": "bank", "t": 1793294686.137, "done": 30000000, "total": 30000000, "s": 13.1, "seq": 15}
+{"type": "stage", "t": 1793294686.179, "stage": "search", "seq": 16}
+{"type": "search_start", "t": 1793294686.18, "search": "Portfolio / Defensive", "children": ["SPY", "TLT"], "seq": 17}
+{"type": "generation", "t": 1793294688.032, "search": "Portfolio / Defensive", "gen": 1, "incumbent": -0.03938907877090603, "scored": 2, "s": 0.78, "replaced": 51, "stop": false, "seq": 18}
+{"type": "generation", "t": 1793294688.804, "search": "Portfolio / Defensive", "gen": 2, "incumbent": -0.03939640700612796, "scored": 3, "s": 0.77, "replaced": 39, "stop": false, "seq": 19}
+{"type": "generation", "t": 1793294689.576, "search": "Portfolio / Defensive", "gen": 3, "incumbent": -0.039380385183989564, "scored": 4, "s": 0.77, "replaced": 35, "stop": false, "seq": 20}
+{"type": "generation", "t": 1793294690.348, "search": "Portfolio / Defensive", "gen": 4, "incumbent": -0.039377821629477, "scored": 5, "s": 0.77, "replaced": 31, "stop": false, "seq": 21}
+{"type": "generation", "t": 1793294691.12, "search": "Portfolio / Defensive", "gen": 5, "incumbent": -0.03937114879180773, "scored": 6, "s": 0.77, "replaced": 28, "stop": false, "seq": 22}
+{"type": "generation", "t": 1793294691.892, "search": "Portfolio / Defensive", "gen": 6, "incumbent": -0.03937856987854242, "scored": 2, "s": 0.77, "replaced": 25, "stop": true, "seq": 23}
+{"type": "search_done", "t": 1793294691.893, "search": "Portfolio / Defensive", "generations": 6, "stopped": "window", "incumbent": -0.03937856987854242, "seq": 24}
+{"type": "search_start", "t": 1793294691.893, "search": "Portfolio", "children": ["Defensive", "GLD"], "seq": 25}
+{"type": "generation", "t": 1793294693.064, "search": "Portfolio", "gen": 1, "incumbent": 0.05833066754613438, "scored": 2, "s": 0.77, "replaced": 37, "stop": false, "seq": 26}
+{"type": "generation", "t": 1793294693.838, "search": "Portfolio", "gen": 2, "incumbent": 0.058278156325194536, "scored": 2, "s": 0.77, "replaced": 31, "stop": false, "seq": 27}
+{"type": "generation", "t": 1793294694.61, "search": "Portfolio", "gen": 3, "incumbent": 0.058266553024154386, "scored": 2, "s": 0.77, "replaced": 42, "stop": false, "seq": 28}
+{"type": "generation", "t": 1793294695.382, "search": "Portfolio", "gen": 4, "incumbent": 0.058268187110278084, "scored": 3, "s": 0.77, "replaced": 26, "stop": false, "seq": 29}
+{"type": "generation", "t": 1793294696.154, "search": "Portfolio", "gen": 5, "incumbent": 0.05825338053958033, "scored": 2, "s": 0.77, "replaced": 36, "stop": false, "seq": 30}
+{"type": "generation", "t": 1793294696.927, "search": "Portfolio", "gen": 6, "incumbent": 0.05825772905389434, "scored": 2, "s": 0.77, "replaced": 35, "stop": true, "seq": 31}
+{"type": "search_done", "t": 1793294696.927, "search": "Portfolio", "generations": 6, "stopped": "window", "incumbent": 0.05825772905389434, "seq": 32}
+{"type": "stage", "t": 1793294696.927, "stage": "metrics", "seq": 33}
+{"type": "done", "t": 1793294699.019, "out": "result.json", "wall_s": 26.4, "objective": 0.05825772905389434, "seq": 34}
+{"type": "end", "t": 1793294748.346341, "ended": "2026-10-29T20:25:47", "wall_s": 92.7, "exit": 0, "status": "done", "objective": 0.05825772905389434, "gpu": "NVIDIA A100-SXM4-40GB", "colab": {"session": "mso-20261029-202414-4acd69", "exit": 0, "wall_s": 45.7, "balance_before": 190.4, "balance_after": 190.4, "cu_measured": null, "cu_note": "Colab had not updated the balance yet; see cu_at_rate", "cu_at_rate": 0.07}, "searches": 2, "sessions_stopped_after": [], "seq": 35}

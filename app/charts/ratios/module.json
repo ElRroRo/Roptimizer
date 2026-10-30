@@ -1,0 +1,7 @@
+{
+  "name": "ratios",
+  "title": "Ratios",
+  "description": "The usual portfolio-evaluation ratios of the selected part next to the Portfolio's: Sharpe, Sortino, UPI, STARR, Calmar, Martin, Omega and Rachev, and the shape of the 12-week outcome (skew, kurtosis, odds of a loss). None of them is optimized; UPI is. Same held-out paths as every other figure.",
+  "needs": ["rows[].metrics.sharpe", "rows[].metrics.sortino", "rows[].metrics.omega", "rows[].metrics.starr", "rows[].metrics.rachev", "rows[].metrics.calmar", "rows[].metrics.martin"],
+  "follows": true
+}

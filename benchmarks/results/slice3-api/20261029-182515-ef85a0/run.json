@@ -1,0 +1,23 @@
+{
+ "id": "20261029-182515-ef85a0",
+ "portfolio_id": "2dbfdac95438",
+ "portfolio_name": "Portfolio (from portfolio_data.csv)",
+ "portfolio_version": 1,
+ "machine": "laptop",
+ "status": "cancelled",
+ "queued": "2026-10-29T18:25:15",
+ "settings": {
+  "bank": 1000000,
+  "draw": 500000,
+  "set": [
+   "tol=-1",
+   "maxgen=80"
+  ]
+ },
+ "started": "2026-10-29T18:25:15",
+ "pid": 54188,
+ "ended": "2026-10-29T18:25:28",
+ "wall_s": 13.3,
+ "exit": -15,
+ "error": "cancelled"
+}

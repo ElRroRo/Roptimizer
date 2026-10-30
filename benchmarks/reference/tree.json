@@ -1,0 +1,724 @@
+{
+ "id": "reference-tree",
+ "name": "Reference tree (frozen inputs)",
+ "version": 1,
+ "run": {
+  "horizon_weeks": 12,
+  "rf": null,
+  "jump_version": "latest"
+ },
+ "assets": {
+  "NVDA": {
+   "equilibrium": 0.0,
+   "view": null
+  },
+  "MNTS": {
+   "equilibrium": 0.0,
+   "view": null
+  },
+  "META": {
+   "equilibrium": 0.0,
+   "view": null
+  },
+  "JPM": {
+   "equilibrium": 0.0,
+   "view": null
+  },
+  "GOOGL": {
+   "equilibrium": 0.0,
+   "view": null
+  },
+  "FERG": {
+   "equilibrium": 0.0,
+   "view": null
+  },
+  "BTC=F": {
+   "equilibrium": 0.0,
+   "view": null
+  },
+  "ADBE": {
+   "equilibrium": 0.0,
+   "view": null
+  },
+  "NRIM": {
+   "equilibrium": 0.0,
+   "view": null
+  },
+  "SPGI": {
+   "equilibrium": 0.0,
+   "view": null
+  },
+  "DBMF": {
+   "equilibrium": 0.0,
+   "view": null
+  },
+  "CTA": {
+   "equilibrium": 0.0,
+   "view": null
+  },
+  "WTMF": {
+   "equilibrium": 0.0,
+   "view": null
+  },
+  "TLT": {
+   "equilibrium": 0.0,
+   "view": null
+  },
+  "IBHK": {
+   "equilibrium": 0.0,
+   "view": null
+  },
+  "SPY": {
+   "equilibrium": 0.0,
+   "view": null
+  }
+ },
+ "tree": {
+  "kind": "group",
+  "name": "Portfolio",
+  "children": [
+   {
+    "kind": "group",
+    "name": "Equities",
+    "children": [
+     {
+      "kind": "group",
+      "name": "Technology",
+      "children": [
+       {
+        "kind": "asset",
+        "ticker": "NVDA",
+        "limits": {
+         "min": {
+          "on": false,
+          "value": null
+         },
+         "max": {
+          "on": false,
+          "value": null
+         }
+        },
+        "portfolio_limits": {
+         "min": {
+          "on": false,
+          "value": null
+         },
+         "max": {
+          "on": false,
+          "value": null
+         }
+        }
+       },
+       {
+        "kind": "asset",
+        "ticker": "META",
+        "limits": {
+         "min": {
+          "on": false,
+          "value": null
+         },
+         "max": {
+          "on": false,
+          "value": null
+         }
+        },
+        "portfolio_limits": {
+         "min": {
+          "on": false,
+          "value": null
+         },
+         "max": {
+          "on": false,
+          "value": null
+         }
+        }
+       },
+       {
+        "kind": "asset",
+        "ticker": "GOOGL",
+        "limits": {
+         "min": {
+          "on": false,
+          "value": null
+         },
+         "max": {
+          "on": false,
+          "value": null
+         }
+        },
+        "portfolio_limits": {
+         "min": {
+          "on": false,
+          "value": null
+         },
+         "max": {
+          "on": false,
+          "value": null
+         }
+        }
+       },
+       {
+        "kind": "asset",
+        "ticker": "ADBE",
+        "limits": {
+         "min": {
+          "on": false,
+          "value": null
+         },
+         "max": {
+          "on": false,
+          "value": null
+         }
+        },
+        "portfolio_limits": {
+         "min": {
+          "on": false,
+          "value": null
+         },
+         "max": {
+          "on": false,
+          "value": null
+         }
+        }
+       }
+      ],
+      "limits": {
+       "min": {
+        "on": false,
+        "value": null
+       },
+       "max": {
+        "on": false,
+        "value": null
+       }
+      },
+      "portfolio_limits": {
+       "min": {
+        "on": false,
+        "value": null
+       },
+       "max": {
+        "on": false,
+        "value": null
+       }
+      },
+      "settings": {},
+      "inherit": {},
+      "view": null
+     },
+     {
+      "kind": "group",
+      "name": "Financials",
+      "children": [
+       {
+        "kind": "asset",
+        "ticker": "JPM",
+        "limits": {
+         "min": {
+          "on": false,
+          "value": null
+         },
+         "max": {
+          "on": false,
+          "value": null
+         }
+        },
+        "portfolio_limits": {
+         "min": {
+          "on": false,
+          "value": null
+         },
+         "max": {
+          "on": false,
+          "value": null
+         }
+        }
+       },
+       {
+        "kind": "asset",
+        "ticker": "NRIM",
+        "limits": {
+         "min": {
+          "on": false,
+          "value": null
+         },
+         "max": {
+          "on": false,
+          "value": null
+         }
+        },
+        "portfolio_limits": {
+         "min": {
+          "on": false,
+          "value": null
+         },
+         "max": {
+          "on": false,
+          "value": null
+         }
+        }
+       },
+       {
+        "kind": "asset",
+        "ticker": "SPGI",
+        "limits": {
+         "min": {
+          "on": false,
+          "value": null
+         },
+         "max": {
+          "on": false,
+          "value": null
+         }
+        },
+        "portfolio_limits": {
+         "min": {
+          "on": false,
+          "value": null
+         },
+         "max": {
+          "on": false,
+          "value": null
+         }
+        }
+       }
+      ],
+      "limits": {
+       "min": {
+        "on": false,
+        "value": null
+       },
+       "max": {
+        "on": false,
+        "value": null
+       }
+      },
+      "portfolio_limits": {
+       "min": {
+        "on": false,
+        "value": null
+       },
+       "max": {
+        "on": false,
+        "value": null
+       }
+      },
+      "settings": {},
+      "inherit": {},
+      "view": null
+     },
+     {
+      "kind": "group",
+      "name": "Other equities",
+      "children": [
+       {
+        "kind": "asset",
+        "ticker": "FERG",
+        "limits": {
+         "min": {
+          "on": false,
+          "value": null
+         },
+         "max": {
+          "on": false,
+          "value": null
+         }
+        },
+        "portfolio_limits": {
+         "min": {
+          "on": false,
+          "value": null
+         },
+         "max": {
+          "on": false,
+          "value": null
+         }
+        }
+       },
+       {
+        "kind": "asset",
+        "ticker": "MNTS",
+        "limits": {
+         "min": {
+          "on": false,
+          "value": null
+         },
+         "max": {
+          "on": false,
+          "value": null
+         }
+        },
+        "portfolio_limits": {
+         "min": {
+          "on": false,
+          "value": null
+         },
+         "max": {
+          "on": false,
+          "value": null
+         }
+        }
+       }
+      ],
+      "limits": {
+       "min": {
+        "on": false,
+        "value": null
+       },
+       "max": {
+        "on": false,
+        "value": null
+       }
+      },
+      "portfolio_limits": {
+       "min": {
+        "on": false,
+        "value": null
+       },
+       "max": {
+        "on": false,
+        "value": null
+       }
+      },
+      "settings": {},
+      "inherit": {},
+      "view": null
+     }
+    ],
+    "limits": {
+     "min": {
+      "on": false,
+      "value": null
+     },
+     "max": {
+      "on": false,
+      "value": null
+     }
+    },
+    "portfolio_limits": {
+     "min": {
+      "on": false,
+      "value": null
+     },
+     "max": {
+      "on": false,
+      "value": null
+     }
+    },
+    "settings": {},
+    "inherit": {},
+    "view": null,
+    "color_slot": 0
+   },
+   {
+    "kind": "group",
+    "name": "Alternatives",
+    "children": [
+     {
+      "kind": "group",
+      "name": "Crypto",
+      "children": [
+       {
+        "kind": "asset",
+        "ticker": "BTC=F",
+        "limits": {
+         "min": {
+          "on": false,
+          "value": null
+         },
+         "max": {
+          "on": false,
+          "value": null
+         }
+        },
+        "portfolio_limits": {
+         "min": {
+          "on": false,
+          "value": null
+         },
+         "max": {
+          "on": false,
+          "value": null
+         }
+        }
+       }
+      ],
+      "limits": {
+       "min": {
+        "on": false,
+        "value": null
+       },
+       "max": {
+        "on": false,
+        "value": null
+       }
+      },
+      "portfolio_limits": {
+       "min": {
+        "on": false,
+        "value": null
+       },
+       "max": {
+        "on": false,
+        "value": null
+       }
+      },
+      "settings": {},
+      "inherit": {},
+      "view": null
+     },
+     {
+      "kind": "group",
+      "name": "Managed futures",
+      "children": [
+       {
+        "kind": "asset",
+        "ticker": "DBMF",
+        "limits": {
+         "min": {
+          "on": false,
+          "value": null
+         },
+         "max": {
+          "on": false,
+          "value": null
+         }
+        },
+        "portfolio_limits": {
+         "min": {
+          "on": false,
+          "value": null
+         },
+         "max": {
+          "on": false,
+          "value": null
+         }
+        }
+       },
+       {
+        "kind": "asset",
+        "ticker": "CTA",
+        "limits": {
+         "min": {
+          "on": true,
+          "value": 0.25
+         },
+         "max": {
+          "on": false,
+          "value": null
+         }
+        },
+        "portfolio_limits": {
+         "min": {
+          "on": false,
+          "value": null
+         },
+         "max": {
+          "on": false,
+          "value": null
+         }
+        }
+       },
+       {
+        "kind": "asset",
+        "ticker": "WTMF",
+        "limits": {
+         "min": {
+          "on": false,
+          "value": null
+         },
+         "max": {
+          "on": false,
+          "value": null
+         }
+        },
+        "portfolio_limits": {
+         "min": {
+          "on": false,
+          "value": null
+         },
+         "max": {
+          "on": false,
+          "value": null
+         }
+        }
+       }
+      ],
+      "limits": {
+       "min": {
+        "on": false,
+        "value": null
+       },
+       "max": {
+        "on": true,
+        "value": 0.3
+       }
+      },
+      "portfolio_limits": {
+       "min": {
+        "on": false,
+        "value": null
+       },
+       "max": {
+        "on": false,
+        "value": null
+       }
+      },
+      "settings": {},
+      "inherit": {},
+      "view": null
+     }
+    ],
+    "limits": {
+     "min": {
+      "on": true,
+      "value": 0.05
+     },
+     "max": {
+      "on": true,
+      "value": 0.15
+     }
+    },
+    "portfolio_limits": {
+     "min": {
+      "on": false,
+      "value": null
+     },
+     "max": {
+      "on": false,
+      "value": null
+     }
+    },
+    "settings": {},
+    "inherit": {},
+    "view": null,
+    "color_slot": 1
+   },
+   {
+    "kind": "group",
+    "name": "Rates & index",
+    "children": [
+     {
+      "kind": "asset",
+      "ticker": "TLT",
+      "limits": {
+       "min": {
+        "on": false,
+        "value": null
+       },
+       "max": {
+        "on": false,
+        "value": null
+       }
+      },
+      "portfolio_limits": {
+       "min": {
+        "on": false,
+        "value": null
+       },
+       "max": {
+        "on": false,
+        "value": null
+       }
+      }
+     },
+     {
+      "kind": "asset",
+      "ticker": "IBHK",
+      "limits": {
+       "min": {
+        "on": false,
+        "value": null
+       },
+       "max": {
+        "on": false,
+        "value": null
+       }
+      },
+      "portfolio_limits": {
+       "min": {
+        "on": false,
+        "value": null
+       },
+       "max": {
+        "on": false,
+        "value": null
+       }
+      }
+     },
+     {
+      "kind": "asset",
+      "ticker": "SPY",
+      "limits": {
+       "min": {
+        "on": false,
+        "value": null
+       },
+       "max": {
+        "on": false,
+        "value": null
+       }
+      },
+      "portfolio_limits": {
+       "min": {
+        "on": false,
+        "value": null
+       },
+       "max": {
+        "on": false,
+        "value": null
+       }
+      }
+     }
+    ],
+    "limits": {
+     "min": {
+      "on": false,
+      "value": null
+     },
+     "max": {
+      "on": false,
+      "value": null
+     }
+    },
+    "portfolio_limits": {
+     "min": {
+      "on": false,
+      "value": null
+     },
+     "max": {
+      "on": false,
+      "value": null
+     }
+    },
+    "settings": {},
+    "inherit": {},
+    "view": null,
+    "color_slot": 2
+   }
+  ],
+  "limits": {
+   "min": {
+    "on": false,
+    "value": null
+   },
+   "max": {
+    "on": false,
+    "value": null
+   }
+  },
+  "portfolio_limits": {
+   "min": {
+    "on": false,
+    "value": null
+   },
+   "max": {
+    "on": false,
+    "value": null
+   }
+  },
+  "settings": {},
+  "inherit": {},
+  "view": null
+ }
+}

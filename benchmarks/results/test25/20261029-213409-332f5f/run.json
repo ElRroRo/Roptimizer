@@ -1,0 +1,17 @@
+{
+ "id": "20261029-213409-332f5f",
+ "portfolio_id": "e9fdb039c9d3",
+ "portfolio_name": "Test: 25 US assets, 4 levels",
+ "portfolio_version": 1,
+ "machine": "a100",
+ "status": "failed",
+ "queued": "2026-10-29T21:34:09",
+ "settings": {},
+ "started": "2026-10-29T21:34:09",
+ "pid": 82377,
+ "ended": "2026-10-29T21:36:50",
+ "wall_s": 160.7,
+ "exit": 1,
+ "error": "[colab] Stopping session 'mso-20261029-213409-332f5f'... | [colab] Session terminated. | the A100 job ended without a result (exit 1): see <repo>/library/runs/20261029-213409-332f5f/results.colab.log",
+ "sessions_stopped_after": []
+}

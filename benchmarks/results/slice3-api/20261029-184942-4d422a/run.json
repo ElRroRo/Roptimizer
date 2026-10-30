@@ -1,0 +1,28 @@
+{
+ "id": "20261029-184942-4d422a",
+ "portfolio_id": "2dbfdac95438",
+ "portfolio_name": "Portfolio (from portfolio_data.csv)",
+ "portfolio_version": 2,
+ "machine": "a100",
+ "status": "done",
+ "queued": "2026-10-29T18:49:42",
+ "settings": {},
+ "started": "2026-10-29T18:49:42",
+ "pid": 59349,
+ "ended": "2026-10-29T18:52:48",
+ "wall_s": 186.0,
+ "exit": 0,
+ "objective": -0.13727086760486648,
+ "gpu": "NVIDIA A100-SXM4-40GB",
+ "colab": {
+  "session": "mso-20261029-184942-4d422a",
+  "exit": 0,
+  "wall_s": 180.9,
+  "balance_before": 190.4,
+  "balance_after": 190.4,
+  "cu_measured": 0.0,
+  "cu_at_rate": 0.27
+ },
+ "searches": 1,
+ "sessions_stopped_after": []
+}

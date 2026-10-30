@@ -1,0 +1,17 @@
+{
+ "id": "20261029-185302-756c26",
+ "portfolio_id": "2dbfdac95438",
+ "portfolio_name": "Portfolio (from portfolio_data.csv)",
+ "portfolio_version": 2,
+ "machine": "a100",
+ "status": "cancelled",
+ "queued": "2026-10-29T18:53:02",
+ "settings": {},
+ "started": "2026-10-29T18:53:02",
+ "pid": 60104,
+ "ended": "2026-10-29T18:54:03",
+ "wall_s": 61.4,
+ "exit": -15,
+ "error": "cancelled",
+ "sessions_stopped_after": []
+}

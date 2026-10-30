@@ -1,0 +1,52 @@
+{
+ "version": "2026-10-29",
+ "created": "2026-10-29T17:07:18",
+ "code_commit": "8ce47e0",
+ "systematic": "^GSPC",
+ "jump_config": {
+  "systematic": {
+   "lambda": 0.008729388942774006,
+   "prob_crash": 0.7777777777777778,
+   "crash_shape": 0,
+   "crash_scale": 0.9331054687499999,
+   "rally_shape": 0,
+   "rally_scale": 0.3398437499999994,
+   "threshold": 3.0
+  },
+  "idiosyncratic": {
+   "lambda": 0.008811922271012176,
+   "prob_crash": 0.5738594689746223,
+   "crash_shape": 0.20240757617020577,
+   "crash_scale": 0.7558593749999998,
+   "rally_shape": 0.3,
+   "rally_scale": 0.5378906249999996,
+   "threshold": 3.0
+  }
+ },
+ "hawkes_config": {
+  "systematic": {
+   "lambda_inf": 0.007771364528071365,
+   "alpha": 0.7237299599825946,
+   "beta": 0.05652629181171671
+  },
+  "idiosyncratic": {
+   "lambda_inf": 0.008811922271012176,
+   "alpha": 1.2005842093569585,
+   "beta": 0.0
+  }
+ },
+ "cojump_config": {
+  "var_jump_mult": 1.594733631727257
+ },
+ "windows": {
+  "systematic": {
+   "first": "1928-01-02",
+   "last": "2026-10-19",
+   "weeks": 5155
+  },
+  "pool": {
+   "first": "1962-01-08",
+   "last": "2026-10-27"
+  }
+ }
+}

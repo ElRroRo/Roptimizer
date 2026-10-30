@@ -1,0 +1,29 @@
+{"type": "queued", "t": 1793294629.5132227, "machine": "laptop", "position": 1, "seq": 0}
+{"type": "started", "t": 1793294629.5141919, "machine": "laptop", "seq": 1}
+{"type": "start", "t": 1793294630.942, "machine": "laptop", "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU", "seed": 20261029, "seq": 2}
+{"type": "stage", "t": 1793294630.942, "stage": "inputs", "seq": 3}
+{"type": "stage", "t": 1793294633.874, "stage": "bank", "paths": 2000000, "seq": 4}
+{"type": "bank", "t": 1793294637.744, "done": 500000, "total": 2000000, "s": 3.9, "seq": 5}
+{"type": "bank", "t": 1793294637.904, "done": 1000000, "total": 2000000, "s": 4.0, "seq": 6}
+{"type": "bank", "t": 1793294638.12, "done": 1500000, "total": 2000000, "s": 4.2, "seq": 7}
+{"type": "bank", "t": 1793294638.328, "done": 2000000, "total": 2000000, "s": 4.5, "seq": 8}
+{"type": "stage", "t": 1793294638.395, "stage": "search", "seq": 9}
+{"type": "search_start", "t": 1793294638.395, "search": "Portfolio / Defensive", "children": ["SPY", "TLT"], "seq": 10}
+{"type": "generation", "t": 1793294639.509, "search": "Portfolio / Defensive", "gen": 1, "incumbent": -0.039398190222608764, "scored": 2, "s": 0.73, "replaced": 48, "stop": false, "seq": 11}
+{"type": "generation", "t": 1793294640.242, "search": "Portfolio / Defensive", "gen": 2, "incumbent": -0.03940001275669934, "scored": 2, "s": 0.73, "replaced": 39, "stop": false, "seq": 12}
+{"type": "generation", "t": 1793294640.976, "search": "Portfolio / Defensive", "gen": 3, "incumbent": -0.03934411446837966, "scored": 3, "s": 0.73, "replaced": 37, "stop": false, "seq": 13}
+{"type": "generation", "t": 1793294641.709, "search": "Portfolio / Defensive", "gen": 4, "incumbent": -0.03933583865232131, "scored": 4, "s": 0.73, "replaced": 36, "stop": false, "seq": 14}
+{"type": "generation", "t": 1793294642.442, "search": "Portfolio / Defensive", "gen": 5, "incumbent": -0.039356479121817764, "scored": 2, "s": 0.73, "replaced": 28, "stop": false, "seq": 15}
+{"type": "generation", "t": 1793294643.176, "search": "Portfolio / Defensive", "gen": 6, "incumbent": -0.039389547822930596, "scored": 2, "s": 0.73, "replaced": 29, "stop": true, "seq": 16}
+{"type": "search_done", "t": 1793294643.176, "search": "Portfolio / Defensive", "generations": 6, "stopped": "window", "incumbent": -0.039389547822930596, "seq": 17}
+{"type": "search_start", "t": 1793294643.176, "search": "Portfolio", "children": ["Defensive", "GLD"], "seq": 18}
+{"type": "generation", "t": 1793294644.282, "search": "Portfolio", "gen": 1, "incumbent": 0.05773812356095203, "scored": 2, "s": 0.73, "replaced": 41, "stop": false, "seq": 19}
+{"type": "generation", "t": 1793294645.015, "search": "Portfolio", "gen": 2, "incumbent": 0.0577109001261006, "scored": 2, "s": 0.73, "replaced": 42, "stop": false, "seq": 20}
+{"type": "generation", "t": 1793294645.749, "search": "Portfolio", "gen": 3, "incumbent": 0.05771040082155599, "scored": 3, "s": 0.73, "replaced": 37, "stop": false, "seq": 21}
+{"type": "generation", "t": 1793294646.482, "search": "Portfolio", "gen": 4, "incumbent": 0.05771232509120841, "scored": 4, "s": 0.73, "replaced": 37, "stop": false, "seq": 22}
+{"type": "generation", "t": 1793294647.216, "search": "Portfolio", "gen": 5, "incumbent": 0.057713853203937994, "scored": 5, "s": 0.73, "replaced": 34, "stop": false, "seq": 23}
+{"type": "generation", "t": 1793294647.95, "search": "Portfolio", "gen": 6, "incumbent": 0.05771678756664101, "scored": 6, "s": 0.73, "replaced": 35, "stop": true, "seq": 24}
+{"type": "search_done", "t": 1793294647.951, "search": "Portfolio", "generations": 6, "stopped": "window", "incumbent": 0.05771678756664101, "seq": 25}
+{"type": "stage", "t": 1793294647.951, "stage": "metrics", "seq": 26}
+{"type": "done", "t": 1793294648.098, "out": "<repo>/library/runs/20261029-202349-402994/results.json", "wall_s": 17.3, "objective": 0.05771678756664101, "seq": 27}
+{"type": "end", "t": 1793294648.6969883, "ended": "2026-10-29T20:24:08", "wall_s": 19.2, "exit": 0, "status": "done", "objective": 0.05771678756664101, "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU", "colab": null, "searches": 2, "seq": 28}

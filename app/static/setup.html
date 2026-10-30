@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roptimizer Setup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="results.css">
+<style>
+/* Setup: where runs can go. Colab first (recommended: a large bank on a rented GPU, nothing to install but the
+   colab CLI), then this computer, then the choice the review's Run button uses. Same tokens as the other screens. */
+body { overflow: auto; }
+.wrap { max-width: 1180px; margin: 0 auto; padding: 18px 16px 40px; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 14px; }
+.card { background: var(--panel); border: 1px solid var(--frame); }
+.card > .ph { height: 30px; }
+.card .body { padding: 14px 16px 16px; }
+.card.wide { grid-column: 1 / -1; }
+h2 { font-size: 18px; margin: 0 0 4px; font-weight: 700; }
+.lede { color: var(--ink-2); margin: 0 0 14px; max-width: 62ch; }
+.rec { font: 600 11px var(--code); color: var(--att); letter-spacing: 0.06em; text-transform: uppercase; margin-left: 8px; }
+ol.steps { list-style: none; margin: 0; padding: 0; counter-reset: s; }
+ol.steps > li { display: grid; grid-template-columns: 26px minmax(0, 1fr) auto; gap: 4px 12px; align-items: start; padding: 12px 0; border-top: 1px solid var(--frame); }
+ol.steps > li::before { counter-increment: s; content: counter(s); font: 600 12px var(--code); color: var(--mute); border: 1px solid var(--frame-2); border-radius: 50%; width: 22px; height: 22px; display: grid; place-items: center; }
+ol.steps > li.ok::before { content: "✓"; color: var(--bg); background: var(--up); border-color: var(--up); }
+.st b { display: block; font-weight: 600; }
+.st span { color: var(--ink-2); }
+.st .err { color: var(--down); white-space: pre-wrap; font-family: var(--code); font-size: 11.5px; display: block; margin-top: 4px; }
+button.go, a.go { font: 600 12.5px var(--sans); background: var(--ink); color: var(--bg); border: 0; border-radius: 2px; padding: 6px 13px; cursor: pointer; text-decoration: none; white-space: nowrap; }
+button.go[disabled] { opacity: 0.4; cursor: default; }
+button.sec { font: 500 12.5px var(--sans); background: transparent; color: var(--ink); border: 1px solid var(--frame-2); border-radius: 2px; padding: 5px 11px; cursor: pointer; }
+.code { display: flex; gap: 8px; margin-top: 8px; grid-column: 2 / -1; flex-wrap: wrap; }
+.code input { flex: 1 1 260px; font: 13px var(--code); color: var(--ink); background: var(--bg); border: 1px solid var(--frame-2); border-radius: 2px; padding: 6px 8px; }
+.code input:focus { outline: none; border-color: var(--att); }
+dl.kv { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 6px 12px; margin: 0 0 12px; }
+dl.kv dt { color: var(--mute); } dl.kv dd { margin: 0; }
+.verdict { padding: 10px 12px; border-left: 3px solid var(--frame-2); background: var(--panel-2); margin-bottom: 12px; }
+.verdict.good { border-color: var(--up); } .verdict.meh { border-color: #e0af68; }
+.choices { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; }
+.choice { text-align: left; background: var(--panel-2); border: 1px solid var(--frame-2); border-radius: 2px; padding: 10px 12px; color: var(--ink); font: inherit; cursor: pointer; }
+.choice b { display: block; margin-bottom: 2px; } .choice span { color: var(--ink-2); font-size: 12px; }
+.choice[aria-pressed="true"] { border-color: var(--att); box-shadow: inset 3px 0 0 var(--att); }
+.choice[disabled] { opacity: 0.45; cursor: default; }
+select.gpu { font: 500 12.5px var(--sans); color: var(--ink); background: var(--bg); border: 1px solid var(--frame-2); border-radius: 2px; padding: 4px 6px; }
+.why { margin: 0 0 14px; padding-left: 18px; color: var(--ink-2); } .why li { margin: 2px 0; }
+.mu { color: var(--mute); }
+.busy::after { content: " …"; }
+@media (max-width: 860px) { .wrap { grid-template-columns: minmax(0, 1fr); } }
+</style></head>
+<body>
+<div class="top"><h1>Setup</h1><span class="meta" id="meta">where your runs go</span><span class="sp"></span>
+  <a class="q" href="builder.html" style="text-decoration:none">Builder</a></div>
+<div class="wrap">
+  <section class="card"><div class="ph"><b>Google Colab</b><span>rented GPUs, run from here</span></div><div class="body">
+    <h2>Run on Colab<span class="rec">recommended</span></h2>
+    <ul class="why">
+      <li>A large scenario bank: up to 30 million paths on the rented GPU, against 2 million on a laptop GPU or 400,000 on a CPU.</li>
+      <li>Your computer stays free while a run goes; the machine shuts down by itself when the run ends.</li>
+      <li>Colab's free tier usually offers a T4; L4, A100 and H100 come with paid compute units.</li>
+    </ul>
+    <ol class="steps" id="colab-steps"></ol>
+  </div></section>
+
+  <section class="card"><div class="ph"><b>This computer</b><span>what runs here can use</span></div><div class="body" id="pc"></div></section>
+
+  <section class="card wide"><div class="ph"><b>Where runs go</b><span>the review's Run button uses this; you can change it on the progress screen too</span></div><div class="body">
+    <div class="choices" id="where"></div>
+    <p class="mu" style="margin:12px 0 0">Every run starts from the review before the run, in the <a href="builder.html" style="color:var(--ink)">builder</a>. Two example portfolios are in the library to try first.</p>
+  </div></section>
+</div>
+<div class="foot" id="note"></div>
+<script>
+const API = { store: (k, v) => { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch { return null; } } };
+const colabGPU = () => API.store("mso.colab_gpu") || "A100";
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+let S = null, BUSY = null;
+try { localStorage.setItem("mso.setup_seen", "1"); } catch { /* private window */ }
+
+async function call(method, url, body) {
+  const r = await fetch(url, { method, headers: { "content-type": "application/json" }, body: body ? JSON.stringify(body) : undefined });
+  const d = await r.json().catch(() => ({}));
+  if (!r.ok) throw new Error(d.detail || `${r.status}`);
+  return d;
+}
+async function refresh() { S = await call("GET", "/api/setup"); draw(); }
+async function act(name, fn) {
+  BUSY = name; draw();
+  try { await fn(); $("#note").textContent = ""; } catch (e) { $("#note").textContent = e.message; S.err = { [name]: e.message }; }
+  BUSY = null; await refresh();
+}
+
+function step(ok, title, text, action, extra = "") {
+  return `<li class="${ok ? "ok" : ""}"><div class="st"><b>${title}</b><span>${text}</span></div><div>${action || ""}</div>${extra}</li>`;
+}
+
+function draw() {
+  const C = S.colab, P = S.computer, si = S.signin, err = S.err || {};
+  const btn = (id, label, dis = false) => `<button class="go${BUSY === id ? " busy" : ""}" type="button" data-a="${id}"${dis || BUSY ? " disabled" : ""}>${label}</button>`;
+  // Colab
+  let s = step(C.installed, "Install the Colab command-line tool",
+    C.installed ? `installed at <span class="mu">${esc(C.path)}</span>` : "Google's colab CLI starts and stops Colab machines for each run. One click installs it (and uv, its installer, if needed).",
+    C.installed ? "" : btn("install", "Install"), err.install ? `<span class="st" style="grid-column:2/-1"><span class="err">${esc(err.install)}</span></span>` : "");
+  const waiting = si && si.state === "waiting_code";
+  s += step(C.signed_in, "Sign in with your Google account",
+    C.signed_in ? "signed in" : waiting ? `Open the Google page, approve, then paste the code it shows below.`
+      : C.error ? esc(C.error) : "Colab runs on your own Google account. Sign-in happens on Google's page; this tool never sees your password.",
+    C.signed_in || !C.installed ? "" : waiting ? `<a class="go" href="${esc(si.url)}" target="_blank" rel="noopener">Open Google sign-in</a>` : btn("signin", "Sign in"),
+    (waiting ? `<div class="code"><input id="code" placeholder="paste the code from Google here" autocomplete="off"><button class="go" type="button" data-a="code"${BUSY ? " disabled" : ""}>Finish sign-in</button></div>` : "")
+    + (si && si.state === "failed" ? `<span class="st" style="grid-column:2/-1"><span class="err">${esc(si.message)}</span></span>` : "")
+    + (err.signin || err.code ? `<span class="st" style="grid-column:2/-1"><span class="err">${esc(err.signin || err.code)}</span></span>` : ""));
+  const gpu = colabGPU();
+  s += step(C.signed_in, "Pick the GPU",
+    C.signed_in ? `Balance ${C.balance == null ? "unknown" : `${C.balance.toFixed(2)} compute units`}. A GPU your plan does not include waits, then fails with a message; T4 is the free-tier choice.` : "after sign-in",
+    `<select class="gpu" id="gpu" aria-label="Colab GPU"${C.signed_in ? "" : " disabled"}>${[["T4", "T4, 16 GB (free tier)"], ["L4", "L4, 24 GB"], ["A100", "A100, 40 GB"], ["H100", "H100, 80 GB"]].map(([v, l]) => `<option value="${v}"${v === gpu ? " selected" : ""}>${l}</option>`).join("")}</select>`);
+  $("#colab-steps").innerHTML = s;
+  // this computer
+  const good = P.gpu, nvNoPkg = P.nvidia && !P.gpu_package;
+  $("#pc").innerHTML = `<div class="verdict ${good ? "good" : "meh"}">${good ? `<b>NVIDIA GPU ready.</b> Runs here build up to 2,000,000 paths, as many as fit its memory.`
+      : nvNoPkg ? `<b>An NVIDIA GPU is here, but its package is missing.</b> Install it to run on the GPU; until then runs use the CPU.`
+      : P.nvidia && P.gpu_package && P.device ? `<b>The NVIDIA GPU did not start, so runs here use the CPU.</b> ${P.forced_cpu ? "MSO_DEVICE=cpu is set." : "Check that the driver works (nvidia-smi) and that the GPU package matches its CUDA version."}`
+      : P.device ? `<b>No NVIDIA GPU: runs here use the CPU.</b> They work, with a 400,000-path bank; a 16-asset run takes about a quarter of an hour. Colab is faster.`
+      : `Checking this computer…`}</div>
+    <dl class="kv"><dt>Runs use</dt><dd>${esc(P.device || "checking…")}</dd><dt>NVIDIA driver</dt><dd>${P.nvidia ? `yes, CUDA ${P.cuda ?? "?"}` : "not found"}</dd>
+      <dt>GPU package</dt><dd>${P.gpu_package ? "installed (CuPy)" : "not installed"}</dd><dt>Python</dt><dd>${esc(P.python)} on ${esc(P.system)}, ${P.threads} threads</dd></dl>
+    ${nvNoPkg ? btn("gpu", "Install GPU support") : ""}${err.gpu ? `<span class="err" style="color:var(--down);display:block;margin-top:6px">${esc(err.gpu)}</span>` : ""}`;
+  // where runs go
+  const m = API.store("mso.machine") || "laptop";
+  $("#where").innerHTML = `<button class="choice" type="button" data-m="laptop" aria-pressed="${m === "laptop"}"><b>This computer</b><span>${esc(P.device || "")}${good ? ", up to 2,000,000 paths" : ", 400,000 paths on the CPU"}; free</span></button>
+    <button class="choice" type="button" data-m="a100" aria-pressed="${m === "a100"}"${C.signed_in ? "" : " disabled"}><b>Colab ${esc(gpu)}</b><span>${C.signed_in ? "up to 30,000,000 paths on the rented GPU; about a minute to start" : "set up Colab first"}</span></button>`;
+  $("#meta").textContent = `runs go to ${m === "a100" ? `Colab ${gpu}` : "this computer"}`;
+}
+
+document.addEventListener("click", (e) => {
+  const a = e.target.closest("[data-a]"); if (a && !a.disabled) {
+    const k = a.dataset.a;
+    if (k === "install") act("install", () => call("POST", "/api/setup/colab/install"));
+    if (k === "gpu") act("gpu", () => call("POST", "/api/setup/gpu"));
+    if (k === "signin") act("signin", async () => { const v = await call("POST", "/api/setup/colab/signin"); if (v.url) window.open(v.url, "_blank", "noopener"); });
+    if (k === "code") { const code = $("#code").value.trim(); act("code", () => call("POST", "/api/setup/colab/code", { code })); }
+  }
+  const c = e.target.closest(".choice[data-m]"); if (c && !c.disabled) { API.store("mso.machine", c.dataset.m); draw(); }
+});
+document.addEventListener("change", (e) => { if (e.target.id === "gpu") { API.store("mso.colab_gpu", e.target.value); draw(); } });
+refresh();
+setInterval(() => { if (!BUSY && S && !S.computer.device) refresh(); }, 4000);   // the device probe finishes a few seconds after start
+</script>
+</body></html>

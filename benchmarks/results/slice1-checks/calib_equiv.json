@@ -1,0 +1,138 @@
+{
+ "identical": {
+  "jump": true,
+  "hawkes": true,
+  "cojump": true
+ },
+ "new": {
+  "jump": {
+   "systematic": {
+    "lambda": 0.008727695888285493,
+    "prob_crash": 0.7777777777777778,
+    "crash_shape": 0,
+    "crash_scale": 0.9333984375,
+    "rally_shape": 0,
+    "rally_scale": 0.3396484374999994,
+    "threshold": 3.0
+   },
+   "idiosyncratic": {
+    "lambda": 0.008877835400691819,
+    "prob_crash": 0.5728013977868375,
+    "crash_shape": 0.18177398441766635,
+    "crash_scale": 0.7666015624999998,
+    "rally_shape": 0.3,
+    "rally_scale": 0.5337890624999997,
+    "threshold": 3.0
+   }
+  },
+  "hawkes": {
+   "systematic": {
+    "lambda_inf": 0.0077698533762949945,
+    "alpha": 0.7237325038258822,
+    "beta": 0.05652665764689773
+   },
+   "idiosyncratic": {
+    "lambda_inf": 0.008877835400691819,
+    "alpha": 1.1461075536246836,
+    "beta": 0.0
+   }
+  },
+  "cojump": {
+   "var_jump_mult": 1.5949229181043396
+  }
+ },
+ "frozen": {
+  "jump": {
+   "systematic": {
+    "lambda": 0.008727695888285493,
+    "prob_crash": 0.7777777777777778,
+    "crash_shape": 0,
+    "crash_scale": 0.9333007812499999,
+    "rally_shape": 0,
+    "rally_scale": 0.3398437499999994,
+    "threshold": 3.0
+   },
+   "idiosyncratic": {
+    "lambda": 0.008793825320477604,
+    "prob_crash": 0.5748934293693958,
+    "crash_shape": 0.21129961799669064,
+    "crash_scale": 0.7494140624999999,
+    "rally_shape": 0.2879960624161124,
+    "rally_scale": 0.5444335937499997,
+    "threshold": 3.0
+   }
+  },
+  "hawkes": {
+   "systematic": {
+    "lambda_inf": 0.0077698533762949945,
+    "alpha": 0.7237325038258822,
+    "beta": 0.05652665764689773
+   },
+   "idiosyncratic": {
+    "lambda_inf": 0.008793825320477604,
+    "alpha": 1.1461075536246836,
+    "beta": 0.0
+   }
+  },
+  "cojump": {
+   "var_jump_mult": 1.594850381136512
+  }
+ },
+ "diagnostics": {
+  "seconds": 26.2,
+  "systematic_fit": "AR-GARCH(1,1)",
+  "veto_threshold": 3.0,
+  "veto_weeks": 45,
+  "veto_last": [
+   "2008-10-06",
+   "2010-05-03",
+   "2011-06-27",
+   "2011-08-01",
+   "2015-08-17",
+   "2018-10-08",
+   "2020-02-24",
+   "2020-03-16",
+   "2022-01-17",
+   "2025-03-31"
+  ],
+  "pool_counts": {
+   "modelled": 388,
+   "too short": 12,
+   "no data": 6
+  },
+  "shocks_pooled": 773612,
+  "gpd": {
+   "systematic": {
+    "jumps": 45,
+    "crashes": 35,
+    "rallies": 10,
+    "observations": 5156
+   },
+   "idiosyncratic": {
+    "jumps": 6868,
+    "crashes": 3934,
+    "rallies": 2934,
+    "observations": 773612
+   }
+  },
+  "hawkes": {
+   "systematic_indicator_weeks": 5156,
+   "idiosyncratic_series_used": 60
+  },
+  "cojump": {
+   "crash_weeks_with_rise": 35,
+   "fallback": false
+  }
+ },
+ "windows": {
+  "systematic": {
+   "first": "1928-01-02",
+   "last": "2026-10-26",
+   "weeks": 5156
+  },
+  "pool": {
+   "first": "1962-01-08",
+   "last": "2026-10-29"
+  }
+ }
+}

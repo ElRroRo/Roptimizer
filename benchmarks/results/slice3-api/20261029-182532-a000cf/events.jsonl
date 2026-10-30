@@ -1,0 +1,10 @@
+{"type": "queued", "t": 1793287532.0282264, "machine": "laptop", "position": 1}
+{"type": "started", "t": 1793287532.029035, "machine": "laptop"}
+{"type": "start", "t": 1793287533.405, "machine": "laptop", "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU", "seed": 20261029}
+{"type": "stage", "t": 1793287533.405, "stage": "inputs"}
+{"type": "stage", "t": 1793287534.449, "stage": "bank", "paths": 1000000}
+{"type": "bank", "t": 1793287539.064, "done": 500000, "total": 1000000, "s": 4.5}
+{"type": "bank", "t": 1793287539.947, "done": 1000000, "total": 1000000, "s": 5.4}
+{"type": "stage", "t": 1793287540.243, "stage": "search"}
+{"type": "search_start", "t": 1793287540.244, "search": "Portfolio", "children": ["NVDA", "MNTS", "META", "JPM", "GOOGL", "FERG", "BTC=F", "ADBE", "NRIM", "SPGI", "DBMF", "CTA", "WTMF", "TLT", "IBHK", "SPY"]}
+{"type": "generation", "t": 1793287544.703, "search": "Portfolio", "gen": 1, "incumbent": -0.10473737925218574, "scored": 2, "s": 2.96, "replaced": 378, "stop": false}

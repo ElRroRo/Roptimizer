@@ -1,0 +1,19 @@
+{
+ "id": "20261029-202349-402994",
+ "portfolio_id": "05e04365dd32",
+ "portfolio_name": "Built by hand (slice 4 test)",
+ "portfolio_version": 2,
+ "machine": "laptop",
+ "status": "done",
+ "queued": "2026-10-29T20:23:49",
+ "settings": {},
+ "started": "2026-10-29T20:23:49",
+ "pid": 71816,
+ "ended": "2026-10-29T20:24:08",
+ "wall_s": 19.2,
+ "exit": 0,
+ "objective": 0.05771678756664101,
+ "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+ "colab": null,
+ "searches": 2
+}

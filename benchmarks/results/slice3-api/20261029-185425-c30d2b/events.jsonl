@@ -1,0 +1,8 @@
+{"type": "queued", "t": 1793289265.8571064, "machine": "a100", "position": 1}
+{"type": "started", "t": 1793289265.857663, "machine": "a100"}
+{"type": "stage", "t": 1793289266.165, "stage": "inputs"}
+{"type": "stage", "t": 1793289268.141, "stage": "packed", "session": "mso-20261029-185425-c30d2b", "payload_kib": 161}
+{"type": "colab", "t": 1793289269.789, "balance_before": 190.4, "rate": 5.3}
+{"type": "start", "t": 1793289297.754, "machine": "local", "gpu": "NVIDIA A100-SXM4-40GB", "seed": 20261029}
+{"type": "stage", "t": 1793289297.754, "stage": "inputs"}
+{"type": "stage", "t": 1793289298.017, "stage": "bank", "paths": 30000000}

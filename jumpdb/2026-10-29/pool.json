@@ -1,0 +1,2784 @@
+{
+ "LIN": {
+  "status": "modelled",
+  "weeks": 1793,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1992-06-22",
+  "last": "2026-10-26"
+ },
+ "SHW": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "APD": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "ECL": {
+  "status": "modelled",
+  "weeks": 2801,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1973-02-26",
+  "last": "2026-10-26"
+ },
+ "FCX": {
+  "status": "modelled",
+  "weeks": 1633,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1995-07-17",
+  "last": "2026-10-26"
+ },
+ "NEM": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "DOW": {
+  "status": "too short",
+  "weeks": 397
+ },
+ "DD": {
+  "status": "modelled",
+  "weeks": 2839,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1972-06-05",
+  "last": "2026-10-26"
+ },
+ "CTVA": {
+  "status": "too short",
+  "weeks": 388
+ },
+ "PPG": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "NUE": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "VMC": {
+  "status": "modelled",
+  "weeks": 2801,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1973-02-26",
+  "last": "2026-10-26"
+ },
+ "MLM": {
+  "status": "modelled",
+  "weeks": 1706,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1994-02-21",
+  "last": "2026-10-26"
+ },
+ "ALB": {
+  "status": "modelled",
+  "weeks": 1705,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1994-02-28",
+  "last": "2026-10-26"
+ },
+ "FMC": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "EMN": {
+  "status": "modelled",
+  "weeks": 1715,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1993-12-20",
+  "last": "2026-10-26"
+ },
+ "CF": {
+  "status": "modelled",
+  "weeks": 1107,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2005-08-15",
+  "last": "2026-10-26"
+ },
+ "MOS": {
+  "status": "modelled",
+  "weeks": 2022,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1988-02-01",
+  "last": "2026-10-26"
+ },
+ "IFF": {
+  "status": "modelled",
+  "weeks": 2706,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1974-12-23",
+  "last": "2026-10-26"
+ },
+ "CE": {
+  "status": "modelled",
+  "weeks": 1136,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2005-01-24",
+  "last": "2026-10-26"
+ },
+ "BALL": {
+  "status": "modelled",
+  "weeks": 2801,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1973-02-26",
+  "last": "2026-10-26"
+ },
+ "PKG": {
+  "status": "modelled",
+  "weeks": 1396,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2000-01-31",
+  "last": "2026-10-26"
+ },
+ "IP": {
+  "status": "modelled",
+  "weeks": 3382,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1962-01-08",
+  "last": "2026-10-26"
+ },
+ "SW": {
+  "status": "modelled",
+  "weeks": 958,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2008-06-23",
+  "last": "2026-10-26"
+ },
+ "AVY": {
+  "status": "modelled",
+  "weeks": 2801,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1973-02-26",
+  "last": "2026-10-26"
+ },
+ "AMCR": {
+  "status": "modelled",
+  "weeks": 754,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2012-05-21",
+  "last": "2026-10-26"
+ },
+ "SEE": {
+  "status": "no data"
+ },
+ "GE": {
+  "status": "modelled",
+  "weeks": 3382,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1962-01-08",
+  "last": "2026-10-26"
+ },
+ "CAT": {
+  "status": "modelled",
+  "weeks": 3382,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1962-01-08",
+  "last": "2026-10-26"
+ },
+ "DE": {
+  "status": "modelled",
+  "weeks": 2839,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1972-06-05",
+  "last": "2026-10-26"
+ },
+ "HON": {
+  "status": "modelled",
+  "weeks": 3382,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1962-01-08",
+  "last": "2026-10-26"
+ },
+ "UNP": {
+  "status": "modelled",
+  "weeks": 2443,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-01-08",
+  "last": "2026-10-27"
+ },
+ "UPS": {
+  "status": "modelled",
+  "weeks": 1407,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1999-11-15",
+  "last": "2026-10-26"
+ },
+ "RTX": {
+  "status": "modelled",
+  "weeks": 3369,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1962-04-09",
+  "last": "2026-10-26"
+ },
+ "BA": {
+  "status": "modelled",
+  "weeks": 3382,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1962-01-08",
+  "last": "2026-10-26"
+ },
+ "LMT": {
+  "status": "modelled",
+  "weeks": 3382,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1962-01-08",
+  "last": "2026-10-26"
+ },
+ "ETN": {
+  "status": "modelled",
+  "weeks": 2839,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1972-06-05",
+  "last": "2026-10-26"
+ },
+ "ADP": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "ITW": {
+  "status": "modelled",
+  "weeks": 2798,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1973-03-19",
+  "last": "2026-10-26"
+ },
+ "WM": {
+  "status": "modelled",
+  "weeks": 2001,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1988-06-27",
+  "last": "2026-10-26"
+ },
+ "CSX": {
+  "status": "modelled",
+  "weeks": 2399,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-11-10",
+  "last": "2026-10-26"
+ },
+ "NSC": {
+  "status": "modelled",
+  "weeks": 2317,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1982-06-07",
+  "last": "2026-10-26"
+ },
+ "GD": {
+  "status": "modelled",
+  "weeks": 3382,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1962-01-08",
+  "last": "2026-10-26"
+ },
+ "EMR": {
+  "status": "modelled",
+  "weeks": 2839,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1972-06-05",
+  "last": "2026-10-26"
+ },
+ "FDX": {
+  "status": "modelled",
+  "weeks": 2533,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1978-04-17",
+  "last": "2026-10-26"
+ },
+ "PH": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "CTAS": {
+  "status": "modelled",
+  "weeks": 2254,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1983-08-22",
+  "last": "2026-10-26"
+ },
+ "PCAR": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "CMI": {
+  "status": "modelled",
+  "weeks": 2801,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1973-02-26",
+  "last": "2026-10-26"
+ },
+ "TDG": {
+  "status": "modelled",
+  "weeks": 1076,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2006-03-20",
+  "last": "2026-10-26"
+ },
+ "NOC": {
+  "status": "modelled",
+  "weeks": 2339,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1982-01-04",
+  "last": "2026-10-26"
+ },
+ "ROP": {
+  "status": "modelled",
+  "weeks": 1811,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1992-02-17",
+  "last": "2026-10-26"
+ },
+ "TT": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "CARR": {
+  "status": "too short",
+  "weeks": 345
+ },
+ "OTIS": {
+  "status": "too short",
+  "weeks": 345
+ },
+ "FAST": {
+  "status": "modelled",
+  "weeks": 2045,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1987-08-24",
+  "last": "2026-10-26"
+ },
+ "AME": {
+  "status": "modelled",
+  "weeks": 2206,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1984-07-23",
+  "last": "2026-10-26"
+ },
+ "EFX": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "VRSK": {
+  "status": "modelled",
+  "weeks": 890,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2009-10-12",
+  "last": "2026-10-26"
+ },
+ "ODFL": {
+  "status": "modelled",
+  "weeks": 1827,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1991-10-28",
+  "last": "2026-10-26"
+ },
+ "GWW": {
+  "status": "modelled",
+  "weeks": 2801,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1973-02-26",
+  "last": "2026-10-26"
+ },
+ "ROK": {
+  "status": "modelled",
+  "weeks": 2339,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1982-01-04",
+  "last": "2026-10-26"
+ },
+ "CPRT": {
+  "status": "modelled",
+  "weeks": 1702,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1994-03-21",
+  "last": "2026-10-26"
+ },
+ "URI": {
+  "status": "modelled",
+  "weeks": 1506,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1997-12-22",
+  "last": "2026-10-26"
+ },
+ "PWR": {
+  "status": "modelled",
+  "weeks": 1498,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1998-02-16",
+  "last": "2026-10-26"
+ },
+ "EXPD": {
+  "status": "modelled",
+  "weeks": 2196,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1984-10-01",
+  "last": "2026-10-26"
+ },
+ "RSG": {
+  "status": "modelled",
+  "weeks": 1478,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1998-07-06",
+  "last": "2026-10-26"
+ },
+ "WAB": {
+  "status": "modelled",
+  "weeks": 1637,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1995-06-19",
+  "last": "2026-10-26"
+ },
+ "DOV": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "XYL": {
+  "status": "modelled",
+  "weeks": 785,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2011-10-17",
+  "last": "2026-10-26"
+ },
+ "SWK": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "MAS": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "SNA": {
+  "status": "modelled",
+  "weeks": 2801,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1973-02-26",
+  "last": "2026-10-26"
+ },
+ "TXT": {
+  "status": "modelled",
+  "weeks": 2801,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1973-02-26",
+  "last": "2026-10-26"
+ },
+ "HII": {
+  "status": "modelled",
+  "weeks": 814,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2011-03-28",
+  "last": "2026-10-26"
+ },
+ "LUV": {
+  "status": "modelled",
+  "weeks": 2443,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-01-08",
+  "last": "2026-10-27"
+ },
+ "DAL": {
+  "status": "modelled",
+  "weeks": 1017,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2007-05-07",
+  "last": "2026-10-26"
+ },
+ "UAL": {
+  "status": "modelled",
+  "weeks": 1081,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2006-02-13",
+  "last": "2026-10-26"
+ },
+ "AAL": {
+  "status": "modelled",
+  "weeks": 1100,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2005-10-03",
+  "last": "2026-10-26"
+ },
+ "ALK": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "CHRW": {
+  "status": "modelled",
+  "weeks": 1515,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1997-10-20",
+  "last": "2026-10-26"
+ },
+ "J": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "AMZN": {
+  "status": "modelled",
+  "weeks": 1537,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1997-05-19",
+  "last": "2026-10-26"
+ },
+ "TSLA": {
+  "status": "modelled",
+  "weeks": 852,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2010-07-05",
+  "last": "2026-10-26"
+ },
+ "HD": {
+  "status": "modelled",
+  "weeks": 2353,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1981-09-28",
+  "last": "2026-10-26"
+ },
+ "MCD": {
+  "status": "modelled",
+  "weeks": 3147,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1966-07-11",
+  "last": "2026-10-26"
+ },
+ "NKE": {
+  "status": "modelled",
+  "weeks": 2395,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-12-08",
+  "last": "2026-10-26"
+ },
+ "LOW": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "SBUX": {
+  "status": "modelled",
+  "weeks": 1792,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1992-06-29",
+  "last": "2026-10-26"
+ },
+ "BKNG": {
+  "status": "modelled",
+  "weeks": 1439,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1999-04-05",
+  "last": "2026-10-26"
+ },
+ "TJX": {
+  "status": "modelled",
+  "weeks": 2053,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1987-06-29",
+  "last": "2026-10-26"
+ },
+ "TGT": {
+  "status": "modelled",
+  "weeks": 2801,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1973-02-26",
+  "last": "2026-10-26"
+ },
+ "MAR": {
+  "status": "modelled",
+  "weeks": 1492,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1998-03-30",
+  "last": "2026-10-26"
+ },
+ "ORLY": {
+  "status": "modelled",
+  "weeks": 1749,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1993-04-26",
+  "last": "2026-10-26"
+ },
+ "CMG": {
+  "status": "modelled",
+  "weeks": 1083,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2006-01-30",
+  "last": "2026-10-26"
+ },
+ "F": {
+  "status": "modelled",
+  "weeks": 2839,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1972-06-05",
+  "last": "2026-10-26"
+ },
+ "GM": {
+  "status": "modelled",
+  "weeks": 832,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2010-11-22",
+  "last": "2026-10-26"
+ },
+ "HLT": {
+  "status": "modelled",
+  "weeks": 672,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2013-12-16",
+  "last": "2026-10-26"
+ },
+ "ROST": {
+  "status": "modelled",
+  "weeks": 2151,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1985-08-12",
+  "last": "2026-10-26"
+ },
+ "AZO": {
+  "status": "modelled",
+  "weeks": 1856,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1991-04-08",
+  "last": "2026-10-26"
+ },
+ "YUM": {
+  "status": "modelled",
+  "weeks": 1519,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1997-09-22",
+  "last": "2026-10-26"
+ },
+ "LVS": {
+  "status": "modelled",
+  "weeks": 1141,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2004-12-20",
+  "last": "2026-10-26"
+ },
+ "TSCO": {
+  "status": "modelled",
+  "weeks": 1706,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1994-02-21",
+  "last": "2026-10-26"
+ },
+ "APTV": {
+  "status": "modelled",
+  "weeks": 780,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2011-11-21",
+  "last": "2026-10-26"
+ },
+ "DHI": {
+  "status": "modelled",
+  "weeks": 1795,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1992-06-08",
+  "last": "2026-10-26"
+ },
+ "LEN": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "GPC": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "EBAY": {
+  "status": "modelled",
+  "weeks": 1466,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1998-09-28",
+  "last": "2026-10-26"
+ },
+ "EXPE": {
+  "status": "modelled",
+  "weeks": 1110,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2005-07-25",
+  "last": "2026-10-26"
+ },
+ "ULTA": {
+  "status": "modelled",
+  "weeks": 992,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2007-10-29",
+  "last": "2026-10-26"
+ },
+ "KMX": {
+  "status": "modelled",
+  "weeks": 1551,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1997-02-10",
+  "last": "2026-10-26"
+ },
+ "RCL": {
+  "status": "modelled",
+  "weeks": 1748,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1993-05-03",
+  "last": "2026-10-26"
+ },
+ "CCL": {
+  "status": "modelled",
+  "weeks": 2049,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1987-07-27",
+  "last": "2026-10-26"
+ },
+ "NCLH": {
+  "status": "modelled",
+  "weeks": 719,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2013-01-21",
+  "last": "2026-10-26"
+ },
+ "BBY": {
+  "status": "modelled",
+  "weeks": 2167,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1985-04-22",
+  "last": "2026-10-26"
+ },
+ "GRMN": {
+  "status": "modelled",
+  "weeks": 1351,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2000-12-11",
+  "last": "2026-10-26"
+ },
+ "DRI": {
+  "status": "modelled",
+  "weeks": 1642,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1995-05-15",
+  "last": "2026-10-26"
+ },
+ "HAS": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "MGM": {
+  "status": "modelled",
+  "weeks": 2008,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1988-05-09",
+  "last": "2026-10-26"
+ },
+ "WYNN": {
+  "status": "modelled",
+  "weeks": 1253,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2002-10-28",
+  "last": "2026-10-26"
+ },
+ "PHM": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "VFC": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "RL": {
+  "status": "modelled",
+  "weeks": 1533,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1997-06-16",
+  "last": "2026-10-26"
+ },
+ "TPR": {
+  "status": "modelled",
+  "weeks": 1360,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2000-10-09",
+  "last": "2026-10-26"
+ },
+ "PVH": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "LKQ": {
+  "status": "modelled",
+  "weeks": 1203,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2003-10-13",
+  "last": "2026-10-26"
+ },
+ "POOL": {
+  "status": "modelled",
+  "weeks": 1620,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1995-10-16",
+  "last": "2026-10-26"
+ },
+ "MHK": {
+  "status": "modelled",
+  "weeks": 1804,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1992-04-06",
+  "last": "2026-10-26"
+ },
+ "BWA": {
+  "status": "modelled",
+  "weeks": 1733,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1993-08-16",
+  "last": "2026-10-26"
+ },
+ "HOG": {
+  "status": "modelled",
+  "weeks": 2103,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1986-07-14",
+  "last": "2026-10-26"
+ },
+ "NWL": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "PG": {
+  "status": "modelled",
+  "weeks": 3382,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1962-01-08",
+  "last": "2026-10-26"
+ },
+ "COST": {
+  "status": "modelled",
+  "weeks": 2103,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1986-07-14",
+  "last": "2026-10-26"
+ },
+ "WMT": {
+  "status": "modelled",
+  "weeks": 2827,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1972-08-28",
+  "last": "2026-10-26"
+ },
+ "KO": {
+  "status": "modelled",
+  "weeks": 3382,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1962-01-08",
+  "last": "2026-10-26"
+ },
+ "PEP": {
+  "status": "modelled",
+  "weeks": 2839,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1972-06-05",
+  "last": "2026-10-26"
+ },
+ "PM": {
+  "status": "modelled",
+  "weeks": 971,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2008-03-24",
+  "last": "2026-10-26"
+ },
+ "MDLZ": {
+  "status": "modelled",
+  "weeks": 1324,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2001-06-18",
+  "last": "2026-10-26"
+ },
+ "MO": {
+  "status": "modelled",
+  "weeks": 3382,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1962-01-08",
+  "last": "2026-10-26"
+ },
+ "CL": {
+  "status": "modelled",
+  "weeks": 2791,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1973-05-07",
+  "last": "2026-10-26"
+ },
+ "EL": {
+  "status": "modelled",
+  "weeks": 1615,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1995-11-20",
+  "last": "2026-10-26"
+ },
+ "KMB": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "GIS": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "SYY": {
+  "status": "modelled",
+  "weeks": 2790,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1973-05-14",
+  "last": "2026-10-26"
+ },
+ "STZ": {
+  "status": "modelled",
+  "weeks": 1806,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1992-03-23",
+  "last": "2026-10-26"
+ },
+ "ADM": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "HSY": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "MKC": {
+  "status": "modelled",
+  "weeks": 2801,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1973-02-26",
+  "last": "2026-10-26"
+ },
+ "CLX": {
+  "status": "modelled",
+  "weeks": 2801,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1973-02-26",
+  "last": "2026-10-26"
+ },
+ "KHC": {
+  "status": "modelled",
+  "weeks": 590,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2015-07-13",
+  "last": "2026-10-26"
+ },
+ "TSN": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "CAG": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "CHD": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "HRL": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "SJM": {
+  "status": "modelled",
+  "weeks": 1669,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1994-11-07",
+  "last": "2026-10-26"
+ },
+ "CPB": {
+  "status": "modelled",
+  "weeks": 2801,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1973-02-26",
+  "last": "2026-10-26"
+ },
+ "TAP": {
+  "status": "modelled",
+  "weeks": 2681,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1975-06-16",
+  "last": "2026-10-26"
+ },
+ "LW": {
+  "status": "modelled",
+  "weeks": 520,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2016-11-14",
+  "last": "2026-10-26"
+ },
+ "BG": {
+  "status": "modelled",
+  "weeks": 1317,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2001-08-06",
+  "last": "2026-10-26"
+ },
+ "OMC": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "LLY": {
+  "status": "modelled",
+  "weeks": 2839,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1972-06-05",
+  "last": "2026-10-26"
+ },
+ "UNH": {
+  "status": "modelled",
+  "weeks": 2193,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1984-10-22",
+  "last": "2026-10-26"
+ },
+ "JNJ": {
+  "status": "modelled",
+  "weeks": 3382,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1962-01-08",
+  "last": "2026-10-26"
+ },
+ "MRK": {
+  "status": "modelled",
+  "weeks": 3382,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1962-01-08",
+  "last": "2026-10-26"
+ },
+ "ABBV": {
+  "status": "modelled",
+  "weeks": 721,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2013-01-08",
+  "last": "2026-10-27"
+ },
+ "TMO": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "ABT": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "PFE": {
+  "status": "modelled",
+  "weeks": 2839,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1972-06-05",
+  "last": "2026-10-26"
+ },
+ "AMGN": {
+  "status": "modelled",
+  "weeks": 2263,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1983-06-20",
+  "last": "2026-10-26"
+ },
+ "DHR": {
+  "status": "modelled",
+  "weeks": 2496,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1979-01-01",
+  "last": "2026-10-26"
+ },
+ "ISRG": {
+  "status": "modelled",
+  "weeks": 1376,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2000-06-19",
+  "last": "2026-10-26"
+ },
+ "ELV": {
+  "status": "modelled",
+  "weeks": 1304,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2001-11-05",
+  "last": "2026-10-26"
+ },
+ "SYK": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "BMY": {
+  "status": "modelled",
+  "weeks": 2839,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1972-06-05",
+  "last": "2026-10-26"
+ },
+ "GILD": {
+  "status": "modelled",
+  "weeks": 1814,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1992-01-27",
+  "last": "2026-10-26"
+ },
+ "CVS": {
+  "status": "modelled",
+  "weeks": 2801,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1973-02-26",
+  "last": "2026-10-26"
+ },
+ "CI": {
+  "status": "modelled",
+  "weeks": 2326,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1982-04-05",
+  "last": "2026-10-26"
+ },
+ "VRTX": {
+  "status": "modelled",
+  "weeks": 1840,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1991-07-29",
+  "last": "2026-10-26"
+ },
+ "ZTS": {
+  "status": "modelled",
+  "weeks": 717,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2013-02-04",
+  "last": "2026-10-26"
+ },
+ "BDX": {
+  "status": "modelled",
+  "weeks": 2801,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1973-02-26",
+  "last": "2026-10-26"
+ },
+ "REGN": {
+  "status": "modelled",
+  "weeks": 1856,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1991-04-08",
+  "last": "2026-10-26"
+ },
+ "BSX": {
+  "status": "modelled",
+  "weeks": 1797,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1992-05-25",
+  "last": "2026-10-26"
+ },
+ "HCA": {
+  "status": "modelled",
+  "weeks": 816,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2011-03-14",
+  "last": "2026-10-26"
+ },
+ "HUM": {
+  "status": "modelled",
+  "weeks": 2339,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1982-01-04",
+  "last": "2026-10-26"
+ },
+ "EW": {
+  "status": "modelled",
+  "weeks": 1387,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2000-04-03",
+  "last": "2026-10-26"
+ },
+ "MCK": {
+  "status": "modelled",
+  "weeks": 1668,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1994-11-14",
+  "last": "2026-10-26"
+ },
+ "CNC": {
+  "status": "modelled",
+  "weeks": 1298,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2001-12-17",
+  "last": "2026-10-26"
+ },
+ "IQV": {
+  "status": "modelled",
+  "weeks": 703,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2013-05-13",
+  "last": "2026-10-26"
+ },
+ "A": {
+  "status": "modelled",
+  "weeks": 1406,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1999-11-22",
+  "last": "2026-10-26"
+ },
+ "DXCM": {
+  "status": "modelled",
+  "weeks": 1124,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2005-04-18",
+  "last": "2026-10-26"
+ },
+ "MTD": {
+  "status": "modelled",
+  "weeks": 1511,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1997-11-17",
+  "last": "2026-10-26"
+ },
+ "RMD": {
+  "status": "modelled",
+  "weeks": 1639,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1995-06-05",
+  "last": "2026-10-26"
+ },
+ "IDXX": {
+  "status": "modelled",
+  "weeks": 1845,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1991-06-24",
+  "last": "2026-10-26"
+ },
+ "BIO": {
+  "status": "modelled",
+  "weeks": 2435,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-03",
+  "last": "2026-10-26"
+ },
+ "TFX": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "COO": {
+  "status": "modelled",
+  "weeks": 2284,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1983-01-24",
+  "last": "2026-10-26"
+ },
+ "HOLX": {
+  "status": "no data"
+ },
+ "STE": {
+  "status": "modelled",
+  "weeks": 1795,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1992-06-08",
+  "last": "2026-10-26"
+ },
+ "WAT": {
+  "status": "modelled",
+  "weeks": 1615,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1995-11-20",
+  "last": "2026-10-26"
+ },
+ "DGX": {
+  "status": "modelled",
+  "weeks": 1558,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1996-12-23",
+  "last": "2026-10-26"
+ },
+ "LH": {
+  "status": "modelled",
+  "weeks": 1909,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1990-04-02",
+  "last": "2026-10-26"
+ },
+ "ALGN": {
+  "status": "modelled",
+  "weeks": 1343,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2001-02-05",
+  "last": "2026-10-26"
+ },
+ "XRAY": {
+  "status": "modelled",
+  "weeks": 2046,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1987-08-17",
+  "last": "2026-10-26"
+ },
+ "UHS": {
+  "status": "modelled",
+  "weeks": 2364,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1981-07-13",
+  "last": "2026-10-26"
+ },
+ "INCY": {
+  "status": "modelled",
+  "weeks": 1721,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1993-11-08",
+  "last": "2026-10-26"
+ },
+ "BIIB": {
+  "status": "modelled",
+  "weeks": 1832,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1991-09-23",
+  "last": "2026-10-26"
+ },
+ "BAX": {
+  "status": "modelled",
+  "weeks": 2348,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1981-11-02",
+  "last": "2026-10-26"
+ },
+ "CAH": {
+  "status": "modelled",
+  "weeks": 2256,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1983-08-08",
+  "last": "2026-10-26"
+ },
+ "HSIC": {
+  "status": "modelled",
+  "weeks": 1617,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1995-11-06",
+  "last": "2026-10-26"
+ },
+ "BRK-B": {
+  "status": "modelled",
+  "weeks": 1590,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1996-05-13",
+  "last": "2026-10-26"
+ },
+ "JPM": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "V": {
+  "status": "modelled",
+  "weeks": 971,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2008-03-24",
+  "last": "2026-10-26"
+ },
+ "MA": {
+  "status": "modelled",
+  "weeks": 1066,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2006-05-29",
+  "last": "2026-10-26"
+ },
+ "BAC": {
+  "status": "modelled",
+  "weeks": 2801,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1973-02-26",
+  "last": "2026-10-26"
+ },
+ "WFC": {
+  "status": "modelled",
+  "weeks": 2839,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1972-06-05",
+  "last": "2026-10-26"
+ },
+ "MS": {
+  "status": "modelled",
+  "weeks": 1757,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1993-03-01",
+  "last": "2026-10-26"
+ },
+ "GS": {
+  "status": "modelled",
+  "weeks": 1434,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1999-05-10",
+  "last": "2026-10-26"
+ },
+ "SCHW": {
+  "status": "modelled",
+  "weeks": 2040,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1987-09-28",
+  "last": "2026-10-26"
+ },
+ "AXP": {
+  "status": "modelled",
+  "weeks": 2839,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1972-06-05",
+  "last": "2026-10-26"
+ },
+ "BLK": {
+  "status": "modelled",
+  "weeks": 1413,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1999-10-04",
+  "last": "2026-10-26"
+ },
+ "SPGI": {
+  "status": "modelled",
+  "weeks": 2801,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1973-02-26",
+  "last": "2026-10-26"
+ },
+ "C": {
+  "status": "modelled",
+  "weeks": 2599,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1977-01-10",
+  "last": "2026-10-26"
+ },
+ "PGR": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "CB": {
+  "status": "modelled",
+  "weeks": 1753,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1993-03-29",
+  "last": "2026-10-26"
+ },
+ "MCO": {
+  "status": "modelled",
+  "weeks": 1669,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1994-11-07",
+  "last": "2026-10-26"
+ },
+ "USB": {
+  "status": "modelled",
+  "weeks": 2791,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1973-05-07",
+  "last": "2026-10-26"
+ },
+ "PNC": {
+  "status": "modelled",
+  "weeks": 2658,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1975-11-24",
+  "last": "2026-10-26"
+ },
+ "TFC": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "ICE": {
+  "status": "modelled",
+  "weeks": 1093,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2005-11-21",
+  "last": "2026-10-26"
+ },
+ "CME": {
+  "status": "modelled",
+  "weeks": 1247,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2002-12-09",
+  "last": "2026-10-26"
+ },
+ "AON": {
+  "status": "modelled",
+  "weeks": 2421,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-06-09",
+  "last": "2026-10-26"
+ },
+ "BK": {
+  "status": "no data"
+ },
+ "TRV": {
+  "status": "modelled",
+  "weeks": 2658,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1975-11-24",
+  "last": "2026-10-26"
+ },
+ "AIG": {
+  "status": "modelled",
+  "weeks": 2808,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1973-01-08",
+  "last": "2026-10-26"
+ },
+ "COF": {
+  "status": "modelled",
+  "weeks": 1667,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1994-11-21",
+  "last": "2026-10-26"
+ },
+ "MET": {
+  "status": "modelled",
+  "weeks": 1386,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2000-04-10",
+  "last": "2026-10-26"
+ },
+ "ALL": {
+  "status": "modelled",
+  "weeks": 1743,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1993-06-07",
+  "last": "2026-10-26"
+ },
+ "PRU": {
+  "status": "modelled",
+  "weeks": 1298,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2001-12-17",
+  "last": "2026-10-26"
+ },
+ "STT": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "HIG": {
+  "status": "modelled",
+  "weeks": 1611,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1995-12-18",
+  "last": "2026-10-26"
+ },
+ "AFL": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "FITB": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "MTB": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "WTW": {
+  "status": "modelled",
+  "weeks": 1324,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2001-06-18",
+  "last": "2026-10-26"
+ },
+ "AMP": {
+  "status": "modelled",
+  "weeks": 1102,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2005-09-19",
+  "last": "2026-10-26"
+ },
+ "NTRS": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "KEY": {
+  "status": "modelled",
+  "weeks": 2034,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1987-11-09",
+  "last": "2026-10-26"
+ },
+ "CFG": {
+  "status": "modelled",
+  "weeks": 631,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2014-09-29",
+  "last": "2026-10-26"
+ },
+ "HBAN": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "RF": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "CINF": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "PFG": {
+  "status": "modelled",
+  "weeks": 1305,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2001-10-29",
+  "last": "2026-10-26"
+ },
+ "RJF": {
+  "status": "modelled",
+  "weeks": 2261,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1983-07-04",
+  "last": "2026-10-26"
+ },
+ "L": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "GL": {
+  "status": "modelled",
+  "weeks": 2404,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-10-06",
+  "last": "2026-10-26"
+ },
+ "AIZ": {
+  "status": "modelled",
+  "weeks": 1186,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2004-02-09",
+  "last": "2026-10-26"
+ },
+ "WRB": {
+  "status": "modelled",
+  "weeks": 2766,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1973-10-29",
+  "last": "2026-10-26"
+ },
+ "BRO": {
+  "status": "modelled",
+  "weeks": 2385,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1981-02-16",
+  "last": "2026-10-26"
+ },
+ "AJG": {
+  "status": "modelled",
+  "weeks": 2210,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1984-06-25",
+  "last": "2026-10-26"
+ },
+ "NDAQ": {
+  "status": "modelled",
+  "weeks": 1269,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2002-07-08",
+  "last": "2026-10-26"
+ },
+ "CBOE": {
+  "status": "modelled",
+  "weeks": 854,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2010-06-21",
+  "last": "2026-10-26"
+ },
+ "IVZ": {
+  "status": "modelled",
+  "weeks": 1627,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1995-08-28",
+  "last": "2026-10-26"
+ },
+ "BEN": {
+  "status": "modelled",
+  "weeks": 2249,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1983-09-26",
+  "last": "2026-10-26"
+ },
+ "AAPL": {
+  "status": "modelled",
+  "weeks": 2394,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-12-15",
+  "last": "2026-10-26"
+ },
+ "MSFT": {
+  "status": "modelled",
+  "weeks": 2120,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1986-03-17",
+  "last": "2026-10-26"
+ },
+ "NVDA": {
+  "status": "modelled",
+  "weeks": 1449,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1999-01-25",
+  "last": "2026-10-26"
+ },
+ "AVGO": {
+  "status": "modelled",
+  "weeks": 899,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2009-08-10",
+  "last": "2026-10-26"
+ },
+ "GOOGL": {
+  "status": "modelled",
+  "weeks": 1158,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2004-08-23",
+  "last": "2026-10-26"
+ },
+ "GOOG": {
+  "status": "modelled",
+  "weeks": 1158,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2004-08-23",
+  "last": "2026-10-26"
+ },
+ "META": {
+  "status": "modelled",
+  "weeks": 754,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2012-05-21",
+  "last": "2026-10-26"
+ },
+ "CRM": {
+  "status": "modelled",
+  "weeks": 1166,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2004-06-28",
+  "last": "2026-10-26"
+ },
+ "ADBE": {
+  "status": "modelled",
+  "weeks": 2098,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1986-08-18",
+  "last": "2026-10-26"
+ },
+ "CSCO": {
+  "status": "modelled",
+  "weeks": 1915,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1990-02-19",
+  "last": "2026-10-26"
+ },
+ "AMD": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "ACN": {
+  "status": "modelled",
+  "weeks": 1319,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2001-07-23",
+  "last": "2026-10-26"
+ },
+ "TXN": {
+  "status": "modelled",
+  "weeks": 2839,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1972-06-05",
+  "last": "2026-10-26"
+ },
+ "INTC": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "QCOM": {
+  "status": "modelled",
+  "weeks": 1820,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1991-12-16",
+  "last": "2026-10-26"
+ },
+ "IBM": {
+  "status": "modelled",
+  "weeks": 3382,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1962-01-08",
+  "last": "2026-10-26"
+ },
+ "AMAT": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "NOW": {
+  "status": "modelled",
+  "weeks": 748,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2012-07-02",
+  "last": "2026-10-26"
+ },
+ "LRCX": {
+  "status": "modelled",
+  "weeks": 2217,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1984-05-07",
+  "last": "2026-10-26"
+ },
+ "ADI": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "MU": {
+  "status": "modelled",
+  "weeks": 2213,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1984-06-04",
+  "last": "2026-10-26"
+ },
+ "PANW": {
+  "status": "modelled",
+  "weeks": 745,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2012-07-23",
+  "last": "2026-10-26"
+ },
+ "SNPS": {
+  "status": "modelled",
+  "weeks": 1809,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1992-03-02",
+  "last": "2026-10-26"
+ },
+ "KLAC": {
+  "status": "modelled",
+  "weeks": 2403,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-10-13",
+  "last": "2026-10-26"
+ },
+ "CDNS": {
+  "status": "modelled",
+  "weeks": 2055,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1987-06-15",
+  "last": "2026-10-26"
+ },
+ "NXPI": {
+  "status": "modelled",
+  "weeks": 847,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2010-08-09",
+  "last": "2026-10-26"
+ },
+ "APH": {
+  "status": "modelled",
+  "weeks": 1825,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1991-11-11",
+  "last": "2026-10-26"
+ },
+ "TEL": {
+  "status": "modelled",
+  "weeks": 1011,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2007-06-18",
+  "last": "2026-10-26"
+ },
+ "MSI": {
+  "status": "modelled",
+  "weeks": 3382,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1962-01-08",
+  "last": "2026-10-26"
+ },
+ "MCHP": {
+  "status": "modelled",
+  "weeks": 1754,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1993-03-22",
+  "last": "2026-10-26"
+ },
+ "IT": {
+  "status": "modelled",
+  "weeks": 1725,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1993-10-11",
+  "last": "2026-10-26"
+ },
+ "GLW": {
+  "status": "modelled",
+  "weeks": 2339,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1982-01-04",
+  "last": "2026-10-26"
+ },
+ "HPQ": {
+  "status": "modelled",
+  "weeks": 3382,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1962-01-08",
+  "last": "2026-10-26"
+ },
+ "HPE": {
+  "status": "modelled",
+  "weeks": 575,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2015-10-26",
+  "last": "2026-10-26"
+ },
+ "KEYS": {
+  "status": "modelled",
+  "weeks": 627,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2014-10-27",
+  "last": "2026-10-26"
+ },
+ "FTNT": {
+  "status": "modelled",
+  "weeks": 884,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2009-11-23",
+  "last": "2026-10-26"
+ },
+ "STX": {
+  "status": "modelled",
+  "weeks": 1246,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2002-12-16",
+  "last": "2026-10-26"
+ },
+ "WDC": {
+  "status": "modelled",
+  "weeks": 2504,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1978-11-06",
+  "last": "2026-10-26"
+ },
+ "NTAP": {
+  "status": "modelled",
+  "weeks": 1614,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1995-11-27",
+  "last": "2026-10-26"
+ },
+ "CDW": {
+  "status": "modelled",
+  "weeks": 696,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2013-07-01",
+  "last": "2026-10-26"
+ },
+ "BR": {
+  "status": "modelled",
+  "weeks": 1023,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2007-03-26",
+  "last": "2026-10-26"
+ },
+ "TYL": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "PTC": {
+  "status": "modelled",
+  "weeks": 1925,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1989-12-11",
+  "last": "2026-10-26"
+ },
+ "AKAM": {
+  "status": "modelled",
+  "weeks": 1409,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1999-11-01",
+  "last": "2026-10-26"
+ },
+ "GEN": {
+  "status": "modelled",
+  "weeks": 1949,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1989-06-26",
+  "last": "2026-10-26"
+ },
+ "QRVO": {
+  "status": "too short",
+  "weeks": 0
+ },
+ "SWKS": {
+  "status": "modelled",
+  "weeks": 2199,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1984-09-10",
+  "last": "2026-10-26"
+ },
+ "TRMB": {
+  "status": "modelled",
+  "weeks": 1893,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1990-07-23",
+  "last": "2026-10-26"
+ },
+ "TER": {
+  "status": "modelled",
+  "weeks": 2801,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1973-02-26",
+  "last": "2026-10-26"
+ },
+ "ZBRA": {
+  "status": "modelled",
+  "weeks": 1837,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1991-08-19",
+  "last": "2026-10-26"
+ },
+ "FFIV": {
+  "status": "modelled",
+  "weeks": 1430,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1999-06-07",
+  "last": "2026-10-26"
+ },
+ "NET": {
+  "status": "too short",
+  "weeks": 372
+ },
+ "NFLX": {
+  "status": "modelled",
+  "weeks": 1275,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2002-05-27",
+  "last": "2026-10-26"
+ },
+ "DIS": {
+  "status": "modelled",
+  "weeks": 3382,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1962-01-08",
+  "last": "2026-10-26"
+ },
+ "T": {
+  "status": "modelled",
+  "weeks": 2240,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1983-11-28",
+  "last": "2026-10-26"
+ },
+ "VZ": {
+  "status": "modelled",
+  "weeks": 2240,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1983-11-28",
+  "last": "2026-10-26"
+ },
+ "CMCSA": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "TMUS": {
+  "status": "modelled",
+  "weeks": 1019,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2007-04-23",
+  "last": "2026-10-26"
+ },
+ "CHTR": {
+  "status": "modelled",
+  "weeks": 877,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2010-01-11",
+  "last": "2026-10-26"
+ },
+ "EA": {
+  "status": "too short",
+  "weeks": 0
+ },
+ "TTWO": {
+  "status": "modelled",
+  "weeks": 1541,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1997-04-21",
+  "last": "2026-10-26"
+ },
+ "WBD": {
+  "status": "too short",
+  "weeks": 0
+ },
+ "LYV": {
+  "status": "modelled",
+  "weeks": 1088,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2005-12-26",
+  "last": "2026-10-26"
+ },
+ "FOXA": {
+  "status": "too short",
+  "weeks": 398
+ },
+ "FOX": {
+  "status": "too short",
+  "weeks": 398
+ },
+ "NWSA": {
+  "status": "modelled",
+  "weeks": 697,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2013-06-24",
+  "last": "2026-10-26"
+ },
+ "NWS": {
+  "status": "modelled",
+  "weeks": 697,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2013-06-24",
+  "last": "2026-10-26"
+ },
+ "NEE": {
+  "status": "modelled",
+  "weeks": 2801,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1973-02-26",
+  "last": "2026-10-26"
+ },
+ "SO": {
+  "status": "modelled",
+  "weeks": 2339,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1982-01-04",
+  "last": "2026-10-26"
+ },
+ "DUK": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "SRE": {
+  "status": "modelled",
+  "weeks": 1478,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1998-07-06",
+  "last": "2026-10-26"
+ },
+ "AEP": {
+  "status": "modelled",
+  "weeks": 3382,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1962-01-08",
+  "last": "2026-10-26"
+ },
+ "D": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "PEG": {
+  "status": "modelled",
+  "weeks": 2443,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-01-08",
+  "last": "2026-10-27"
+ },
+ "EXC": {
+  "status": "modelled",
+  "weeks": 2791,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1973-05-07",
+  "last": "2026-10-26"
+ },
+ "XEL": {
+  "status": "modelled",
+  "weeks": 2801,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1973-02-26",
+  "last": "2026-10-26"
+ },
+ "ED": {
+  "status": "modelled",
+  "weeks": 3382,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1962-01-08",
+  "last": "2026-10-26"
+ },
+ "ES": {
+  "status": "modelled",
+  "weeks": 2801,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1973-02-26",
+  "last": "2026-10-26"
+ },
+ "EIX": {
+  "status": "modelled",
+  "weeks": 2791,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1973-05-07",
+  "last": "2026-10-26"
+ },
+ "WEC": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "DTE": {
+  "status": "modelled",
+  "weeks": 3382,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1962-01-08",
+  "last": "2026-10-26"
+ },
+ "ETR": {
+  "status": "modelled",
+  "weeks": 2839,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1972-06-05",
+  "last": "2026-10-26"
+ },
+ "PPL": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "AEE": {
+  "status": "modelled",
+  "weeks": 1503,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1998-01-08",
+  "last": "2026-10-22"
+ },
+ "CMS": {
+  "status": "modelled",
+  "weeks": 2801,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1973-02-26",
+  "last": "2026-10-26"
+ },
+ "CNP": {
+  "status": "modelled",
+  "weeks": 3382,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1962-01-08",
+  "last": "2026-10-26"
+ },
+ "ATO": {
+  "status": "modelled",
+  "weeks": 2235,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1984-01-02",
+  "last": "2026-10-26"
+ },
+ "LNT": {
+  "status": "modelled",
+  "weeks": 2801,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1973-02-26",
+  "last": "2026-10-26"
+ },
+ "EVRG": {
+  "status": "modelled",
+  "weeks": 2801,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1973-02-26",
+  "last": "2026-10-26"
+ },
+ "FE": {
+  "status": "modelled",
+  "weeks": 1511,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1997-11-17",
+  "last": "2026-10-26"
+ },
+ "AWK": {
+  "status": "modelled",
+  "weeks": 966,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2008-04-28",
+  "last": "2026-10-26"
+ },
+ "AES": {
+  "status": "modelled",
+  "weeks": 1844,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1991-07-01",
+  "last": "2026-10-26"
+ },
+ "NRG": {
+  "status": "modelled",
+  "weeks": 1195,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2003-12-08",
+  "last": "2026-10-26"
+ },
+ "NI": {
+  "status": "modelled",
+  "weeks": 2801,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1973-02-26",
+  "last": "2026-10-26"
+ },
+ "PNW": {
+  "status": "modelled",
+  "weeks": 2801,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1973-02-26",
+  "last": "2026-10-26"
+ },
+ "PLD": {
+  "status": "modelled",
+  "weeks": 1510,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1997-11-24",
+  "last": "2026-10-26"
+ },
+ "AMT": {
+  "status": "modelled",
+  "weeks": 1496,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1998-03-02",
+  "last": "2026-10-26"
+ },
+ "EQIX": {
+  "status": "modelled",
+  "weeks": 1368,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2000-08-14",
+  "last": "2026-10-26"
+ },
+ "CCI": {
+  "status": "modelled",
+  "weeks": 1471,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1998-08-24",
+  "last": "2026-10-26"
+ },
+ "PSA": {
+  "status": "modelled",
+  "weeks": 2397,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-11-24",
+  "last": "2026-10-26"
+ },
+ "O": {
+  "status": "modelled",
+  "weeks": 1671,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1994-10-24",
+  "last": "2026-10-26"
+ },
+ "SPG": {
+  "status": "modelled",
+  "weeks": 1715,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1993-12-20",
+  "last": "2026-10-26"
+ },
+ "DLR": {
+  "status": "modelled",
+  "weeks": 1148,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2004-11-01",
+  "last": "2026-10-26"
+ },
+ "VICI": {
+  "status": "too short",
+  "weeks": 460
+ },
+ "WELL": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "AVB": {
+  "status": "no data"
+ },
+ "EQR": {
+  "status": "too short",
+  "weeks": 0
+ },
+ "CSGP": {
+  "status": "modelled",
+  "weeks": 1478,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1998-07-06",
+  "last": "2026-10-26"
+ },
+ "SBAC": {
+  "status": "modelled",
+  "weeks": 1428,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1999-06-21",
+  "last": "2026-10-26"
+ },
+ "EXR": {
+  "status": "modelled",
+  "weeks": 1158,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2004-08-23",
+  "last": "2026-10-26"
+ },
+ "CBRE": {
+  "status": "modelled",
+  "weeks": 1168,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2004-06-14",
+  "last": "2026-10-26"
+ },
+ "WY": {
+  "status": "modelled",
+  "weeks": 2791,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1973-05-07",
+  "last": "2026-10-26"
+ },
+ "ARE": {
+  "status": "modelled",
+  "weeks": 1535,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1997-06-02",
+  "last": "2026-10-26"
+ },
+ "VTR": {
+  "status": "modelled",
+  "weeks": 1538,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1997-05-12",
+  "last": "2026-10-26"
+ },
+ "BXP": {
+  "status": "modelled",
+  "weeks": 1532,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1997-06-23",
+  "last": "2026-10-26"
+ },
+ "HST": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "MAA": {
+  "status": "modelled",
+  "weeks": 1709,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1994-01-31",
+  "last": "2026-10-26"
+ },
+ "UDR": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "IRM": {
+  "status": "modelled",
+  "weeks": 1604,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1996-02-05",
+  "last": "2026-10-26"
+ },
+ "REG": {
+  "status": "modelled",
+  "weeks": 1722,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1993-11-01",
+  "last": "2026-10-26"
+ },
+ "ESS": {
+  "status": "modelled",
+  "weeks": 1690,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1994-06-13",
+  "last": "2026-10-26"
+ },
+ "KIM": {
+  "status": "modelled",
+  "weeks": 1823,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1991-11-25",
+  "last": "2026-10-26"
+ },
+ "FRT": {
+  "status": "modelled",
+  "weeks": 2791,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1973-05-07",
+  "last": "2026-10-26"
+ },
+ "XOM": {
+  "status": "modelled",
+  "weeks": 3382,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1962-01-08",
+  "last": "2026-10-26"
+ },
+ "CVX": {
+  "status": "modelled",
+  "weeks": 3382,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1962-01-08",
+  "last": "2026-10-26"
+ },
+ "COP": {
+  "status": "modelled",
+  "weeks": 2339,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1982-01-04",
+  "last": "2026-10-26"
+ },
+ "SLB": {
+  "status": "modelled",
+  "weeks": 2339,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1982-01-04",
+  "last": "2026-10-26"
+ },
+ "EOG": {
+  "status": "modelled",
+  "weeks": 1934,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1989-10-09",
+  "last": "2026-10-26"
+ },
+ "MPC": {
+  "status": "modelled",
+  "weeks": 801,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2011-06-27",
+  "last": "2026-10-26"
+ },
+ "PSX": {
+  "status": "modelled",
+  "weeks": 759,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2012-04-16",
+  "last": "2026-10-26"
+ },
+ "VLO": {
+  "status": "modelled",
+  "weeks": 2338,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1982-01-11",
+  "last": "2026-10-26"
+ },
+ "OXY": {
+  "status": "modelled",
+  "weeks": 2339,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1982-01-04",
+  "last": "2026-10-26"
+ },
+ "WMB": {
+  "status": "modelled",
+  "weeks": 2339,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1982-01-04",
+  "last": "2026-10-26"
+ },
+ "HAL": {
+  "status": "modelled",
+  "weeks": 2839,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1972-06-05",
+  "last": "2026-10-26"
+ },
+ "BKR": {
+  "status": "modelled",
+  "weeks": 2064,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1987-04-13",
+  "last": "2026-10-26"
+ },
+ "DVN": {
+  "status": "modelled",
+  "weeks": 2153,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1985-07-29",
+  "last": "2026-10-26"
+ },
+ "OKE": {
+  "status": "modelled",
+  "weeks": 2404,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-10-06",
+  "last": "2026-10-26"
+ },
+ "TRGP": {
+  "status": "modelled",
+  "weeks": 829,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2010-12-13",
+  "last": "2026-10-26"
+ },
+ "CTRA": {
+  "status": "no data"
+ },
+ "FANG": {
+  "status": "modelled",
+  "weeks": 733,
+  "fit": "AR-GARCH(1,1)",
+  "first": "2012-10-15",
+  "last": "2026-10-26"
+ },
+ "APA": {
+  "status": "modelled",
+  "weeks": 2476,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1979-05-21",
+  "last": "2026-10-26"
+ },
+ "EQT": {
+  "status": "modelled",
+  "weeks": 2432,
+  "fit": "AR-GARCH(1,1)",
+  "first": "1980-03-24",
+  "last": "2026-10-26"
+ },
+ "YELLQ": {
+  "status": "no data"
+ }
+}

@@ -1,0 +1,44 @@
+{"type": "queued", "t": 1793288982.2968683, "machine": "a100", "position": 1}
+{"type": "started", "t": 1793288982.2975376, "machine": "a100"}
+{"type": "stage", "t": 1793288982.576, "stage": "inputs"}
+{"type": "stage", "t": 1793288984.499, "stage": "packed", "session": "mso-20261029-184942-4d422a", "payload_kib": 161}
+{"type": "colab", "t": 1793288986.134, "balance_before": 190.4, "rate": 5.3}
+{"type": "start", "t": 1793289000.449, "machine": "local", "gpu": "NVIDIA A100-SXM4-40GB", "seed": 20261029}
+{"type": "stage", "t": 1793289000.449, "stage": "inputs"}
+{"type": "stage", "t": 1793289000.705, "stage": "bank", "paths": 30000000}
+{"type": "bank", "t": 1793289012.274, "done": 4000000, "total": 30000000, "s": 11.5}
+{"type": "bank", "t": 1793289013.683, "done": 8000000, "total": 30000000, "s": 13.0}
+{"type": "bank", "t": 1793289015.076, "done": 12000000, "total": 30000000, "s": 14.3}
+{"type": "bank", "t": 1793289016.482, "done": 16000000, "total": 30000000, "s": 15.8}
+{"type": "bank", "t": 1793289017.884, "done": 20000000, "total": 30000000, "s": 17.2}
+{"type": "bank", "t": 1793289019.292, "done": 24000000, "total": 30000000, "s": 18.6}
+{"type": "bank", "t": 1793289020.685, "done": 28000000, "total": 30000000, "s": 20.0}
+{"type": "bank", "t": 1793289022.375, "done": 30000000, "total": 30000000, "s": 21.6}
+{"type": "stage", "t": 1793289022.399, "stage": "search"}
+{"type": "search_start", "t": 1793289022.4, "search": "Portfolio", "children": ["NVDA", "MNTS", "META", "JPM", "GOOGL", "FERG", "BTC=F", "ADBE", "NRIM", "SPGI", "DBMF", "CTA", "WTMF", "TLT", "IBHK", "SPY"]}
+{"type": "generation", "t": 1793289032.108, "search": "Portfolio", "gen": 1, "incumbent": -0.10479624057869047, "scored": 2, "s": 6.05, "replaced": 414, "stop": false}
+{"type": "generation", "t": 1793289038.15, "search": "Portfolio", "gen": 2, "incumbent": -0.12398491802316185, "scored": 2, "s": 6.04, "replaced": 418, "stop": false}
+{"type": "generation", "t": 1793289044.191, "search": "Portfolio", "gen": 3, "incumbent": -0.13287349308236157, "scored": 2, "s": 6.04, "replaced": 326, "stop": false}
+{"type": "generation", "t": 1793289050.233, "search": "Portfolio", "gen": 4, "incumbent": -0.134053114352028, "scored": 2, "s": 6.04, "replaced": 258, "stop": false}
+{"type": "generation", "t": 1793289056.275, "search": "Portfolio", "gen": 5, "incumbent": -0.13405161481694639, "scored": 3, "s": 6.04, "replaced": 221, "stop": false}
+{"type": "generation", "t": 1793289062.315, "search": "Portfolio", "gen": 6, "incumbent": -0.1340097618775837, "scored": 4, "s": 6.04, "replaced": 314, "stop": false}
+{"type": "generation", "t": 1793289068.358, "search": "Portfolio", "gen": 7, "incumbent": -0.13501121572918762, "scored": 2, "s": 6.04, "replaced": 173, "stop": false}
+{"type": "generation", "t": 1793289074.4, "search": "Portfolio", "gen": 8, "incumbent": -0.13513595782940263, "scored": 2, "s": 6.04, "replaced": 133, "stop": false}
+{"type": "generation", "t": 1793289080.443, "search": "Portfolio", "gen": 9, "incumbent": -0.13542788323722338, "scored": 2, "s": 6.04, "replaced": 312, "stop": false}
+{"type": "generation", "t": 1793289086.487, "search": "Portfolio", "gen": 10, "incumbent": -0.13633798124021296, "scored": 2, "s": 6.04, "replaced": 318, "stop": false}
+{"type": "generation", "t": 1793289092.532, "search": "Portfolio", "gen": 11, "incumbent": -0.13671975017756902, "scored": 2, "s": 6.04, "replaced": 216, "stop": false}
+{"type": "generation", "t": 1793289098.576, "search": "Portfolio", "gen": 12, "incumbent": -0.1367124767744798, "scored": 3, "s": 6.04, "replaced": 245, "stop": false}
+{"type": "generation", "t": 1793289104.619, "search": "Portfolio", "gen": 13, "incumbent": -0.13672460764459365, "scored": 4, "s": 6.04, "replaced": 284, "stop": false}
+{"type": "generation", "t": 1793289110.662, "search": "Portfolio", "gen": 14, "incumbent": -0.13670532438177602, "scored": 5, "s": 6.04, "replaced": 285, "stop": false}
+{"type": "generation", "t": 1793289116.705, "search": "Portfolio", "gen": 15, "incumbent": -0.1369876458943464, "scored": 2, "s": 6.04, "replaced": 132, "stop": false}
+{"type": "generation", "t": 1793289122.748, "search": "Portfolio", "gen": 16, "incumbent": -0.1370188621190402, "scored": 3, "s": 6.04, "replaced": 228, "stop": false}
+{"type": "generation", "t": 1793289128.79, "search": "Portfolio", "gen": 17, "incumbent": -0.13722208988267307, "scored": 2, "s": 6.04, "replaced": 159, "stop": false}
+{"type": "generation", "t": 1793289134.833, "search": "Portfolio", "gen": 18, "incumbent": -0.1371612394230376, "scored": 3, "s": 6.04, "replaced": 166, "stop": false}
+{"type": "generation", "t": 1793289140.874, "search": "Portfolio", "gen": 19, "incumbent": -0.13712315860112645, "scored": 4, "s": 6.04, "replaced": 313, "stop": false}
+{"type": "generation", "t": 1793289146.917, "search": "Portfolio", "gen": 20, "incumbent": -0.13723915618459873, "scored": 2, "s": 6.04, "replaced": 109, "stop": false}
+{"type": "generation", "t": 1793289152.959, "search": "Portfolio", "gen": 21, "incumbent": -0.1373242206993518, "scored": 2, "s": 6.04, "replaced": 208, "stop": false}
+{"type": "generation", "t": 1793289159.001, "search": "Portfolio", "gen": 22, "incumbent": -0.13727086760486648, "scored": 2, "s": 6.04, "replaced": 212, "stop": true}
+{"type": "search_done", "t": 1793289159.001, "search": "Portfolio", "generations": 22, "stopped": "window", "incumbent": -0.13727086760486648}
+{"type": "stage", "t": 1793289159.001, "stage": "metrics"}
+{"type": "done", "t": 1793289161.758, "out": "result.json", "wall_s": 161.5, "objective": -0.13727086760486648}
+{"type": "end", "t": 1793289169.3238664, "ended": "2026-10-29T18:52:48", "wall_s": 186.0, "exit": 0, "status": "done", "objective": -0.13727086760486648, "gpu": "NVIDIA A100-SXM4-40GB", "colab": {"session": "mso-20261029-184942-4d422a", "exit": 0, "wall_s": 180.9, "balance_before": 190.4, "balance_after": 190.4, "cu_measured": 0.0, "cu_at_rate": 0.27}, "searches": 1, "sessions_stopped_after": []}

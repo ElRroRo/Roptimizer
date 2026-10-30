@@ -1,0 +1,14 @@
+{
+ "id": "20261029-185425-c30d2b",
+ "portfolio_id": "2dbfdac95438",
+ "portfolio_name": "Portfolio (from portfolio_data.csv)",
+ "portfolio_version": 2,
+ "machine": "a100",
+ "status": "interrupted",
+ "queued": "2026-10-29T18:54:25",
+ "settings": {},
+ "started": "2026-10-29T18:54:25",
+ "pid": 60453,
+ "ended": "2026-10-29T18:55:11",
+ "error": "the server stopped while this run was running"
+}

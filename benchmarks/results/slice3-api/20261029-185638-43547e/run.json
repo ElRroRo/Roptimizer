@@ -1,0 +1,25 @@
+{
+ "id": "20261029-185638-43547e",
+ "portfolio_id": "2dbfdac95438",
+ "portfolio_name": "Portfolio (from portfolio_data.csv)",
+ "portfolio_version": 2,
+ "machine": "laptop",
+ "status": "done",
+ "queued": "2026-10-29T18:56:38",
+ "settings": {
+  "bank": 600000,
+  "draw": 300000,
+  "set": [
+   "maxgen=12"
+  ]
+ },
+ "started": "2026-10-29T18:56:38",
+ "pid": 61119,
+ "ended": "2026-10-29T18:57:09",
+ "wall_s": 31.0,
+ "exit": 0,
+ "objective": -0.13640902423011692,
+ "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+ "colab": null,
+ "searches": 1
+}

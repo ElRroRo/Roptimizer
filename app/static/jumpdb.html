@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="design-allow" content="mono: owner FUI brief, mono panel labels and tickers; micro-label: owner FUI brief, panel labels; hairline: panel frames; outlined-box: the wall of framed panels is the direction, same as the analysis room"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jump Data</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="results.css">
+<style>
+/* Jump data: the settings behind every run's jumps, on the same wall. The pool the jumps are calibrated on, the
+   dated versions, what the calibration found, and each held asset's crash and rally betas with manual overrides. */
+#v-jump { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: minmax(0, 0.8fr) minmax(0, 1.2fr); }
+#v-jump .p-pool { grid-row: 1 / -1; }
+#v-jump .p-betas { grid-column: 2 / -1; }
+#v-jump2 { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); grid-template-rows: minmax(0, 1.1fr) minmax(0, 0.9fr) 218px; }
+#v-jump2 .j2-pool { grid-row: 1 / -1; }
+#v-jump3 { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); grid-template-rows: minmax(0, 1.2fr) minmax(0, 0.85fr) 218px; }
+#v-jump3 .j3-tree { grid-row: 1 / -1; }
+.wall[hidden] { display: none !important; }
+.top .seg { flex: none; }
+#p-radial svg *, #p-scatter svg *, #p-jtree svg * { pointer-events: none; }
+#p-radial svg .hit, #p-scatter svg .hit, #p-jtree svg .hit { pointer-events: auto; cursor: pointer; }
+#p-scatter svg .drag, #p-jtree svg .drag { cursor: grab; }
+body.dragging, body.dragging * { cursor: grabbing !important; user-select: none; }
+#p-pool svg * { pointer-events: none; }   /* only the row hit areas take clicks, so a bar never swallows its row */
+#p-pool svg .hit { pointer-events: auto; }
+.chips { display: flex; flex-wrap: wrap; gap: 4px; padding: 8px 10px 12px; }
+.chip { font: 500 11px var(--code); color: var(--ink-2); background: var(--panel-2); border: 1px solid var(--frame); border-radius: 2px; padding: 2px 4px 2px 6px; display: inline-flex; align-items: center; gap: 4px; }
+.chip button { font: 600 11px var(--sans); color: var(--mute); background: transparent; border: 0; padding: 0 2px; cursor: pointer; line-height: 1; }
+.chip button:hover { color: var(--att); }
+.chip.out { color: var(--mute); text-decoration: line-through; border-style: dashed; }
+.chip.out button { color: var(--ink-2); text-decoration: none; }
+.chip.held { border-color: var(--frame-2); color: var(--ink); }
+.addrow { display: flex; gap: 8px; align-items: center; padding: 0 10px 8px; flex-wrap: wrap; }
+.addrow .mu { font-size: 12px; }
+input.box.small { width: 92px; text-align: left; font: 500 11.5px var(--code); text-transform: uppercase; }
+input.ov { width: 58px; font: inherit; text-align: right; color: var(--ink); background: transparent; border: 1px solid transparent; border-radius: 2px; padding: 1px 4px; }
+input.ov:hover { border-color: var(--frame-2); }
+input.ov:focus { outline: none; border-color: var(--att); background: var(--bg); }
+input.ov.typed { font-weight: 700; color: #fff; border-color: color-mix(in oklab, var(--ink) 40%, var(--frame-2)); }
+.src { font: 500 10.5px var(--code); letter-spacing: 0.02em; padding: 1px 5px; border-radius: 2px; border: 1px solid var(--frame-2); color: var(--ink-2); }
+.src.fallback { border-style: dashed; color: var(--mute); }
+.src.manual { border-color: var(--att); color: color-mix(in oklab, var(--att) 76%, white); }
+.vbtns { display: flex; gap: 8px; padding: 6px 12px 10px; flex-wrap: wrap; }
+.vbtns button { font: 600 12.5px var(--sans); border-radius: 2px; padding: 5px 11px; cursor: pointer; background: transparent; color: var(--ink); border: 1px solid var(--frame-2); }
+.vbtns button.go { background: var(--ink); color: var(--bg); border: 0; }
+</style></head>
+<body>
+<div class="top"><a class="q" id="to-builder" href="builder.html" style="text-decoration:none">← Builder</a><a class="q" id="to-results" href="results.html" style="text-decoration:none" hidden>← Results</a><h1>Jump data</h1><span class="meta" id="meta"></span><span class="sp"></span>
+  <button class="q" type="button" id="reset">Reset pool to default</button><button class="q" type="button" id="recal">Recalibrate</button></div>
+<div class="wall" id="v-jump">
+  <section class="panel p-pool"><div class="ph"><b>Calibration pool</b><span id="pool-sub"></span></div><div class="pb scroll" id="p-pool"></div></section>
+  <section class="panel"><div class="ph"><b>Versions</b><span>each recalibration is a dated version; a run uses the newest unless one is pinned</span></div><div class="pb" id="p-ver"></div></section>
+  <section class="panel"><div class="ph"><b>Jump sizes</b><span>in standard deviations, beyond the 3σ threshold</span></div><div class="pb" id="p-size"></div></section>
+  <section class="panel p-betas"><div class="ph"><b>Your assets' betas</b><span>how each asset moves on a surprise day of the S&amp;P 500; type a value to override</span></div><div class="pb scroll" id="p-betas"></div></section>
+</div>
+<div class="foot" id="note"></div>
+<div class="tip" id="tip"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="live.js"></script>
+<script src="common2.js"></script>
+<script src="jumpdb-data.js"></script>
+<script src="jumpdb-live.js"></script>
+<script src="jumpdb.js"></script>
+<script>draw();
+// the way back: to this portfolio's builder, and to the run it came from (else its latest finished run)
+(() => { const pid = encodeURIComponent(LIVE.portfolio.id), run = (LIVE.run && LIVE.run.id) || (LIVE.last_run && LIVE.last_run.id);
+  document.getElementById("to-builder").href = `builder.html?p=${pid}`;
+  const r = document.getElementById("to-results"); if (run) { r.href = `results.html?run=${encodeURIComponent(run)}&p=${pid}#results`; r.hidden = false; } })();</script>
+</body></html>

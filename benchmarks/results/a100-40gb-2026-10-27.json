@@ -1,0 +1,155 @@
+{
+ "snapshot": {
+  "created": "2026-10-27T17:25:46",
+  "last_return_week": "2026-10-19",
+  "assets": 16
+ },
+ "hardware": {
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "gpu_total_gib": 39.49,
+  "gpu_free_gib": 39.08,
+  "nvidia_smi": "NVIDIA A100-SXM4-40GB, 40960 MiB, 580.82.07",
+  "cupy": "14.0.1",
+  "cuda_runtime": 13000,
+  "host_cpus": 12
+ },
+ "completed_stages": [
+  "hardware",
+  "bank",
+  "eval",
+  "bank_eval",
+  "optimize",
+  "score"
+ ],
+ "bank": {
+  "paths": 30000000,
+  "chunk": 4000000,
+  "assets": 16,
+  "steps": 12,
+  "kept_on_host": true,
+  "wall_s": 27.9,
+  "sim_s": 19.2,
+  "copy_s": 8.56,
+  "first_chunk_s": 11.76,
+  "s_per_million_paths": 0.287,
+  "peak_gpu_pool_gib": 18.56,
+  "bank_bytes_gib": 21.46,
+  "note": "sim = full-path Heston-Bates simulation per chunk; copy = the chunk's real per-asset paths, transposed to path-major and copied to host",
+  "check_terminal_mean_vs_posterior_se": {
+   "NVDA": 1.72,
+   "MNTS": -0.24,
+   "META": 0.11,
+   "JPM": -1.34,
+   "GOOGL": 0.28,
+   "FERG": 0.76,
+   "BTC=F": 1.73,
+   "ADBE": -0.75,
+   "NRIM": -1.06,
+   "SPGI": 0.05,
+   "DBMF": 1.31,
+   "CTA": 0.85,
+   "WTMF": 1.09,
+   "TLT": 0.75,
+   "IBHK": 0.6,
+   "SPY": -0.43
+  }
+ },
+ "eval": {
+  "paths": 3000000,
+  "reps": 6,
+  "first_s": 2.18,
+  "mean_s": 0.66,
+  "sd_s": 0.0,
+  "values": [
+   -0.05247517938412516,
+   -0.02405147977599941,
+   -0.04859093102487043,
+   -0.05864335713611451,
+   -0.053763365351745265,
+   -0.055344893595894486
+  ],
+  "peak_gpu_pool_gib": 9.4
+ },
+ "bank_eval": {
+  "bank_paths": 30000000,
+  "paths": 3000000,
+  "reps": 6,
+  "host_subset_upload_s": 3.247,
+  "bank_upload_s": 19.9,
+  "gpu_resident": true,
+  "first_s": 1.812,
+  "mean_s": 0.0317,
+  "values": [
+   -0.05238015792973931,
+   -0.024030096229322284,
+   -0.04848803674873939,
+   -0.05859335597262539,
+   -0.05372750851281728,
+   -0.05537956059267366
+  ],
+  "simulated_values": [
+   -0.05247517938412516,
+   -0.02405147977599941,
+   -0.04859093102487043,
+   -0.05864335713611451,
+   -0.053763365351745265,
+   -0.055344893595894486
+  ]
+ },
+ "optimize": {
+  "sims": 3000000,
+  "iters": 15,
+  "popsize": 30,
+  "seed": 20261027,
+  "evaluations": 7680,
+  "wall_s": 5065.6,
+  "s_per_eval": 0.66,
+  "weights": {
+   "NVDA": 0.037099,
+   "MNTS": 0.008144,
+   "META": 0.007376,
+   "JPM": 0.033155,
+   "GOOGL": 0.012384,
+   "FERG": 0.032283,
+   "BTC=F": 0.272432,
+   "ADBE": 0.005647,
+   "NRIM": 0.022678,
+   "SPGI": 0.047769,
+   "DBMF": 0.100046,
+   "CTA": 0.10625,
+   "WTMF": 0.082548,
+   "TLT": 0.019356,
+   "IBHK": 0.13814,
+   "SPY": 0.074693
+  },
+  "expected_return_12w": 0.03526144009185518,
+  "volatility_12w": 0.09602645871634438,
+  "cvar_12w": -0.16686736615406086,
+  "cdar_12w": -0.20791344344615936,
+  "starr_12w": 0.14344521246102762,
+  "score": {
+   "paths": 10000000,
+   "reps": 3,
+   "values": [
+    -0.08833226201175057,
+    -0.08828606332130949,
+    -0.08836675579805071
+   ],
+   "mean": -0.08832836037703691,
+   "sd": 4.0487479740498047e-05
+  }
+ },
+ "colab": {
+  "machine": "plain A100 (--gpu A100, no --high-mem)",
+  "session": "bench-a100",
+  "launch_to_script_start_s": 57.5,
+  "pip_install_arch_s": 2.8,
+  "vm_script_s": 5147.1,
+  "launch_to_teardown_s": 5206.8,
+  "compute_units_before": 199.91,
+  "compute_units_after": 192.56,
+  "compute_units_used": 7.35,
+  "usage_rate_per_hour_live": 5.3,
+  "note": "first attempt 80 s earlier failed at assignment with 503 Service Unavailable (no VM, no charge)"
+ }
+}

@@ -1,0 +1,43 @@
+/* Review layout W: the pre-flight room. Same panels and tokens as the analysis room and the builder. */
+body.reviewing .main { visibility: hidden; }
+.rv { position: absolute; left: 0; right: 0; top: 44px; bottom: 24px; padding: 8px; gap: 8px; display: none;
+  grid-template-columns: 330px minmax(0, 1fr) 452px; grid-template-rows: minmax(0, 0.84fr) minmax(0, 0.16fr) minmax(0, 1fr) auto;
+  grid-template-areas: "tree w r" "lim w r" "lim w s" "bar bar bar"; }
+body.reviewing .rv { display: grid; }
+.p-tree { grid-area: tree; } .p-w { grid-area: w; } .p-r { grid-area: r; } .p-l { grid-area: lim; } .p-s { grid-area: s; }
+.rv .pb { overflow: auto; }
+.rv .pb svg { display: block; }
+.rv svg * { pointer-events: none; }   /* only the hit areas take the pointer, so a bar never swallows its row's click */
+.rv svg .hit { pointer-events: auto; cursor: pointer; }
+.rv .wrow { fill: transparent; }
+.rv .wrow:hover, .rv .wrow.hl { fill: color-mix(in oklab, var(--ink) 6%, transparent); }
+
+.rv path.rvband { fill: color-mix(in oklab, var(--c) 30%, var(--panel)); stroke: var(--panel); stroke-width: 1.5; }   /* the builder's band tint, the same on every radial */
+.rv path.rvband.empty { fill: var(--panel); stroke: color-mix(in oklab, var(--c) 60%, var(--panel)); stroke-dasharray: 4 3; }
+.rv path.rvband.on, .rv path.rvband.blk { stroke-width: 2; }
+.rv path.rvband.hl, .rv path.rvband:hover { fill: color-mix(in oklab, var(--c) 42%, var(--panel)); }
+.rv.lit #rv-tree [data-rid]:not(.hl) { opacity: 0.3; }
+.rv circle.hl { stroke: var(--ink); stroke-width: 2; }
+/* settings: a dot per value; only values that differ from the default are written */
+.sgrid { display: grid; grid-template-columns: minmax(0, 1fr) repeat(7, 40px); align-items: center; padding: 6px 10px 2px 0; row-gap: 1px; }
+.sgrid .sh { font-size: 11px; color: var(--ink-2); text-align: center; padding-bottom: 2px; white-space: nowrap; }
+.sgrid .sd { font-size: 11px; color: var(--mute); text-align: center; padding-bottom: 5px; border-bottom: 1px solid var(--frame); }
+.sgrid .sn { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; height: 24px; line-height: 24px; box-shadow: inset 3px 0 0 var(--c, transparent); }
+.sgrid .sn.mu { color: var(--mute); font-size: 11px; padding-left: 8px; border-bottom: 1px solid var(--frame); height: auto; line-height: 1.4; padding-bottom: 5px; box-shadow: none; }
+.sgrid .sn em { font-style: normal; color: var(--mute); font-size: 11px; }
+.sgrid .sn.hl { background: color-mix(in oklab, var(--ink) 6%, transparent); }
+.sc { display: flex; align-items: center; justify-content: center; gap: 4px; height: 24px; font-size: 11px; color: var(--ink-2); }
+.sc i, .sg { display: inline-block; width: 7px; height: 7px; border-radius: 50%; flex: none; }
+.sc.d i, .sg.d { border: 1.2px solid var(--frame-2); }
+.sc.h i, .sg.h { background: var(--ink); }
+.sc.h { color: var(--ink); font-weight: 600; }
+.sc.f i, .sg.f { border: 2px solid var(--ink-2); width: 8px; height: 8px; }
+.sc.d i:only-child { opacity: 0.9; }
+.sc:has(i:only-child) i { margin: 0; }
+.rv .panel { grid-template-columns: minmax(0, 1fr); overflow: hidden; }
+.rv .runbar { grid-area: bar; background: var(--panel); border: 1px solid var(--frame); display: grid; grid-template-columns: 210px minmax(0, 1fr) auto; align-items: center; gap: 16px; padding: 8px 14px; min-height: 58px; }
+.rv svg text.rng { font-size: 11px; fill: var(--ink-2); }
+.rv .wrow.on { fill: color-mix(in oklab, var(--ink) 11%, transparent); }
+.rv path.rvband.on { stroke: var(--ink); }
+.rv path.rvband.blk { stroke: var(--att); }
+.sgrid { grid-template-columns: minmax(0, 1fr) repeat(7, 42px); column-gap: 2px; }
