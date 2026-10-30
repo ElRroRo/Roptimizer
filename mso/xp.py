@@ -31,10 +31,13 @@ def _available_ram():
         return info.get("MemAvailable", info["MemFree"]), info["MemTotal"]
     except (OSError, KeyError, ValueError):
         try:
-            pages, size = os.sysconf("SC_AVPHYS_PAGES"), os.sysconf("SC_PAGE_SIZE")
-            return pages * size, os.sysconf("SC_PHYS_PAGES") * size
+            size, total = os.sysconf("SC_PAGE_SIZE"), os.sysconf("SC_PHYS_PAGES") * os.sysconf("SC_PAGE_SIZE")
         except (AttributeError, OSError, ValueError):    # no sysconf (Windows): assume a modest machine
             return 8 * 2**30, 16 * 2**30
+        try:
+            return os.sysconf("SC_AVPHYS_PAGES") * size, total
+        except (OSError, ValueError):                     # macOS has no "available pages": count on half
+            return total // 2, total
 
 
 class _Pool:

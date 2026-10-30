@@ -10,7 +10,8 @@ A portfolio is a **tree**. Groups of assets (subportfolios) are optimized on the
 
 ## Start
 
-**Linux or macOS:** run `./start.sh` (or double-click it and choose *Run in terminal*).
+**macOS:** double-click `start.command`. The first time, macOS may refuse a downloaded script: right-click it, choose *Open*, then *Open* again. (Or in Terminal: `bash start.sh` in the folder.)
+**Linux:** run `./start.sh` (or double-click it and choose *Run in terminal*).
 **Windows:** double-click `start.bat` (checked on Windows 11: the first start installs in about 6 minutes, later starts take seconds).
 
 The first start installs everything into the project folder: [uv](https://docs.astral.sh/uv/) (a Python installer) if you don't have it, Python 3.13, the packages, and the GPU package when an NVIDIA GPU is found. Then it opens the tool in your browser at http://localhost:8797. Later starts skip the installing. On the first visit you land on the setup screen:
